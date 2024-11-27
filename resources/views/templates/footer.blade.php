@@ -112,8 +112,8 @@
 <div class="copyright-area">
 <div class="container">
     <div class="copyright-item">
-        <p>© <span>TMU</span> is Proudly Owned by <a href="https://hibootstrap.com/"
-                target="_blank">HiBoostrap</a></p>
+        <p>© <span>TMU Hospital </span> is Proudly Owned by <a href="https://tmu.ac.in"
+                target="_blank">TMU</a></p>
     </div>
 </div>
 </div>
@@ -121,38 +121,71 @@
 
 
 <!-- Essential JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('js/jquery.min.js')}}"></script>
+<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <!-- Owl Carousel JS -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <!-- Meanmenu JS -->
-<script src="js/jquery.meanmenu.js"></script>
+<script src="{{asset('js/jquery.meanmenu.js')}}"></script>
 <!-- Slider Slider JS -->
-<script src="js/slick.min.js"></script>
+<script src="{{asset('js/slick.min.js')}}"></script>
 <!-- Magnific Popup -->
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
 <!-- Wow JS -->
-<script src="js/wow.min.js"></script>
+<script src="{{asset('js/wow.min.js')}}"></script>
 <!-- Form Ajaxchimp JS -->
-<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
 <!-- Form Validator JS -->
-<script src="js/form-validator.min.js"></script>
+<script src="{{asset('js/form-validator.min.js')}}"></script>
 <!-- Contact JS -->
-<script src="js/contact-form-script.js"></script>
+<script src="{{asset('js/contact-form-script.js')}}"></script>
 <!-- Odometer JS -->
-<script src="js/odometer.min.js"></script>
-<script src="js/jquery.appear.min.js"></script>
+<script src="{{asset('js/odometer.min.js')}}"></script>
+<script src="{{asset('js/jquery.appear.min.js')}}"></script>
 <!-- Custom JS -->
-<script src="js/custom.js"></script>
+<script src="{{asset('js/custom.js')}}"></script>
 <!-- Owl Carousel2 JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
 integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- imageMapResize JS -->
+<script src="{{asset('js/imageMapResizer.js')}}"></script>
+
+
+
+<!-- JS for adding active class to nav-item-->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentUrl = window.location.pathname.toLowerCase().replace(/\/$/, ""); 
+        // Select all nav-link elements
+        const navLinks = document.querySelectorAll('.nav-link');
+    
+        // Loop through each nav-link to find the one that matches the current URL
+        navLinks.forEach(link => {
+            const linkPath = link.getAttribute('data-path');
+            if (linkPath) {
+                const normalizedLinkPath = linkPath.toLowerCase().replace(/\/$/, "");
+                if (currentUrl === normalizedLinkPath) {
+                    link.classList.add('active'); 
+                }
+            } else {
+                console.warn("Skipping nav-link with no data-path attribute:", link);
+            }
+        });
+    });
+    
+    
+    
+</script>
+
+<script>
+    imageMapResize();
+</script>
 
 <!-- Js for our services section  -->
 <script>
 $(document).ready(function () {
-    var owl = $(".owl-carousel");
+    var owl = $(".services-section .owl-carousel");
     owl.owlCarousel({
         loop: true,
         margin: 10,
@@ -183,6 +216,117 @@ $(document).ready(function () {
         owl.trigger("next.owl.carousel");
     });
 });
+
+$(document).ready(function () {
+    var owl = $(".hospital-awards .owl-carousel");
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+            },
+
+            786: {
+                items: 2,
+            },
+            1240: {
+                items: 3,
+            },
+        },
+    });
+
+    $(".owl-prev").click(function () {
+        owl.trigger("prev.owl.carousel");
+    });
+
+    $(".owl-next").click(function () {
+        owl.trigger("next.owl.carousel");
+    });
+});
+
+
+$(document).ready(function () {
+    var owl = $(".patient-testimonial");
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+            },
+
+            786: {
+                items: 2,
+            },
+            1240: {
+                items: 3,
+            },
+        },
+    });
+}); 
+
+
+$(document).ready(function () {
+    var owl = $(".counter-area-carousel");
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+            },
+
+            786: {
+                items: 2,
+            },
+            1240: {
+                items: 3,
+            },
+        },
+    });
+});
+
+$(document).ready(function () {
+    var owl = $(".speciality-item-carousel");
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+            },
+
+            786: {
+                items: 2,
+            },
+            1240: {
+                items: 3,
+            },
+        },
+    });
+});
+
 </script>
 </body>
 

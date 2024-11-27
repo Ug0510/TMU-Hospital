@@ -1,13 +1,13 @@
-
 <!-- resources/views/pages/home.blade.php -->
 @extends('layout.app')
 
 @section('content')
+
 <!-- Main content for the home page goes here -->
 <div class="main-content">
     <!-- Home Slider -->
     <div class="home-slider owl-theme owl-carousel">
-        <div class="slider-item slider-item-img">
+        <div class="slider-item one slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -35,34 +35,42 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="slider-text">
-                            <!-- <div class="slider-shape-two">
-                                    <img src="img/home-one/home-slider/2.png" alt="Shape">
-                                </div>
-                                <h1>Caring Health is Important Than All</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                                <div class="common-btn">
-                                    <a href="appointment.html">Get Appointment</a>
-                                    <a class="cmn-btn-right" href="about.html">Learn More</a>
+                            <!-- <div class="slider-shape">
+                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
                                 </div> -->
+                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
+                            <p class="invisible">
+                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
+                                state-of-the-art facilities and experienced medical professionals ensure you receive the
+                                best treatment available. Trust us to be your partner in achieving optimal health and a
+                                brighter future. </p>
+                            <div class="common-btn invisible">
+                                <a href="appointment.html">Get Appointment</a>
+                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="slider-item slider-item-img three">
+        <div class="slider-item three slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="slider-text">
-                            <!-- <div class="slider-shape-three">
-                                    <img src="img/home-one/home-slider/3.png" alt="Shape">
-                                </div>
-                                <h1>We Offer Highly Treatments</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                                <div class="common-btn">
-                                    <a href="appointment.html">Get Appointment</a>
-                                    <a class="cmn-btn-right" href="about.html">Learn More</a>
+                            <!-- <div class="slider-shape">
+                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
                                 </div> -->
+                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
+                            <p class="invisible">
+                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
+                                state-of-the-art facilities and experienced medical professionals ensure you receive the
+                                best treatment available. Trust us to be your partner in achieving optimal health and a
+                                brighter future. </p>
+                            <div class="common-btn invisible">
+                                <a href="appointment.html">Get Appointment</a>
+                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +81,7 @@
 
     <!-- Counter -->
     <div class="counter-area">
-        <div class="container">
+        <div class="container d-none d-md-block">
             <div class="row counter-bg second">
                 <div class="col-sm-6 col-md-3 col-lg-3">
                     <div class="counter-item">
@@ -114,13 +122,71 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="counter-area-carousel owl-carousel d-block d-md-none ">
+            <div class="container pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-patient-bed"></i>
+                            <h3>
+                                <span class="odometer" data-count="900">00</span>
+                            </h3>
+                            <p>Bed Capacity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-people"></i>
+                            <h3>
+                                <span class="odometer" data-count="1200">00</span>
+                                <!-- <span class="target">+</span> -->
+                            </h3>
+                            <p>Employees Including Doctors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-doctor-alt"></i>
+                            <h3>
+                                <span class="odometer" data-count="20">00</span>
+                            </h3>
+                            <p>Daily Average Surgeries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-badge"></i>
+                            <h3>
+                                <span class="odometer" data-count="20">00</span>
+                            </h3>
+                            <p>Specialities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <!-- End Counter -->
 
-
     <!-- Outer links options section Start -->
     <section>
-        <div class="container mt-3 mb-5">
+        <div class="container mt-0 mt-md-3 mb-5">
             <div class="overview-booking snipcss-t88io">
                 <div class="overview-section">
                     <div class="overview-box-outer">
@@ -510,9 +576,9 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                <!-- divs after this will be eliminated from page on tablet and phone view -->
-                 <div class="d-none d-lg-flex row">
+            </div>
+            <!-- divs after this will be eliminated from page on tablet and phone view -->
+            <div class="d-none d-flex row" id="more-content">
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
                     <div class="service-item">
                         <div class="d-table">
@@ -633,47 +699,180 @@
                         </div>
                     </div>
                 </div>
-            
+
             </div>
 
-            <a href="" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect">View all.....</a>
+            <a href="javascript:void(0)" onclick="showMoreContent()" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect view-more-btn">View More</a>
 
         </div>
     </section>
     <!-- End Services -->
 
+    <script>
+        function showMoreContent() {
+            var moreContent = document.getElementById('more-content');
+            var viewMoreButton = document.querySelector('.view-more-btn');
 
-    <!-- Interactive body map-->
+            if (moreContent.classList.contains('d-none')) {
+                moreContent.classList.remove('d-none') // Show the hidden content
+                viewMoreButton.innerHTML = 'View Less'; // Change button text
+            } else {
+                moreContent.classList.add('d-none') // Hide the content
+                viewMoreButton.innerHTML = 'View More'; // Change button text back
+            }
+        }
+    </script>
 
-    <section class="services-area pb-70" style="display: flex; justify-content: center; align-items: center;">
+
+    <!-- Interactive body map Mobile-->
+
+    <section class="services-area services-area-mob pb-70" style=" justify-content: center; align-items: center;">
         <div class="container">
             <div class="section-title">
                 <h2 class="tmu-primary">Various Specialities</h2>
             </div>
-            <div class="row justify-content-center" style="max-width: 340px">
-                <img src="{{asset('img/home/human_body_map.png')}}" usemap="#image-map" alt="Man Body">
-                 
+            <div class="row justify-content-center flex w-100" style=" align-items: center; justify-content: center; position: relative;">
+                <img src="{{asset('img/home/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
+
+
+
                 <map name="image-map">
-                    <area target="_self" alt="Brain" title="Brain" href="/neuro_surgery" coords="67,32,20,10" shape="rect">
-                    <area target="_self" alt="Eye" title="Eye" href="/ophthalomology" coords="252,24,298,44" shape="rect">
-                    <area target="_self" alt="Vocal-Cord" title="Vocal-Cord" href="/ent" coords="258,60,308,99" shape="rect">
-                    <area target="_self" alt="Heart" title="Heart" href="/cardiology" coords="248,121,297,144" shape="rect">
-                    <area target="_self" alt="Liver" title="Liver" href="/gastroenterology" coords="18,145,68,166" shape="rect">
-                    <area target="_self" alt="Stomach" title="Stomach" href="/general_surgery" coords="8,199,74,220" shape="rect">
-                    <area target="_self" alt="Arm" title="Arm" href="/orthopaedics" coords="266,191,309,214" shape="rect">
-                    <area target="_self" alt="Hip" title="Hip" href="/orthopaedics" coords="266,272,304,298" shape="rect">
-                    <area target="_self" alt="Knee" title="Knee" href="/orthopaedics" coords="264,405,309,429" shape="rect">
-                    <area target="_self" alt="Kindney" title="Kindney" href="/ephrology" coords="5,236,60,263" shape="rect">
-                    <area target="_self" alt="Reproductive-System" title="Reproductive-System" href="/urology" coords="218,338,319,375" shape="rect">
-                    <area target="_self" alt="Lower-Back" title="Lower-Back" href="/spine" coords="264,228,318,263" shape="rect">
-                    <area target="_self" alt="Thigh" title="Thigh" href="/orthopedics" coords="30,352,77,374" shape="rect">
-                    <area target="_self" alt="Varicose-Vain" title="Varicose-Vain" href="/varicose" coords="10,453,73,492" shape="rect">
+                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="/neuro-surgery" coords="75,35,275,135" shape="rect">
+                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="/ophthalomology" coords="1008,90,1192,190" shape="rect">
+                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="/ent" coords="1035,230,1232,410" shape="rect">
+                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="/cardiology" coords="992,480,1188,580" shape="rect">
+                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="/gastroenterology" coords="72,575,272,675" shape="rect">
+                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="/gastroenterology" coords="20,790,296,890" shape="rect">
+                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="/orthopaedics" coords="1070,760,1236,860" shape="rect">
+                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="/orthopaedics" coords="1064,1090,1216,1190" shape="rect">
+                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="/orthopaedics" coords="1056,1620,1236,1720" shape="rect">
+                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="/ephrology" coords="10,950,250,1050" shape="rect">
+                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="/urology" coords="870,1340,1276,1520" shape="rect">
+                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="/spine" coords="1060,900,1280,1070" shape="rect">
+                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="/orthopaedics" coords="110,1400,320,1500" shape="rect">
+                    <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
+
+
+
             </div>
         </div>
     </section>
 
-    <!--End Interactive body map -->
+    <!--End Interactive body map mobile -->
+
+    <!-- Interactive body map Large screen  -->
+
+    <section class="services-area services-area-pointer pb-70" style=" justify-content: center; align-items: center;">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="tmu-primary">Various Specialities</h2>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12">
+
+
+                <div class="tabs-content">
+
+
+
+
+                    <div class="structure male">
+                        <img src="{{asset('img/home/human_body_manmap.png')}}" alt="Man Body">
+
+                        <ul class="service-speciality-left body_list left">
+                            <li class="eyeMpointer">
+                                <a href="/ophthalomology"><span class="txt">Eye</span></a>
+                            </li>
+
+                            <li class="earMPointer">
+                                <a href="/ent"><span class="txt">Ear</span></a>
+                            </li>
+
+                            <li class="earMPointer vocalcordMPointer">
+                                <a href="/ent"><span class="txt">Vocal Cord</span></a>
+                            </li>
+
+                            <li class="liverMpointer">
+                                <a href="/gastroenterology"><span class="txt">Liver</span></a>
+                            </li>
+
+                            <li class="handMpointer">
+                                <a href="/orthopaedics"><span class="txt">Arm</span></a>
+                            </li>
+
+                            <li class="kidneysMpointer">
+                                <a href="/nephrology"><span class="txt">Kidney</span></a>
+                            </li>
+
+                            <li class="lowerBackMpointer">
+                                <a href="/neuro-surgery"><span class="txt">Lower Back</span></a>
+                            </li>
+
+                            <li class="reproductiveMpointer">
+                                <a href="/urology"><span class="txt">Reproductive System</span></a>
+                            </li>
+
+                            <li class="thighMpointer">
+                                <a href="/orthopaedics"><span class="txt">Thigh</span></a>
+                            </li>
+
+                            <li class="thighMpointer vericoseMpointer">
+                                <a href="/varicose"><span class="txt">Varicose Vein</span></a>
+                            </li>
+
+                            <li class="footMpointer">
+                                <a href="/orthopaedics"><span class="txt">Foot</span></a>
+                            </li>
+                        </ul>
+
+
+                        <ul class="service-speciality-right body_list right">
+                            <li class="brainMpointer">
+                                <a href="/neurology"><span class="txt">Brain</span></a>
+                            </li>
+
+                            <li class="noseMpointer">
+                                <a href="/ent"><span class="txt">Nose</span></a>
+                            </li>
+
+                            <li class="heartMpointer">
+                                <a href="/cardiology"><span class="txt">Heart</span></a>
+                            </li>
+
+                            <li class="lungMpointer">
+                                <a href="/pulmonology"><span class="txt">Chest</span></a>
+                            </li>
+
+                            <li class="elbowMpointer">
+                                <a href="/orthopaedics"><span class="txt">Elbow</span></a>
+                            </li>
+
+                            <li class="spineMpointer">
+                                <a href="/gastroenterology"><span class="txt">Stomach</span></a>
+                            </li>
+
+                            <li class="hipMpointer">
+                                <a href="/orthopaedics"><span class="txt">Hip</span></a>
+                            </li>
+
+                            <li class="kneeMpointer">
+                                <a href="/orthopaedics"><span class="txt">Knee</span></a>
+                            </li>
+
+                            <li class="ankleMpointer">
+                                <a href="/orthopaedics"><span class="txt">Ankle</span></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive body map Large screen  -->
 
     <!-- Expertise -->
     <section class="expertise-area pb-70">
@@ -684,7 +883,7 @@
                     <div class="section-title">
                         <h2 class="tmu-primary">Our Expertise</h2>
                     </div>
-                    <div class="speciality-item">
+                    <div class="speciality-item d-none d-md-block">
                         <div class="row m-0">
                             <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="speciality-inner">
@@ -700,6 +899,42 @@
                                     <p>MRI, Spiral CT, Color Doppler, Neurology Lab, and Endoscopy services.</p>
                                 </div>
                             </div>
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Emergency Services</h3>
+                                    <p>24/7 comprehensive trauma, surgical, and medical emergency care.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Specialty Surgery</h3>
+                                    <p>Arthroscopy, neurosurgery, IVF, and advanced orthopedic procedures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="speciality-item-carousel speciality-item d-block d-md-none owl-carousel pt-1 pb-4">
+                        <div class="row m-0 pt-3">
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Cardiac Care</h3>
+                                    <p>Angiography, angioplasty, bypass surgery, and pacemaker implantation.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Advanced Tests</h3>
+                                    <p>MRI, Spiral CT, Color Doppler, Neurology Lab, and Endoscopy services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 pt-3">
                             <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="speciality-inner">
                                     <i class="icofont-check-circled"></i>
@@ -734,7 +969,9 @@
     </section>
     <!-- End Expertise -->
 
-    <section class="mb-5 pb-3">
+    <!--Our Services-->
+
+    <section class="mb-5 pb-3 services-section">
         <div class="container-fluid m-0">
             <div class="row">
                 <div class="section-title d-block d-md-none mt-4 mb-2">
@@ -745,7 +982,7 @@
                         <b style="font-weight: 700; color:#fff">Our </b> <br />
                         <span class="tmu-primary-orange underline-white">Services</span>
                     </h2>
-                    <div class="align-self-end mb-5" >
+                    <div class="align-self-end mb-5">
                         <div class="custom-nav row d-none d-md-block">
                             <button class="owl-prev col service-carousel-btn my-1 my-lg-0"><i class="icofont-simple-left"></i></button>
                             <button class="owl-next col service-carousel-btn my-1 my-lg-0"><i class="icofont-simple-right"></i></button>
@@ -762,7 +999,7 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2 active">Second Opinion</div>
-                                    <div class="card-text">
+                                    <div class="card-text truncate">
                                         <p>Confirm diagnosis and take informed decision of treatment plan with some of experts</p>
                                     </div>
                                     <div class="card-button d-flex justify-content-between centered-items">
@@ -772,7 +1009,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="https://www.medanta.org/storage/services/October2023//7MJ6W47Iqi1ah2952atrbVsa3QXLXN-metaU2Vjb25kIG9waW5pb24ucG5n-.png"
+                                            <img src="{{asset('img/home/doctor.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -785,8 +1022,8 @@
                                     <img width="514" height="400" src="https://www.medanta.org/storage/services/January2024//bqt2PdNyaR2Ut6TdYi8hHNXjtz5cib-metaMTIucG5n-.png" alt="homecare">
                                 </div>
                                 <div class="card-desk">
-                                    <div class="heading-md font600 card-title hidden-xs mb-2">Homecare Services</div>
-                                    <div class="card-text">
+                                    <div class="heading-md font600 card-title-1 hidden-xs mb-2">Home Nursing</div>
+                                    <div class="card-text truncate">
                                         <p>We continue to give you the best care possible with all the comforts, even after you reach home</p>
                                     </div>
                                     <div class="card-button d-flex justify-content-between centered-items">
@@ -796,7 +1033,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="https://www.medanta.org/storage/services/October2023//KJEeZyVS5OsLg64qTmc8FTsRzhTm6f-metaSG9tZSBjYXJlLnBuZw==-.png"
+                                            <img src="{{asset('img/home/homecare.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -811,7 +1048,7 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">e-ICU</div>
-                                    <div class="card-text">
+                                    <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
                                     </div>
@@ -822,7 +1059,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="https://www.medanta.org/storage/services/October2023//YAZ7Jln5Ee18KwZelKRiSmxIUuL8NJ-metaZUlDVS5wbmc=-.png"
+                                            <img src="{{asset('img/home/strecher.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -837,7 +1074,7 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">Health Check</div>
-                                    <div class="card-text">
+                                    <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
                                     </div>
@@ -848,7 +1085,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="https://www.medanta.org/storage/services/October2023//TYB5hFVu3sj0Jhd5N0bfslJ5Ie1eQe-metaSGVhbHRoIGNoZWNrdXAucG5n-.png"
+                                            <img src="{{asset('img/home/report.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -912,6 +1149,8 @@
             </div>
         </div>
     </section>
+
+    <!--Our Services End-->
 
     <!-- Video -->
     <div class="video-wrap">
@@ -1215,9 +1454,5 @@
     <!-- End Blog -->
 </div>
 
-<script src="{{asset('js/imageMapResizer.js')}}"></script>
 
-<script>
-    imageMapResize();
-</script>
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Department;
 use App\Models\Service;
+use App\Models\Edutip; // Import the EduTip model
 
 class DepartmentController extends Controller
 {
@@ -22,10 +23,14 @@ class DepartmentController extends Controller
         // Fetch related services for the department
         $services = Service::where('department_id', $department->id)->get();
 
+        // Fetch related educational tips for the department
+        $edutips = Edutip::where('department_id', $department->id)->get();
+
         // Fetch the HOD related to the department
         $hod = $department->hod;
 
-        // Return the view with department, services, and hod data
-        return view('department.show', compact('department', 'services', 'hod'));
+        // Return the view with department, services, hod, and edutips data
+        return view('department.show', compact('department', 'services', 'hod', 'edutips'));
     }
 }
+

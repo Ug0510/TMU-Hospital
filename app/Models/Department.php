@@ -22,4 +22,10 @@ class Department extends Model
     {
         return $this->hasOne(HOD::class);
     }
+
+    // Define the relationship with the EduTip model
+    public function edutips()
+    {
+        return $this->hasMany(EduTip::class, 'department_id');
+    }
 }

@@ -131,47 +131,41 @@
     @endif
     <!-- END Message from our HOD  -->
 
-    <!-- Symptoms -->
-    <section class="symptoms-area pb-70">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-6">
-                    <div class="symptoms-img">
-                        <img src="{{ asset('img/departments/patient_education.jpg') }}" alt="Symptoms">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="symptoms-content">
-                        <div class="section-title">
-                            <h2>Patient Education</h2>
+    <!-- Patient Education -->
+    @if($department->edutips->isNotEmpty())
+        <section class="symptoms-area pb-70">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="symptoms-img">
+                            <img src="{{ asset('img/departments/patient_education.jpg') }}" alt="Symptoms">
                         </div>
-                        <p>We believe that informed patients are empowered to make the best decisions about their health. Our education resources include:</p>
-                        <ul>
-                            <li>
-                                <span>
-                                    <i class="icofont-caret-right"></i>
-                                    Heart Health Seminars
-                                </span>
-                            </li>
-                            <li>
-                                <span>
-                                    <i class="icofont-caret-right"></i>
-                                    Online Resources and Articles
-                                </span>
-                            </li>
-                            <li>
-                                <span>
-                                    <i class="icofont-caret-right"></i>
-                                    Support Groups and Counseling Services
-                                </span>
-                            </li>
-                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="symptoms-content">
+                            <div class="section-title">
+                                <h2>Patient Education</h2>
+                            </div>
+                            <p>We believe that informed patients are empowered to make the best decisions about their health. Our education resources include:</p>
+                            <ul>
+                                @foreach($department->edutips as $edutip)
+                                    <li>
+                                        <span>
+                                            <i class="icofont-caret-right"></i>
+                                            {{ $edutip->title ?? 'Default Title' }}
+                                        </span>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End Symptoms -->
+        </section>
+    @endif
+    <!-- End Patient Education -->
+
+ 
 
     <!-- Appointment -->
     <div class="appointment-area-three pb-5">

@@ -1,0 +1,198 @@
+
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+
+.heading {
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--light-text);
+    font-weight: 700;
+    margin: 0;
+}
+
+@media screen and (max-width: 1599px) {
+    .heading {
+        font-size: 24px;
+    }
+}
+
+.story-video-container {
+    display: flex;
+    margin: 0 -7px;
+    align-items: center;
+}
+
+.story-video-container .video-col-1 {
+    width: 18%;
+}
+
+.story-video-container .video-col-2 {
+    width: 21.33%;
+}
+
+.story-video-container .video-wrap {
+    padding: 7px;
+}
+
+.video-wrap .video {
+    position: relative;
+}
+
+.video-wrap .video::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 70%;
+    content: '';
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    border-radius: 0 0 20px 20px;
+}
+
+.video-wrap .video .video-thumb {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.video-wrap .video .video-thumb.ratio1 {
+    padding-bottom: 110%;
+}
+
+.video-wrap .video .video-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+
+.video-wrap .video .video-thumb.ratio2 {
+    padding-bottom: 80%;
+}
+
+.video-wrap .video .video-thumb.ratio3 {
+    padding-bottom: 90%;
+}
+
+.video-wrap .video .video-thumb.ratio4 {
+    padding-bottom: 175%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.video-wrap .video .video-thumb:not(.default) img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.video-wrap .video:hover .video-thumb img {
+    scale: 1.1;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.video-wrap .video .video-thumb .play-video {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 55;
+    transform: scale(0.9);
+    transition: 0.3s;
+}
+
+.video-wrap .video:hover .video-thumb .play-video {
+    transform: scale(1);
+}
+
+.video-wrap .video .video-caption .video-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+@media screen and (max-width: 1599px) {
+    .video-wrap .video .video-caption .video-title {
+        font-size: 15px;
+    }
+
+    .video-wrap .video .video-caption .video-title {
+        font-size: 16px;
+    }
+}
+
+.video-wrap .video .video-caption p {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media screen and (max-width: 1599px) {
+    .video-wrap .video .video-caption p {
+        font-size: 11px;
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+/* These were inline style tags. Uses id+class to override almost everything */
+#style-E6isK.style-E6isK {
+    visibility: visible;
+    animation-name: fadeInUp;
+}
+
+#style-lwSRM.style-lwSRM {
+    visibility: visible;
+    animation-delay: 0.5s;
+    animation-name: fadeInUp;
+}

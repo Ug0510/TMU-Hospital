@@ -29,9 +29,10 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <!-- Theme Dark CSS -->
     <link rel="stylesheet" href="{{ asset('css/theme-dark.css') }}">
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <!-- Testimonial CSS -->
+    <link rel="stylesheet" href="{{ asset('css/testimonial.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -138,10 +139,10 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item active">
-                                <a href="/" class="nav-link active">Home</a>
+                                <a href="/" class="nav-link" data-path="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/about" class="nav-link">About</a>
+                                <a href="/About-Us" class="nav-link" data-path="/About-Us">About</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link dropdown-toggle">Speciality</a>
@@ -154,7 +155,7 @@
                                         <a href="appointment.html" class="nav-link">GENERAL SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">ORTHOPAEDICS</a>
+                                        <a href="/orthopaedics" class="nav-link">ORTHOPAEDICS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="appointment.html" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
@@ -194,13 +195,13 @@
                                         <a href="/neurology" class="nav-link">NEUROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/neuro_surgery" class="nav-link">NEURO SURGERY</a>
+                                        <a href="/neuro-surgery" class="nav-link">NEURO SURGERY</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/ctvs" class="nav-link">CTVS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/plastic_surgery" class="nav-link">PLASTIC SURGERY</a>
+                                        <a href="/plastic-surgery" class="nav-link">PLASTIC SURGERY</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/gastroenterology" class="nav-link">GASTROENTEROLOGY</a>
@@ -219,12 +220,11 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="/blog" class="nav-link">Blogs</a>
-                               
+                                <a href="/Blog" class="nav-link" data-path="/Blog">Blogs</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/contact-us" class="nav-link">Contact Us</a>
-                            </li>
+                                <a href="/Contact-Us" class="nav-link" data-path="/Contact-Us">Contact Us</a>
+                            </li>                            
                         </ul>
                         <div class="nav-srh">
                             <div class="search-toggle">
@@ -236,7 +236,8 @@
                                     <input type="text" class="src-input" id="search-terms"
                                         placeholder="Search here..." />
                                     <button type="submit" name="submit" value="Go" class="search-icon"><i
-                                            class="icofont-search-1"></i></button>
+                                            class="icofont-search-1"></i>
+                                    </button>
                                 </form>
                             </div>
                         </div>
@@ -246,29 +247,3 @@
         </div>
     </div>
     <!-- End Navbar Area -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
