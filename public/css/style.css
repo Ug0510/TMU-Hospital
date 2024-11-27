@@ -340,21 +340,17 @@ button:focus {
     background-image: url(../img/home/banner1.png);
     /* background-position-x: 100px; */
 }
-@media screen and (max-width:480px) {
-    .slider-item-img{
-        background-image: url(../img/home/mobile_banner1.jpg);
-    }
-}
+
 .slider-item {
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     height: 75vh;
     position: relative;
 }
 .slider-item-img.two{
     background-image: url(../img/home/banner2.jpg);
-    background-position-y:top;
+    /* background-position-y:top; */
 }
 .slider-item-img.three{
     background-image: url(../img/home/banner3.png);
@@ -441,6 +437,17 @@ button:focus {
     color: #001055;
     background-color: #fff;
 }
+@media screen and (max-width:480px) {
+    .slider-item-img{
+        background-image: url(../img/home/mobile_banner1.jpg);
+    }
+    .slider-item-img.two{
+        background-image: url(../img/home/mobile_banner2.jpg);
+    }
+    .slider-item-img.three{
+        background-image: url(../img/home/mobile-banner3.jpg);
+    }
+}
 .home-slider .owl-prev {
     position: absolute;
     top: 45%;
@@ -485,6 +492,7 @@ button:focus {
     margin-top: 0;
 }
 .home-slider.owl-theme .owl-dots .owl-dot span {
+    display: none;
     width: 20px;
     height: 5px;
     margin: 5px 4px;
@@ -1403,20 +1411,11 @@ footer {
     color: #fff;
 }
 .copyright-area .copyright-item p a:hover {
-    color: #001055;
+    color: #FF7900;
 }
 .home-slider-two.owl-theme .owl-dots .owl-dot.active span,
 .home-slider-two.owl-theme .owl-dots .owl-dot:hover span {
     background: #9dbdfc;
-}
-.slider-item-img-two {
-    background-image: url(../img/home-two/slider/1.jpg);
-}
-.slider-item-img-three {
-    background-image: url(../img/home-two/slider/2.jpg);
-}
-.slider-item-img-four {
-    background-image: url(../img/home-two/slider/3.jpg);
 }
 .home-slider-two .owl-prev {
     background-color: #bdcce2 !important;
@@ -2068,7 +2067,7 @@ footer {
     content: "";
     left: -5px;
     top: -5px;
-    width: 295px;
+    width: 100%;
     height: 100%;
     z-index: -1;
     border-radius: 15px;
@@ -4019,4 +4018,656 @@ footer {
     
   }
   /* CSS for HOD's message end*/
+
+/* Human Body map - Home Page */
+
+.service-speciality-left li {
+    position: relative;
+    padding-left: 40px !important;
+}
+
+.service-speciality-left{
+    color: #82868a;
+    list-style: none !important;
+    padding: 0;
+    line-height: 30px;
+}
+
+.structure {
+    text-align: center;
+    position: relative;
+    max-width: 695px !important;
+    margin: auto;
+}
+
+.structure > img {
+    max-width: 410px !important;
+    display: inline-block !important;
+    width: 100% !important;
+}
+
+.structure >ul, ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.body_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.body_list.right {
+    left: auto;
+    right: 0;
+}
+.body_list > li {
+    position: absolute;
+    top: 0;
+}
+.body_list > li:hover > a {
+    color: var(--warning);
+}
+.body_list > li > a {
+    position: relative;
+    color: #fff;
+    /* font-family: FrutigerLTStd55Roman; */
+    font-size: 16px;
+    font-weight:bold;
+    transition: none;
+}
+.body_list > li > a:hover {
+    color: var(--warning);
+}
+.body_list > li > a > .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    color: #fff;
+}
+.body_list > li:hover > a .txt,
+.body_list > li > a:hover .txt {
+    /* transform: scale(1.5); */
+    top: -1px;
+    color: var(--warning);
+}
+
+
+.structure.male .body_list.left > li.eyeMpointer {
+    left: 70px;
+    top: 35px;
+}
+.structure.male .body_list.left > li.eyeMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/eyeMpointerImgWhite.png);
+    position: absolute;
+    right: -215px;
+}
+.structure.male .body_list.left > li.eyeMpointer > a .txt {
+    left:20px;
+    top: 2px;
+}
+.body_list.left > li.eyeMpointer > a:hover:before,
+.structure.male .body_list.left > li.eyeMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/eyeMpointerImgRed.png);
+}
+.structure.male .body_list.left > li.earMPointer {
+    left: 50px;
+    top: 55px;
+}
+.structure.male .body_list.left > li.earMPointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/earMPointerImgWhite.png);
+    position: absolute;
+    right: -225px;
+}
+.structure.male .body_list.left > li.earMPointer > a .txt {
+    left:-35px;
+    top: 2px;
+}
+.body_list.left > li.earMPointer > a:hover:before,
+.structure.male .body_list.left > li.earMPointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/earMPointerImgRed.png);
+}
+.structure.male .body_list.left>li.vocalcordMPointer {
+    left: 76px;
+    top: 83px;
+}
+
+.structure.male .body_list.left>li.vocalcordMPointer>a .txt {
+    left: -60px !important;
+    top: 5px;
+}
+
+.structure.male .body_list.left > li.teethMpointer {
+    left: 80px;
+    top: 100px;
+}
+.structure.male .body_list.left > li.teethMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/teethMpointerImgWhite.png);
+    position: absolute;
+    right: -215px;
+    top: -16px;
+}
+.structure.male .body_list.left > li.teethMpointer > a .txt {
+    left:-35px;
+}
+.body_list.left > li.teethMpointer > a:hover:before,
+.structure.male .body_list.left > li.teethMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/teethMpointerImgRed.png);
+}
+.structure.male .body_list.left > li.throatMpointer {
+    left: 80px;
+    top: 135px;
+}
+.structure.male .body_list.left > li.throatMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/throatMpointerImgWhite.png);
+    position: absolute;
+    right: -220px;
+    top: -23px;
+}
+.structure.male .body_list.left > li.throatMpointer > a .txt {
+    left:-30px;
+}
+.body_list.left > li.throatMpointer > a:hover:before,
+.structure.male .body_list.left > li.throatMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/throatMpointerImgRed.png);
+}
+/* .structure.male .body_list.left > li.chestMpointer {
+    left: 50px;
+    top: 165px;
+}
+.structure.male .body_list.left > li.chestMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/chestMpointerImgWhite.png);
+    position: absolute;
+    right: -305px;
+    top: -2px;
+}
+.body_list.left > li.chestMpointer > a:hover:before,
+.structure.male .body_list.left > li.chestMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/chestMpointerImgRed.png);
+} */
+.structure.male .body_list.left > li.liverMpointer {
+    left: 25px;
+    top: 200px;
+}
+.structure.male .body_list.left > li.liverMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/liverMpointerImgWhite.png);
+    position: absolute;
+    right: -253px;
+    top: 0;
+}
+.structure.male .body_list.left > li.liverMpointer > a .txt {
+    left:-50px;
+    top:1px;
+}
+.body_list.left > li.liverMpointer > a:hover:before,
+.structure.male .body_list.left > li.liverMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/liverMpointerImgRed.png);
+}
+.structure.male .body_list.left > li.handMpointer {
+    left: -5px;
+    top: 235px;
+}
+.structure.male .body_list.left > li.handMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/handMpointerImgWhite.png);
+    position: absolute;
+    right: -220px;
+    top: -2px;
+}
+.structure.male .body_list.left > li.handMpointer > a .txt {
+    left:-20px;
+}
+.body_list.left > li.handMpointer > a:hover:before,
+.structure.male .body_list.left > li.handMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/handMpointerImgRed.png);
+}
+.structure.male .body_list.left > li.kidneysMpointer {
+    left: 55px;
+    top: 265px;
+}
+.structure.male .body_list.left > li.kidneysMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/kidneysMpointerImgWhite.png);
+    position: absolute;
+    right: -222px;
+    top: -16px;
+}
+.structure.male .body_list.left > li.kidneysMpointer > a .txt {
+    left:-40px;
+}
+.body_list.left > li.kidneysMpointer > a:hover:before,
+.structure.male .body_list.left > li.kidneysMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/kidneysMpointerImgRed.png);
+}
+.structure.male .body_list.left > li.lowerBackMpointer {
+    left: 30px;
+    top: 300px;
+}
+.structure.male .body_list.left > li.lowerBackMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/lowerBackMpointerImgWhite.png);
+    position: absolute;
+    right: -260px;
+    top: -7px;
+}
+.structure.male .body_list.left > li.lowerBackMpointer > a .txt {
+    left:-30px;
+}
+
+.body_list.left > li.lowerBackMpointer > a:hover:before,
+.structure.male .body_list.left > li.lowerBackMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/lowerBackMpointerImgRed.png);
+}
+
+.body_list.left > li.lowerBackMpointer > a:hover .txt,
+.structure.male .body_list.left > li.lowerBackMpointer:hover > a .txt {
+    /* transform: scale(1.2); */
+    top: -1px;
+    left: -30px;
+    color: var(--warning);
+}
+
+.structure.male .body_list.left > li.lowerBackMpointer > a > .txt {
+    white-space: nowrap;
+}
+.structure.male .body_list.left > li.reproductiveMpointer {
+    left: 55px;
+    top: 365px;
+}
+.structure.male .body_list.left > li.reproductiveMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/reproductiveMpointerImgWhite.png);
+    position: absolute;
+    right: -249px;
+    top: -3px;
+}
+.structure.male .body_list.left > li.reproductiveMpointer > a .txt {
+    left:-45px;
+}
+.body_list.left > li.reproductiveMpointer > a:hover:before,
+.structure.male .body_list.left > li.reproductiveMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/reproductiveMpointerImgRed.png);
+}
+.body_list.left > li.reproductiveMpointer > a:hover .txt,
+.structure.male .body_list.left > li.reproductiveMpointer:hover > a .txt {
+    /* transform: scale(1.5); */
+    top: -1px;
+    color: var(--warning);
+}
+.structure.male .body_list.left > li.reproductiveMpointer > a > .txt {
+    text-align: left;
+    line-height: 16px;
+}
+.structure.male .body_list.left > li.vocalcordMPointer > a > .txt {
+    text-align: left;
+    line-height: 16px;
+}
+.structure.male .body_list.left > li.thighMpointer {
+    left: 100px;
+    top: 440px;
+}
+.structure.male .body_list.left > li.thighMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgWhite.png);
+    position: absolute;
+    right: -180px;
+    top: 0;
+}
+.structure.male .body_list.left > li.thighMpointer > a .txt {
+    left:-20px;
+}
+.body_list.left > li.thighMpointer > a:hover:before,
+.structure.male .body_list.left > li.thighMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/thighMpointerImgRed.png);
+}
+
+.structure.male .body_list.left > li.footMpointer {
+    left: 50px;
+    top: 675px;
+}
+.structure.male .body_list.left > li.footMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/footMpointerImgWhite.png);
+    position: absolute;
+    right: -225px;
+    top: 8px;
+}
+.structure.male .body_list.left > li.footMpointer > a .txt {
+    left:-40px;
+}
+.body_list.left > li.footMpointer > a:hover:before,
+.structure.male .body_list.left > li.footMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/footMpointerImgRed.png);
+}
+.structure.male .body_list.right > li > a > .txt {
+    left: auto;
+    right: -40px;
+}
+.body_list.right > li > a:hover .txt,
+.structure.male .body_list.right > li:hover > a .txt {
+    left: auto;
+    right: -40px;
+}
+.structure.male .body_list.right > li.brainMpointer {
+    left: -100px;
+    top: 50px;
+}
+.structure.male .body_list.right > li.brainMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/brainMpointerImgWhite.png);
+    position: absolute;
+    left: -250px;
+    top: -22px;
+    width: 200px;
+}
+.structure.male .body_list.right > li.brainMpointer > a .txt {
+    left:-70px;
+}
+.body_list.right > li.brainMpointer > a:hover:before,
+.structure.male .body_list.right > li.brainMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/brainMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.noseMpointer {
+    left: -80px;
+    top: 90px;
+}
+.structure.male .body_list.right > li.noseMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/noseMpointerImgWhite.png);
+    position: absolute;
+    left: -290px;
+    top: -23px;
+    width: 182px;
+}
+.structure.male .body_list.right > li.noseMpointer > a .txt {
+    left:-210px;
+}
+.body_list.right > li.noseMpointer > a:hover:before,
+.structure.male .body_list.right > li.noseMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/noseMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.heartMpointer {
+    left: -110px;
+    top: 162px;
+}
+
+.structure.male .body_list.right > li.heartMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgWhite.png);
+    position: absolute;
+    left: -210px;
+    top: 0;
+    width: 160px;
+}
+.structure.male .body_list.right > li.heartMpointer > a .txt {
+    left:-80px;
+}
+.body_list.right > li.heartMpointer > a:hover:before,
+.structure.male .body_list.right > li.heartMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/heartMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.lungMpointer {
+    left: -110px;
+    top: 187px;
+}
+.structure.male .body_list.right > li.lungMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgWhite.png);
+    position: absolute;
+    left: -230px;
+    top: 0;
+    width: 160px;
+}
+.structure.male .body_list.right > li.lungMpointer > a .txt {
+    left:-120px;
+}
+.body_list.right > li.lungMpointer > a:hover:before,
+.structure.male .body_list.right > li.lungMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/lungMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.elbowMpointer {
+    left: -70px;
+    top: 240px;
+}
+.structure.male .body_list.right > li.elbowMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgWhite.png);
+    position: absolute;
+    left: -190px;
+    top: 0;
+    width: 160px;
+}
+.structure.male .body_list.right > li.elbowMpointer > a .txt {
+    left:-50px;
+}
+.body_list.right li.elbowMpointer > a:hover:before,
+.structure.male .body_list.right > li.elbowMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.spineMpointer {
+    left: -110px;
+    top: 265px;
+}
+.structure.male .body_list.right > li.spineMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/spineMpointerImgWhite.png);
+    position: absolute;
+    left: -240px;
+    top: -20px;
+    width: 200px;
+}
+.structure.male .body_list.right > li.spineMpointer > a .txt {
+    left:-45px;
+}
+.body_list.right li.spineMpointer > a:hover:before,
+.structure.male .body_list.right > li.spineMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/spineMpointerImgRed.png);
+}
+/* .structure.male .body_list.right > li.stomachMpointer {
+    left: -100px;
+    top: 310px;
+}
+.structure.male .body_list.right > li.stomachMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/brainMpointerImgWhite.png);
+    position: absolute;
+    left: -255px;
+    top: -23px;
+    width: 198px;
+}
+.structure.male .body_list.right > li.stomachMpointer > a .txt {
+    left:-90px;
+}
+.body_list.right li.stomachMpointer > a:hover:before,
+.structure.male .body_list.right > li.stomachMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/stomachMpointerImgRed.png);
+} */
+.structure.male .body_list.right > li.hipMpointer {
+    left: -57px;
+    top: 362px;
+}
+.structure.male .body_list.right > li.hipMpointer > a {
+    min-width: 90px;
+}
+.structure.male .body_list.right > li.hipMpointer > a:before {
+    /* content: url(../img/lines/hipMpointerImgWhite.png); */
+    content: url(https://www.bombayhospital.com/assets/images/spineMpointerImgWhite.png);
+    position: absolute;
+    left: -230px;
+    top: 0;
+    width: 200px;
+}
+.body_list.right li.hipMpointer > a:hover:before,
+.structure.male .body_list.right > li.hipMpointer:hover > a:before {
+    /* content: url(../img/lines/hipMpointerImgRed.png); */
+    content: url(https://www.bombayhospital.com/assets/images/spineMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.hipMpointer > a .txt {
+    left:-65px;
+    top:15px;
+}
+
+.structure.male .body_list.right > li.kneeMpointer {
+    left: -140px;
+    top: 550px;
+}
+.structure.male .body_list.right > li.kneeMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/elbowMpointerImgWhite.png);
+    position: absolute;
+    left: -190px;
+    top: 0;
+    width: 160px;
+}
+.structure.male .body_list.right > li.kneeMpointer > a .txt {
+    left:-40px;
+}
+.body_list.right li.kneeMpointer > a:hover:before,
+.structure.male .body_list.right > li.kneeMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images//kneeMpointerImgRed.png);
+}
+.structure.male .body_list.right > li.ankleMpointer {
+    left: -70px;
+    top: 600px;
+}
+.structure.male .body_list.right > li.ankleMpointer > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/ankleMpointerImgWhite.png);
+    position: absolute;
+    left: -248px;
+    top: 6px;
+    width: 215px;
+}
+.structure.male .body_list.right > li.ankleMpointer > a .txt {
+    left:-40px;
+}
+.body_list.right li:nth-child(10) > a:hover:before,
+.structure.male .body_list.right > li.ankleMpointer:hover > a:before {
+    content: url(https://www.bombayhospital.com/assets/images/ankleMpointerImgRed.png);
+}
+
+.structure li:before{
+    display:none;
+    padding-left:0
+}
+
+.structure li a{
+    border:none !important;
+}
+.body_list {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.body_list>li>a>.txt {
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    -webkit-transition: all .2s ease-in-out 0s;
+    transition: all .2s ease-in-out 0s;
+    color: #3170ad;
+}
+
+.structure.male .body_list.left>li.vericoseMpointer {
+    left: 70px !important;
+    top: 584px !important;
+}
+
+.structure.male .body_list.left>li.vericoseMpointer>a .txt {
+    left: -50px !important;
+}
+.structure.male .body_list.left > li.vericoseMpointer > a > .txt {
+    text-align: left;
+    line-height: 16px;
+}
+
+@media (max-width: 760px) {
+    .services-area-mob {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 761px) {
+    .services-area-mob {
+      display: none;
+    }
+  }
+
+@media (min-width: 760px) {
+    .services-area-pointer {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 759px) {
+    .services-area-pointer {
+      display: none;
+    }
+  }
+
+
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+            line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin-bottom: 10px;
+  }
+  
+  /* For screens lower than 786px */
+  @media (max-width: 786px) {
+    .truncate {
+      -webkit-line-clamp: 3;
+              line-clamp: 3;
+    }
+  }
+  
+  
+
+/* Human Body map - Home Page End*/
+
+
+
+/* About-US page */
+.hospital-awards .doctor-item {
+    box-shadow: none;
+}
+
+.hospital-awards {
+    position: relative;
+}
+
+.hospital-awards .custom-nav {
+    position: absolute;
+    z-index: 5;
+    width: 150px;
+    bottom: 6rem;
+    left: 15vw;
+}
+
+
+
+    /* Style for Owl Carousel dots (inactive state) */
+.owl-carousel .owl-dots{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    background-color: #001055; /* Dark blue color for inactive dots */
+    opacity: 0.6; /* Slightly transparent for inactive dots */
+    transition: background-color 0.3s, opacity 0.3s;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+}
+
+/* Style for active dot */
+.owl-carousel .owl-dots .owl-dot.active {
+    background-color: #FF7900; /* Orange color for active dot */
+    opacity: 1; /* Full opacity for active dot */
+}
+
+/* Hover effect for dots */
+.owl-carousel .owl-dots .owl-dot:hover {
+    background-color: #FF7900; /* Orange color on hover */
+    opacity: 1;
+}
+
+@media screen and (max-width:480px) {
+    .section-title{
+        margin-bottom: 0 !important;
+    }
+}
 

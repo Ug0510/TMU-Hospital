@@ -416,6 +416,7 @@
   font-weight: 500;
   color: var(--text);
   width: 70%;
+  margin-bottom: 0px;
 }
 
 @media screen and (max-width: 1799px) {
@@ -431,7 +432,7 @@
 }
 
 .services-logo {
-  width: 52px;
+  width: 40px;
 }
 
 a {
@@ -539,6 +540,10 @@ a {
   position: absolute;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+  display: none !important;
 }
 
 /* our services cards carousel section css end */

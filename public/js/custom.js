@@ -24,14 +24,16 @@ jQuery(function ($) {
 		nav: true,
 		dots: true,
 		smartSpeed: 1000,
-		autoplay:false,
-		autoplayTimeout:9000,
+		autoplay:true,
+		autoplayTimeout:3000,
 		autoplayHoverPause:true,
-		navText: [
-			"<i class='icofont-simple-left'></i>",
-			"<i class='icofont-simple-right'></i>"
-		],
+		// navText: [
+		// 	"<i class='icofont-simple-left'></i>",
+		// 	"<i class='icofont-simple-right'></i>"
+		// ],
 	});
+	
+	
 
 	// Testimonial Slider JS
 	$('.testimonial-slider').owlCarousel({
@@ -232,7 +234,7 @@ jQuery(function ($) {
 	});	
 
 	// Switch Btn
-	$('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+	// $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
 }(jQuery));
 
 

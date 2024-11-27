@@ -1,451 +1,57 @@
 @extends('layout.app')
 
-@section('title', 'About-Us')
+@section('title', 'Contact-Us')
 
 @section('content')
-        <!-- Page Title -->
-        <div class="page-title-area page-title-four">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="page-title-item">
-                        <h2>About</h2>
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <i class="icofont-simple-right"></i>
-                            </li>
-                            <li>About</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Page Title -->
+    <!-- ------------------------------------------------------------------- -->
 
-        <!-- About -->
-        <div class="about-area pt-100 pb-70">
-            <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="about-item">
-                            <div class="about-left">
-                                <img src="img/home-one/4.jpg" alt="About">
-                            </div>
+    <!-- About -->
+    <div class="about-area pt-100 pb-70">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <!-- <div class="col-lg-6">
+                    <div class="about-item">
+                        <div class="about-left">
+                            <img src="assets/img/home-one/4.jpg" alt="About" >
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about-item about-right">
-                            <img src="img/home-one/5.png" alt="About">
-                            <h2>About Our Hospital</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-                            <ul>
-                                <li>
-                                    <i class="icofont-check-circled"></i>
-                                    Browse Our Website
-                                </li>
-                                <li>
-                                    <i class="icofont-check-circled"></i>
-                                    Choose Service
-                                </li>
-                                <li>
-                                    <i class="icofont-check-circled"></i>
-                                    Send Messege
-                                </li>
-                            </ul>
-                            <a href="about.html">Know More</a>
+                </div> -->
+                <div class="col-lg-12">
+                    <div class="hospital-item">
+                        <div class="section-title w-fit-content mx-auto">
+                            <h2 class="tmu-primary">About TMU Hospital</h2>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End About -->
 
-        <!-- Counter -->
-        <div class="counter-area counter-bg counter-area-four">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-patient-bed"></i>
-                            <h3>
-                                <span class="odometer" data-count="850">00</span>
-                            </h3>
-                            <p>Patients Beds</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-people"></i>
-                            <h3>
-                                <span class="odometer" data-count="2500">00</span>
-                                <span class="target">+</span>
-                            </h3>
-                            <p>Happy Patients</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-doctor-alt"></i>
-                            <h3>
-                                <span class="odometer" data-count="750">00</span>
-                            </h3>
-                            <p>Doctors  & Nurse</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-badge"></i>
-                            <h3>
-                                <span class="odometer" data-count="18">00</span>
-                            </h3>
-                            <p>Year Experience</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Counter -->
-        
-        <!-- Speciality -->
-        <section class="speciality-area pb-100">
-            <div class="container-fluid p-0">
-                <div class="row m-0">
-                    <div class="col-lg-7">
-                        <div class="speciality-left">
-                            <div class="section-title-two">
-                                <span>Speciality</span>
-                                <h2>Our Expertise</h2>
-                            </div>
-                            <div class="speciality-item">
-                                <div class="row m-0">
-                                    <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                        <div class="speciality-inner">
-                                            <i class="icofont-check-circled"></i>
-                                            <h3>Child Care</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="speciality-inner">
-                                            <i class="icofont-check-circled"></i>
-                                            <h3>More Stuff</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                        <div class="speciality-inner">
-                                            <i class="icofont-check-circled"></i>
-                                            <h3>Enough Lab</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="speciality-inner">
-                                            <i class="icofont-check-circled"></i>
-                                            <h3>24 Hour Doctor</h3>
-                                            <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 pr-0">
-                        <div class="speciality-item speciality-right">
-                            <img src="img/home-two/4.jpg" alt="Speciality">
-                            <div class="speciality-emergency">
-                                <div class="speciality-icon">
-                                    <i class="icofont-ui-call"></i>
-                                </div>
-                                <h3>Emergency Call</h3>
-                                <a href="tel:+07554332322">095688 65444</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Speciality -->
 
-        <!-- Services -->
-        <section class="services-area pb-70">
-            <div class="container">
-                <div class="section-title-two">
-                    <span>Services</span>
-                    <h2>Our Hospital Services</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-doctor"></i>
-                                        <h3>Expert Doctor</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-doctor"></i>
-                                        <h3>Expert Doctor</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="img-container">
+                                    <img src="{{asset('img/about/main.jpg')}}" alt="">
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-prescription"></i>
-                                        <h3>Diagnosis</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-prescription"></i>
-                                        <h3>Diagnosis</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-patient-file"></i>
-                                        <h3>Pathology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-patient-file"></i>
-                                        <h3>Pathology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".9s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-tooth"></i>
-                                        <h3>Dental Care</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-tooth"></i>
-                                        <h3>Dental Care</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-heart-beat-alt"></i>
-                                        <h3>Cardiology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-heart-beat-alt"></i>
-                                        <h3>Cardiology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-drug"></i>
-                                        <h3>Medicine</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-drug"></i>
-                                        <h3>Medicine</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-dna-alt-1"></i>
-                                        <h3>Neurology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-dna-alt-1"></i>
-                                        <h3>Neurology</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".9s">
-                        <div class="service-item">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-front">
-                                        <i class="icofont-ambulance-cross"></i>
-                                        <h3>Ambulance</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                    </div>
-                                    <div class="service-end">
-                                        <i class="icofont-ambulance-cross"></i>
-                                        <h3>Ambulance</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Services -->
-
-        <!-- Testimonials -->
-        <section class="testimonial-area ptb-100">
-            <div class="container">
-                <div class="testimonial-wrap">
-                    <h2>What our patient say</h2>
-                    
-                    <div class="testimonial-slider owl-theme owl-carousel">
-                        <div class="testimonial-item">
-                            <img src="img/home-three/7.png" alt="Testimonial">
-                            <h3>John Mic</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam id labore vitae cupiditate dolorum voluptates dicta delectus quibusdam excepturi, veniam deserunt magni ipsam mollitia optio, quas quis rem non reprehenderit.</p>
-                        </div>
-                        <div class="testimonial-item">
-                            <img src="img/home-three/8.png" alt="Testimonial">
-                            <h3>Adam Smith</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam id labore vitae cupiditate dolorum voluptates dicta delectus quibusdam excepturi, veniam deserunt magni ipsam mollitia optio, quas quis rem non reprehenderit.</p>
-                        </div>
-                        <div class="testimonial-item">
-                            <img src="img/home-three/9.png" alt="Testimonial">
-                            <h3>Jac Jacson</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam id labore vitae cupiditate dolorum voluptates dicta delectus quibusdam excepturi, veniam deserunt magni ipsam mollitia optio, quas quis rem non reprehenderit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Testimonials -->
-
-        <!-- Blog -->
-        <section class="blog-area pt-100 pb-70">
-            <div class="container">
-                <div class="section-title-two">
-                    <span>Blogs</span>
-                    <h2>Our latest blogs</h2>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="blog-item">
-                            <div class="blog-top">
-                                <a href="/Blog-Details">
-                                    <img src="img/home-one/11.jpg" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog-bottom">
-                                <h3>
-                                    <a href="/Blog-Details">In this hospital there are special surgeon.</a>
-                                </h3>
-                                <p>Lorem ipsum is  dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et....</p>
+                            <div class="col-lg-6 d-flex align-items-start flex-column justify-content-center">
+                                <p class="">
+                                    Teerthanker Mahaveer Medical College Hospital has widely expanded various clinical
+                                    departments with a provision of super specialty care with growing spectrum of
+                                    disease and
+                                    increasing demand of such facilities. The Hospital is the apex health institution
+                                    and
+                                    provides tertiary care to the entire population of Moradabad and adjoining districts
+                                    besides
+                                    imparting clinical training to the students.
+                                </p>
                                 <ul>
                                     <li>
-                                        <a href="/Blog-Details">
-                                            Read More
-                                            <i class="icofont-long-arrow-right"></i>
-                                        </a>
+                                        <i class="icofont-check-circled"></i>
+                                        900+ beds
                                     </li>
                                     <li>
-                                        <i class="icofont-calendar"></i>
-                                        Jan 03, 2024
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="blog-item">
-                            <div class="blog-top">
-                                <a href="/Blog-Details">
-                                    <img src="img/home-one/12.jpg" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog-bottom">
-                                <h3>
-                                    <a href="/Blog-Details">World AIDS Day, designated on 1 December.</a>
-                                </h3>
-                                <p>Lorem ipsum is  dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et....</p>
-                                <ul>
-                                    <li>
-                                        <a href="/Blog-Details">
-                                            Read More
-                                            <i class="icofont-long-arrow-right"></i>
-                                        </a>
+                                        <i class="icofont-check-circled"></i>
+                                        750 Doctors and Nurse
                                     </li>
                                     <li>
-                                        <i class="icofont-calendar"></i>
-                                        Jan 03, 2024
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6   col-lg-4 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="blog-item">
-                            <div class="blog-top">
-                                <a href="/Blog-Details">
-                                    <img src="img/home-one/13.jpg" alt="Blog">
-                                </a>
-                            </div>
-                            <div class="blog-bottom">
-                                <h3>
-                                    <a href="/Blog-Details">More than 80 clinical trials launch to test coronavirus.</a>
-                                </h3>
-                                <p>Lorem ipsum is  dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et....</p>
-                                <ul>
-                                    <li>
-                                        <a href="/Blog-Details">
-                                            Read More
-                                            <i class="icofont-long-arrow-right"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <i class="icofont-calendar"></i>
-                                        Jan 03, 2024
+                                        <i class="icofont-check-circled"></i>
+                                        2,500+ Happy Customer
                                     </li>
                                 </ul>
                             </div>
@@ -453,7 +59,373 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- End Blog -->
+        </div>
+    </div>
+    <!-- End About -->
 
-@endsection
+
+
+
+
+    <!-- Speciality -->
+    <section class="speciality-area pb-100">
+        <div class="container-fluid p-0">
+            <div class="row m-0">
+                <div class="col-lg-7">
+                    <div class="speciality-left">
+                        <div class="section-title-two">
+                            <div class="section-title">
+                                <h2 class="tmu-primary">Our Expertise</h2>
+                            </div>
+                        </div>
+                        <div class="speciality-item">
+                            <div class="row m-0">
+                                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="speciality-inner">
+                                        <i class="icofont-check-circled"></i>
+                                        <h3>Child Care</h3>
+                                        <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="speciality-inner">
+                                        <i class="icofont-check-circled"></i>
+                                        <h3>More Stuff</h3>
+                                        <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="speciality-inner">
+                                        <i class="icofont-check-circled"></i>
+                                        <h3>Enough Lab</h3>
+                                        <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="speciality-inner">
+                                        <i class="icofont-check-circled"></i>
+                                        <h3>24 Hour Doctor</h3>
+                                        <p>Lorem ipsum dolor sit amet, is consectetur adipiscing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 pr-0">
+                    <div class="speciality-item speciality-right">
+                        <img src="{{asset('img/home/expertise1.jpg')}}" alt="Speciality">
+                        <div class="speciality-emergency">
+                            <div class="speciality-icon">
+                                <i class="icofont-ui-call"></i>
+                            </div>
+                            <h3>Emergency Call</h3>
+                            <a href="tel:+07554332322">095688 65444</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Speciality -->
+
+    <section class="mb-md-5 pb-5 hospital-awards">
+        <div class="container-fluid m-0">
+            <div class="row">
+                <div class="section-title d-block d-md-none mt-4 mb-2">
+                    <h2 class="tmu-primary">Our Awards & Achievements</h2>
+                </div>
+                <div
+                    class="col-sm-3 text-center text-sm-start d-sm-flex justify-content-center align-items-center side-carousel ">
+                    <h2 class="d-none d-sm-block">
+                        <b style="font-weight: 700; color:#fff">Our Awards </b> <br />
+                        <b class="text-light">& </b>
+                        <br>
+                        <span class="tmu-primary-orange "> Achievements</span>
+                    </h2>
+                    <div class="align-self-end mb-5">
+                        <div class="custom-nav row d-none d-md-block">
+                            <button class="owl-prev col service-carousel-btn my-1 my-lg-0"><i
+                                    class="icofont-simple-left"></i></button>
+                            <button class="owl-next col service-carousel-btn my-1 my-lg-0"><i
+                                    class="icofont-simple-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-9 position-relative ps-0">
+                    <div class="side-overlay-carousel-design d-none d-sm-block"></div>
+                    <div class="owl-carousel owl-theme mx-0 my-1 ps-4 ps-md-0 py-md-5 my-md-5">
+
+                        <div class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="doctor-item">
+                                <div class="doctor-top">
+                                    <img src="{{asset('img/about/awards/7.jpg')}}" alt="Doctor">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="doctor-item">
+                                <div class="doctor-top">
+                                    <img src="https://www.tmu.ac.in/monaco/assets/image/award/4.webp" alt="Doctor">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="doctor-item">
+                                <div class="doctor-top">
+                                    <img src="https://www.tmu.ac.in/monaco/assets/image/award/6.webp" alt="Doctor">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="doctor-item">
+                                <div class="doctor-top">
+                                    <img src="https://www.tmu.ac.in/monaco/assets/image/award/3.webp" alt="Doctor">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay=".3s">
+                            <div class="doctor-item">
+                                <div class="doctor-top">
+                                    <img src="https://www.tmu.ac.in/monaco/assets/image/award/2.webp" alt="Doctor">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mb-5">
+        <div class="container snipcss-rSb7J ">
+            <div class="section-title-two">
+                <div class="section-title">
+                    <h2 class="tmu-primary">Patient Testimonials</h2>
+                </div>
+            </div>
+
+            <!-- Mobile View -->
+
+            <div class="container d-lg-none">
+                <div class="patient-testimonial owl-carousel ">
+                    <div class="item">
+                        <div class="video-wrap">
+                            <div class="video">
+                                <div class="video-thumb ratio2">
+                                    <img src="{{asset('img/about/testimonial/1.jpg')}}"
+                                        width="514" height="400" alt="liver failure">
+                                    <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
+                                        <img src="{{asset('img/about/play.png')}}"
+                                            alt="Coronary Artery Disease" width="48" height="48">
+                                    </a>
+                                </div>
+                                <div class="video-caption">
+                                    <div class="video-title">Liver Failure</div>
+                                    <p>Baby Bhavika</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="video-wrap">
+                            <div class="video">
+                                <div class="video-thumb ratio3">
+                                    <img src="{{asset('img/about/testimonial/3.jpg')}}"
+                                        width="514" height="400" alt="jaw cancer">
+                                    <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
+                                        <img src="{{asset('img/about/play.png')}}" width="48"
+                                            height="48" alt="Coronary Artery Disease">
+                                    </a>
+                                </div>
+                                <div class="video-caption">
+                                    <div class="video-title">Jaw Cancer</div>
+                                    <p>Dr. Abhilasha Agarwal </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="video-wrap">
+                            <div class="video">
+                                <div class="video-thumb ratio2">
+                                    <img src="{{asset('img/about/testimonial/1.jpg')}}"
+                                        width="514" height="400" alt="liver failure">
+                                    <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
+                                        <img src="{{asset('img/about/play.png')}}"
+                                            alt="Coronary Artery Disease" width="48" height="48">
+                                    </a>
+                                </div>
+                                <div class="video-caption">
+                                    <div class="video-title">Liver Failure</div>
+                                    <p>Baby Bhavika</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="video-wrap">
+                            <div class="video">
+                                <div class="video-thumb ratio3">
+                                    <img src="{{asset('img/about/testimonial/3.jpg')}}"
+                                        width="514" height="400" alt="jaw cancer">
+                                    <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
+                                        <img src="{{asset('img/about/play.png')}}" width="48"
+                                            height="48" alt="Coronary Artery Disease">
+                                    </a>
+                                </div>
+                                <div class="video-caption">
+                                    <div class="video-title">Jaw Cancer</div>
+                                    <p>Dr. Abhilasha Agarwal </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop View -->
+            <div class="story-video-container wow fadeInUp style-lwSRM d-none d-lg-flex" data-wow-delay="0.5s"
+                id="style-lwSRM">
+
+                <div class="video-col video-col-2">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio4">
+                                <img src="{{asset('img/about/testimonial/2.jpg')}}"
+                                    width="514" height="400" alt="pre-term babies">
+                                <a href="https://www.youtube.com/watch?v=Izcsx6gtGsI" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}" width="48"
+                                        height="48" alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Pre-term Babies</div>
+                                <p>Ms Sakshi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-col video-col-2">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/1.jpg')}}"
+                                    width="514" height="400" alt="liver failure">
+                                <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease" width="48" height="48">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Liver Failure</div>
+                                <p>Baby Bhavika</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio3">
+                                <img src="{{asset('img/about/testimonial/3.jpg')}}"
+                                    width="514" height="400" alt="jaw cancer">
+                                <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}" width="48"
+                                        height="48" alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Jaw Cancer</div>
+                                <p>Dr. Abhilasha Agarwal </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-col video-col-2">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio4">
+                                <img src="{{asset('img/about/testimonial/4.jpg')}}"
+                                    width="514" height="400" alt="mauritian patient treated for esophageal cancer">
+                                <a href="https://www.youtube.com/watch?v=arFxSlbt9V8" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease" width="48" height="48">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Mauritian Patient Treated For Esophageal Cancer</div>
+                                <p>Mr Fazl Hosany</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-col video-col-2">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio3">
+                                <img src="{{asset('img/about/testimonial/5.jpg')}}"
+                                    width="514" height="400" alt="neurosurgical treatment">
+                                <a href="https://www.youtube.com/watch?v=Q4KOz-Zmh7g" class="play-video">
+                                    <img width="48" height="48"
+                                        src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Neurosurgical Treatment</div>
+                                <p>Mr. Devender Jeet Singh</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/6.jpg')}}"
+                                    width="514" height="400" alt="bone marrow transplant">
+                                <a href="https://www.youtube.com/watch?v=zDxSL37jy0U" class="play-video">
+                                    <img width="48" height="48"
+                                        src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Bone Marrow Transplant</div>
+                                <p>Patient Father Mr Haider</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-col video-col-2">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio4">
+                                <img src="{{asset('img/about/testimonial/7.jpg')}}"
+                                    width="514" height="400" alt="mother saves daughter by donating a kidney">
+                                <a href="https://www.youtube.com/watch?v=M0jn57I0bwo" class="play-video">
+                                    <img width="48" height="48"
+                                        src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Mother Saves Daughter By Donating A Kidney</div>
+                                <p>Ms Paluk Sunger</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonials -->
+
+
+    <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    @endsection
