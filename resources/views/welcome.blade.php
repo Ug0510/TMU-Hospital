@@ -1,6 +1,8 @@
 <!-- resources/views/pages/home.blade.php -->
 @extends('layout.app')
 
+@section('title', 'TMH')
+
 @section('content')
 
 <!-- Main content for the home page goes here -->
