@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@yield('title', 'TMU Hospital')</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -96,18 +97,18 @@
                         <div class="header-top-right">
                             <ul>
                                 <li>
-                                    <a href="https://www.facebook.com/login/" target="_blank">
+                                    <a href="https://www.facebook.com/tmumbd/" target="_blank">
                                         <i class="icofont-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/i/flow/login" target="_blank">
+                                    <a href="https://x.com/Tmumbd" target="_blank">
                                         <i class="icofont-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.pinterest.com/" target="_blank">
-                                        <i class="icofont-pinterest"></i>
+                                    <a href="https://www.instagram.com/tmu.updates/" target="_blank">
+                                        <i class="icofont-instagram"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -139,10 +140,10 @@
                         <ul class="navbar-nav">
 
                             <li class="nav-item active">
-                                <a href="/" class="nav-link" data-path="/">Home</a>
+                                <a href="{{route('home')}}" class="nav-link" data-path="/">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/About-Us" class="nav-link" data-path="/About-Us">About</a>
+                                <a href="{{route('about.us')}}" class="nav-link" data-path="/About-Us">About</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link dropdown-toggle">Speciality</a>
@@ -227,18 +228,18 @@
                             </li>                            
                         </ul>
                         <div class="nav-srh">
-                            <div class="search-toggle">
+                            <div class="search-toggle closed">
                                 <button class="search-icon icon-search"><i class="icofont-search-1"></i></button>
                                 <button class="search-icon icon-close"><i class="icofont-close"></i></button>
                             </div>
                             <div class="search-area">
-                                <form>
-                                    <input type="text" class="src-input" id="search-terms"
-                                        placeholder="Search here..." />
-                                    <button type="submit" name="submit" value="Go" class="search-icon"><i
-                                            class="icofont-search-1"></i>
+                                <form id="search-form">
+                                    <input type="text" class="src-input" id="search-terms" placeholder="Search here..." autocomplete="off" />
+                                    <button type="submit" class="search-icon">
+                                        <i class="icofont-search-1"></i>
                                     </button>
                                 </form>
+                                <ul id="search-results" class="search-results"></ul>
                             </div>
                         </div>
                     </div>

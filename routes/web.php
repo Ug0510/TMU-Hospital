@@ -2,52 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\HospitalController;
+use App\Http\Controllers\SearchController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HospitalController::class, 'home'])->name('home');
+Route::get('/contact-us', [HospitalController::class, 'contact_us'])->name('contact.us');
+Route::get('/about-us', [HospitalController::class, 'about_us'])->name('about.us');
+Route::get('/blog', [HospitalController::class, 'blog'])->name('blog');
+Route::get('/blog-details', [HospitalController::class, 'blog_details'])->name('blog.details');
 
-route::get('/Contact-Us', function () {
-    return view('contact');
-});
+//Super Speciality Routes 
+Route::get('/cardiology', [DepartmentController::class, 'cardiology'])->name('cardiology');
 
-route::get('/contact-us', function () {
-    return view('contact');
-});
-
-route::get('/About-Us', function () {
-    return view('about');
-});
-
-Route::get('/about-us', function () {
-    return view('about');
-});
-
-route::get('/Blog', function () {
-    return view('blog');
-});
-
-route::get('/blog', function () {
-    return view('blog');
-});
-
-route::get('/Blog-Details', function () {
-    return view('blog_details');
-});
-
-route::get('/blog-details', function () {
-    return view('blog_details');
-});
-
-route::get('/test', function () {
-    return view('test');
-});
-
-route::get('/services/test', function () {
-    return view('test');
-});
-
-
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/{department}', [DepartmentController::class, 'show'])->name('department.show');
-
 
