@@ -17,7 +17,7 @@
                             <!-- <div class="slider-shape">
                                     <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
                                 </div> -->
-                            <h1>Welcome to <span class="tmu-primary-orange">TMUU Hospital</span></h1>
+                            <h1>Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
                             <p>
                                 At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
                                 state-of-the-art facilities and experienced medical professionals ensure you receive the
