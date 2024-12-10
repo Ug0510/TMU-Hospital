@@ -11,7 +11,7 @@ body {
     font-family: poppins;
     color: #4a6f8a;
     background-color: #fff;
-    font-size: 15px;
+    font-size: 16px;
 }
 .tmu-primary{
     color:#001055 !important;
@@ -1599,7 +1599,7 @@ footer {
 .speciality-item .speciality-inner {
     border-radius: 10px;
     box-shadow: 0 0 20px 0 rgba(221, 221, 221, 0.6509803922);
-    padding: 35px;
+    padding: 25px;
     margin-bottom: 30px;
 }
 .speciality-item .speciality-inner.department{
@@ -3459,7 +3459,7 @@ footer {
 .privacy-item ul li {
     list-style-type: none;
     display: block;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 .privacy-item ul li i {

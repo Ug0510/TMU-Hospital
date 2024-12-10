@@ -72,7 +72,7 @@
                             <a href="service-details.html">Massage Therapy</a>
                         </li>
                         <li>
-                            <a href="service-details.html">Ambluance Sevices</a>
+                            <a href="service-details.html">Ambulance Sevices</a>
                         </li>
                         <li>
                             <a href="service-details.html">Medicine</a>

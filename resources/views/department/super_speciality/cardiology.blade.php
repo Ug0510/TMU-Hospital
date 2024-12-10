@@ -1,77 +1,64 @@
 @extends('layout.app')
 
-@section('title', ($department->name ?? 'TMU Hospital') . ' Department, TMH')
+@section('title', 'Cardiology Department, TMu')
 
 @section('content')
-<!-- Page Title -->
-<div class="page-title-area page-title-three department" @if($department->bg_image) style="background-image: url('{{ $department->bg_image}}');" @endif >
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="page-title-item-two text-center w-100">
-                    <h2>{{ $department->name ?? 'Default Department' }} Department</h2>
-                </div>
-            </div>0
+
+<style>
+    
+    .row234{
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
+</style>
+<div class="container-fluid  my-0">
+    <div class="row ">
+        <div class="col-md-6 pt-0 pt-md-5 pt-lg-3 ">
+            <h1 class=" ps-md-5 ps-0 mt-5 mb-2 banner-main-heading"><span class="heading1234">Welcome to
+            Department of  </span> <span style="font-weight:700!important;color:#ff7900!important">Cardiology</span>
+            </h1>
+            <div class="d-none d-md-flex gap-3 mt-3 ps-sm-5 ps-0 pt-md-3 pt-lg-5 pt-0 justify-content-left">
+                <a href="{{ url('/contact-us') }}" class="hospital-btn-23456 tmu-btn  px-4 py-2">
+                    Contact Us
+                </a>
+                <a href="{{ url('/book-appointment') }}" class="hospital-btn-34567 tmu-btn btn-outline-primary px-4 py-2">
+                    Book Appointment
+                </a>
+            </div>
         </div>
-    </div>
-<!-- End Page Title -->
-<!-- <div class="container-fluid  my-0 px-2">
-    <div class="row ps-4">
-        <div class="col-md-6 pt-0 pt-md-4 ps-md-5 mb-4">
-            <h1 class=" mt-5 mb-5 banner-main-heading">Welcome to <br> <span
-                    style="font-weight:700!important;color:#ff7900!important">Department of </span> Cardiology</h1>
-
-
-
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="pe-lg-4 position-relative p-0">
+        <div class="col-12 col-md-6 pt-0 pt-md-5 pt-lg-1 row234 mb-2">
+            <div class="position-relative p-0 pt-3">
                 <div style="z-index: 2;">
-                    <img src="{{asset('/img/departments/cardiology/banner.png')}}" alt="" class="p-0 m-0">
+                    <img src="{{asset('/img/departments/cardiology/banner2.png')}}" alt="" class="p-0 m-0">
                 </div>
             </div>
         </div>
+        <div class="d-flex gap-3 mt-3 mb-3 pt-md-3 pt-lg-5 pt-0 mt-sm-5 d-block d-md-none justify-content-center">
+                <a href="{{ url('/contact-us') }}" class="hospital-btn-23456 tmu-btn  px-4 py-2">
+                    Contact Us
+                </a>
+                <a href="{{ url('/book-appointment') }}" class="hospital-btn-34567 btn-outline-primary px-4 py-2">
+                    Book Appointment
+                </a>
+        </div>
     </div>
-</div> -->
+</div>
+
 <!-- Doctor Details -->
 <div class="doctor-details-area pb-70">
     <div class="container">
         <div class="row justify-content-center">
-            <!-- <div class="col-lg-5">
-                    <div class="doctor-details-item doctor-details-left pb-3">
-                        <img src="{{ str_replace('assets/', '', $department->banner_image ?? 'default-banner.jpg') }}" alt="{{ $department->name ?? 'Default Department' }}">
-                        <div class="doctor-details-contact">
-                            <p class="pe-5">For more information or to schedule an appointment, please contact our {{ $department->name ?? 'Default Department' }}</p>
-                            <h3>Contact info</h3>
-                            <ul>
-                                <li>
-                                    <i class="icofont-ui-call"></i>
-                                    Call : <a href="tel:+919837775170">9837775170</a>
-                                </li>
-                                <li>
-                                    <i class="icofont-ui-message"></i>
-                                    <a href="mailto:tmuhospital@tmu.ac.in">tmuhospital@tmu.ac.in</a>
-                                </li>
-                                <li>
-                                    <i class="icofont-location-pin"></i>
-                                    TMU hospital, NH-09,<br> <span class="ms-3 ps-4"> Delhi Road Moradabad</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div> -->
             <div class="col-lg-12">
                 <div class="doctor-details-item">
                     <div class="doctor-details-right">
-                        <div class="doctor-details-biography">
-                            <h3>Welcome to TMU Hospital {{ $department->name ?? 'Default Department' }}</h3>
                             @php
                             $description = $department->description ?: 'No description available';
                             @endphp
                             @foreach(explode("\n", $description) as $paragraph)
-                            <p>{{ $paragraph }}</p>
+                            <p class="mb-2">{{ $paragraph }} </p>
                             @endforeach
 
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -85,24 +72,27 @@
     <div class="container">
         <div class="row m-0">
             <div class="col-lg-12">
-                <div class="px-5">
+                <div class="px-0 px-md-5">
                     <div class="section-title text-center">
-                        <h2 class="tmu-primary w-fit-content d-block mx-auto">Our Services</h2>
+                        <h2 class="tmu-primary w-fit-content d-block mx-auto mb-3">Our Services</h2>
                     </div>
                     <div class="speciality-item">
                         <div class="row m-0">
                             @if($department->services && count($department->services) > 0)
                             @foreach($department->services as $service)
-                            <div class="col-sm-6 col-md-4 wow fadeInUp pb-4" data-wow-delay=".3s">
-                                <div class="speciality-inner department">
+                            <div class="col-sm-6 col-md-6 col-lg-4 wow fadeInUp pb-4" data-wow-delay=".3s">
+                                <div class="speciality-inner department pb-2 mb-2">
                                     <i class="icofont-check-circled"></i>
                                     <h3>{{ $service->title ?? 'Default Service Title' }}</h3>
-                                    <div class="privacy-item department mt-4 mb-0">
-                                        <ul>
+                                    <div class="privacy-item department mt-4 mb-0 ">
+                                        <ul class="description-container" data-max-lines="10">
                                             @foreach(explode("\n", $service->description ?? 'No description available') as $item)
                                             <li><i class="icofont-simple-right text-break"></i>{!! $item !!}</li>
                                             @endforeach
                                         </ul>
+                                        <div class="text-center">
+                                            <button class="read-more-btn mt-3 d-none">Read More</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -117,6 +107,7 @@
         </div>
     </div>
 </section>
+
 <!-- End Services -->
 
 <!-- Message from our HOD -->
@@ -126,7 +117,7 @@
         <div class="col-lg-12">
             <div class="px-5">
                 <div class="section-title text-center">
-                    <h2 class="tmu-primary w-fit-content d-block mx-auto text-capitalize">Message from our HOD</h2>
+                    <h2 class="tmu-primary w-fit-content d-block mx-auto text-capitalize mt-5 mb-3">Message from our HOD</h2>
                 </div>
             </div>
         </div>
@@ -150,7 +141,7 @@
 
 <!-- Patient Education -->
 @if($department->edutips->isNotEmpty())
-<section class="symptoms-area pb-70">
+<section class="symptoms-area pb-70 mt-5">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-6">
@@ -160,7 +151,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="symptoms-content">
-                    <div class="section-title">
+                    <div class="section-title mb-3">
                         <h2>Patient Education</h2>
                     </div>
                     <p>At TMU Hospital, empowering patients with knowledge is a priority. We offer a
@@ -189,9 +180,9 @@
 <div class="appointment-area-three pb-5">
     <div class="container p-0">
         <div class="row m-0">
-            <div class="col-lg-6 d-flex align-items-center" style="height: 60vh;">
+            <div class="col-lg-6 d-flex align-items-center" >
                 <div class="symptoms-content">
-                    <div class="section-title">
+                    <div class="section-title mt-5>
                         <h2>Research and Innovation</h2>
                     </div>
                     <p>{{ !empty($department->research_description) ? $department->research_description : 'No research description available' }}</p>
@@ -213,5 +204,30 @@
     </div>
 </div>
 <!-- End Appointment -->
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const descriptionContainers = document.querySelectorAll(".description-container");
+
+    descriptionContainers.forEach(container => {
+        // Locate the button inside the parent container
+        const button = container.parentElement.querySelector(".read-more-btn");
+        const originalHeight = container.scrollHeight;
+
+        // Check if the content height exceeds the visible height
+        if (originalHeight > container.offsetHeight) {
+            button.classList.remove("d-none"); // Show the button
+
+            button.addEventListener("click", () => {
+                container.classList.toggle("expanded");
+                button.textContent = container.classList.contains("expanded") ? "Read Less" : "Read More";
+            });
+        }
+    });
+});
+
+</script>
 
 @endsection
