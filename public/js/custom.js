@@ -53,18 +53,76 @@ jQuery(function ($) {
 		],
 	});
 	
-    // Search Box JS
-    $('.search-toggle').addClass('closed');
-    $('.search-toggle .search-icon').on('click', function(e) {
-        if ($('.search-toggle').hasClass('closed')) {
-        $('.search-toggle').removeClass('closed').addClass('opened');
-        $('.search-toggle, .search-area').addClass('opened');
-        $('#search-terms').focus();
-        } else {
-        $('.search-toggle').removeClass('opened').addClass('closed');
-        $('.search-toggle, .search-area').removeClass('opened');
-        }
+// Search Box JS
+
+document.addEventListener('DOMContentLoaded', function() {
+	const searchTerms = document.getElementById('search-terms');
+	const searchResults = document.getElementById('search-results');
+	const searchToggle = document.querySelector('.search-toggle');
+	const searchArea = document.querySelector('.search-area');
+	const searchForm = document.getElementById('search-form');
+
+	// Toggle search area visibility
+	searchToggle.addEventListener('click', function() {
+		if (searchToggle.classList.contains('closed')) {
+			searchToggle.classList.remove('closed');
+			searchToggle.classList.add('opened');
+			searchArea.classList.add('opened');
+			searchTerms.focus();
+		} else {
+			searchToggle.classList.remove('opened');
+			searchToggle.classList.add('closed');
+			searchArea.classList.remove('opened');
+			searchResults.innerHTML = ''; // Clear results when closing
+		}
 	});
+
+	// Fetch search results on input change
+	searchTerms.addEventListener('input', function() {
+		const query = this.value.trim();
+	
+		if (query.length >= 3) { // Ensure query length is at least 3 characters
+			fetch(`/search?q=${encodeURIComponent(query)}`)
+				.then(response => response.json())
+				.then(data => {
+					console.log('Fetched data:', data);
+					searchResults.innerHTML = ''; // Clear previous results
+	
+					if (data.results.length > 0) {
+						data.results.slice(0, 5).forEach(result => {
+							const resultItem = document.createElement('li'); // Create a list item
+							const resultLink = document.createElement('a');  // Create a link inside the list item
+							resultLink.href = result.link || '#'; 
+							resultLink.textContent = result.name; 
+							resultItem.appendChild(resultLink); // Append link to the list item
+							searchResults.appendChild(resultItem); // Append list item directly to the search results
+						});
+					} else {
+						searchResults.innerHTML = '<li class="dropdown-item">No results found</li>';
+					}
+	
+					// Add scroll if there are more than 5 results
+					if (data.results.length > 5) {
+						searchResults.style.maxHeight = '200px'; // Adjust height as needed
+						searchResults.style.overflowY = 'scroll';
+					} else {
+						searchResults.style.maxHeight = ''; // Reset max height
+						searchResults.style.overflowY = ''; // Reset overflow
+					}
+				})
+				.catch(error => console.error('Error fetching search results:', error));
+		} else {
+			searchResults.innerHTML = ''; // Clear results if query is less than 3 characters
+		}
+	});
+	
+	// Prevent form submission from refreshing the page
+	searchForm.addEventListener('submit', function(event) {
+		event.preventDefault();
+	});
+	
+});
+
 
 	// Slick Slider JS
     $('.slider-for').slick({
