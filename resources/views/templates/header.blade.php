@@ -187,7 +187,7 @@
                                 <a href="#" class="nav-link dropdown-toggle">Super Speciality</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="/cardiology" class="nav-link">CARDIOLOGY</a>
+                                        <a href="{{route('cardiology')}}" class="nav-link">CARDIOLOGY</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="/nephrology" class="nav-link">NEPHROLOGY</a>
