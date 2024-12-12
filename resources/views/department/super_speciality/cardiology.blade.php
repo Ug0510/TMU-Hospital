@@ -29,7 +29,7 @@
         <div class="col-12 col-md-6 pt-0 pt-md-5 pt-lg-1 row234 mb-2">
             <div class="position-relative p-0 pt-3">
                 <div style="z-index: 2;">
-                    <img src="{{asset('/img/departments/cardiology/banner2.png')}}" alt="" class="p-0 m-0">
+                    <img src="{{asset('/img/departments/cardiology/banner.png')}}" alt="" class="p-0 m-0">
                 </div>
             </div>
         </div>
@@ -182,7 +182,7 @@
         <div class="row m-0">
             <div class="col-lg-6 d-flex align-items-center" >
                 <div class="symptoms-content">
-                    <div class="section-title mt-5>
+                    <div class="section-title mt-5">
                         <h2>Research and Innovation</h2>
                     </div>
                     <p>{{ !empty($department->research_description) ? $department->research_description : 'No research description available' }}</p>
