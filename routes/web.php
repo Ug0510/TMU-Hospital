@@ -21,6 +21,14 @@ Route::get('/plastic-surgery', [DepartmentController::class, 'plastic_Surgery'])
 Route::get('/gastroenterology', [DepartmentController::class, 'gastroenterology'])->name('gastroenterology');
 Route::get('/urology', [DepartmentController::class, 'urology'])->name('urology');
 
-Route::get('/search', [SearchController::class, 'search'])->name('search');
-Route::get('/{department}', [DepartmentController::class, 'show'])->name('department.show');
 
+//Super Speciality Routes 
+Route::get('/ent', [DepartmentController::class, 'ent'])->name('ent');
+Route::get('/opthamalogy', [DepartmentController::class, 'opthamalogy'])->name('opthamalogy');
+Route::get('/respiratory-medicine', [DepartmentController::class, 'respiratory_medicine'])->name('respiratory.medicine');
+Route::get('/psychiatrist', [DepartmentController::class, 'psychiatrist'])->name('psychiatrist');
+Route::get('/dermatology', [DepartmentController::class, 'dermatology'])->name('dermatology');
+Route::get('/radiology', [DepartmentController::class, 'radiology'])->name('radiology');
+
+//Search route
+Route::get('/search', [SearchController::class, 'search'])->name('search');
