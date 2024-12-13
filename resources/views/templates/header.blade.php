@@ -190,35 +190,35 @@
                                         <a href="{{route('cardiology')}}" class="nav-link">CARDIOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/nephrology" class="nav-link">NEPHROLOGY</a>
+                                        <a href="{{route('nephrology')}}" class="nav-link">NEPHROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/neurology" class="nav-link">NEUROLOGY</a>
+                                        <a href="{{route('neurology')}}" class="nav-link">NEUROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/neuro-surgery" class="nav-link">NEURO SURGERY</a>
+                                        <a href="{{route('neuro-surgery')}}" class="nav-link">NEURO SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/ctvs" class="nav-link">CTVS</a>
+                                        <a href="{{route('ctvs')}}" class="nav-link">CTVS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/plastic-surgery" class="nav-link">PLASTIC SURGERY</a>
+                                        <a href="{{route('plastic-surgery')}}" class="nav-link">PLASTIC SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/gastroenterology" class="nav-link">GASTROENTEROLOGY</a>
+                                        <a href="{{route('gastroenterology')}}" class="nav-link">GASTROENTEROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/urology" class="nav-link">UROLOGY</a>
+                                        <a href="{{route('urology')}}" class="nav-link">UROLOGY</a>
                                     </li>
 
 
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="/Blog" class="nav-link" data-path="/Blog">Blogs</a>
+                                <a href="{{route('blog')}}" class="nav-link" data-path="/Blog">Blogs</a>
                             </li>
                             <li class="nav-item">
-                                <a href="/Contact-Us" class="nav-link" data-path="/Contact-Us">Contact Us</a>
+                                <a href="{{route('contact.us')}}" class="nav-link" data-path="/Contact-Us">Contact Us</a>
                             </li>                            
                         </ul>
                         <div class="nav-srh">
