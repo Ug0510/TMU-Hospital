@@ -196,13 +196,13 @@
                                         <a href="{{route('neurology')}}" class="nav-link">NEUROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('neuro-surgery')}}" class="nav-link">NEURO SURGERY</a>
+                                        <a href="{{route('neuro.surgery')}}" class="nav-link">NEURO SURGERY</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{route('ctvs')}}" class="nav-link">CTVS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('plastic-surgery')}}" class="nav-link">PLASTIC SURGERY</a>
+                                        <a href="{{route('plastic.surgery')}}" class="nav-link">PLASTIC SURGERY</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{route('gastroenterology')}}" class="nav-link">GASTROENTEROLOGY</a>
