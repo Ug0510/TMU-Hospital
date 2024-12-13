@@ -210,12 +210,6 @@
                                     <li class="nav-item">
                                         <a href="/urology" class="nav-link">UROLOGY</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="/endocrinology" class="nav-link">ENDOCRINOLOGY</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="/pulmonology" class="nav-link">PULMONOLOGY</a>
-                                    </li>
 
 
                                 </ul>

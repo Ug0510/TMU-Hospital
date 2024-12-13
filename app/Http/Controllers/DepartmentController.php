@@ -51,5 +51,88 @@ class DepartmentController extends Controller
         // Return the view with department, services, hod, and edutips data
         return view('department.super_speciality.cardiology', compact('department', 'services', 'hod', 'edutips'));
     }
-}
 
+    public function nephrology()
+    {
+        $department = Department::where('name', 'nephrology')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.nephrology', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function neurology()
+    {
+        $department = Department::where('name', 'neurology')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.neurology', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function neuro_surgery()
+    {
+        $department = Department::where('name', 'neuro surgery')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.neuro_surgery', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function ctvs()
+    {
+        $department = Department::where('name', 'ctvs')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.ctvs', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function plastic_surgery()
+    {
+        $department = Department::where('name', 'plastic surgery')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.plastic_surgery', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function gastroenterology()
+    {
+        $department = Department::where('name', 'gastroenterology')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.gastroenterology', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+    public function urology()
+    {
+        $department = Department::where('name', 'urology')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.super_speciality.urology', compact('department', 'services', 'hod', 'edutips'));
+    }
+}
