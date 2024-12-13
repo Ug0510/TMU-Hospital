@@ -9,30 +9,6 @@ use App\Models\Edutip;
 
 class DepartmentController extends Controller
 {
-    public function show($departmentName)
-    {
-        // Fetch the department based on the name
-        $department = Department::where('url_name', $departmentName)->first();
-
-        // Check if the department exists
-        if (!$department) {
-            // Redirect to the home page if the department is not found
-            return redirect('/');
-        }
-
-        // Fetch related services for the department
-        $services = Service::where('department_id', $department->id)->get();
-
-        // Fetch related educational tips for the department
-        $edutips = Edutip::where('department_id', $department->id)->get();
-
-        // Fetch the HOD related to the department
-        $hod = $department->hod;
-
-        // Return the view with department, services, hod, and edutips data
-        return view('department.show', compact('department', 'services', 'hod', 'edutips'));
-    }
-
     public function cardiology()
     {
         // Fetch the department based on the name
@@ -134,5 +110,49 @@ class DepartmentController extends Controller
         $edutips = Edutip::where('department_id', $department->id)->get();
         $hod = $department->hod;
         return view('department.super_speciality.urology', compact('department', 'services', 'hod', 'edutips'));
+    }
+
+
+    public function ent()
+    {
+        return $this->loadDepartmentData('ent');
+    }
+
+    public function opthamalogy()
+    {
+        return $this->loadDepartmentData('opthamalogy');
+    }
+
+    public function respiratory_medicine()
+    {
+        return $this->loadDepartmentData('respiratory medicine');
+    }
+
+    public function psychiatrist()
+    {
+        return $this->loadDepartmentData('psychiatrist');
+    }
+
+    public function dermatology()
+    {
+        return $this->loadDepartmentData('dermatology');
+    }
+
+    public function radiology()
+    {
+        return $this->loadDepartmentData('radiology');
+    }
+
+    private function loadDepartmentData($departmentName)
+    {
+        $department = Department::where('name', $departmentName)->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+
+        return view("department.super_speciality.$departmentName", compact('department', 'services', 'hod', 'edutips'));
     }
 }
