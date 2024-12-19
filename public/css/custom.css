@@ -633,39 +633,59 @@ a {
     display: inline-block
   }
 
-  
+
 }
 
 
+/* General Styling for Read More Section */
 .description-container {
   display: -webkit-box;
-  -webkit-line-clamp: 9;
-  /* Limit to 12 lines */
+  /* Required for WebKit browsers */
   -webkit-box-orient: vertical;
+  /* Required for line clamping */
   overflow: hidden;
-  max-height: 18em;
-  /* Approximate height for 12 lines */
-  transition: max-height 0.3s ease;
+  text-overflow: ellipsis;
+  /* Adds "..." at the end of truncated text */
+  -webkit-line-clamp: 7;
+  /* Number of lines to display */
+  max-height: unset;
+  /* Ensure no conflict with max-height */
+  line-height: 1.5;
+  /* Set a consistent line height */
 }
 
 .description-container.expanded {
   -webkit-line-clamp: unset;
-  max-height: none;
+  /* Remove line clamping on expansion */
+  display: block;
+  /* Revert display property */
+  overflow: visible;
+  /* Allow full content to show */
 }
 
+/* Styling for Read More Button */
 .read-more-btn {
+  display: block;
+  margin: 10px auto 0;
   background-color: #001055;
   color: white;
   border: none;
-  padding: 0.2em 0.7em;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 8px 16px;
   font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .read-more-btn:hover {
   background-color: #0056b3;
 }
+
+.read-more-btn:focus {
+  outline: none;
+}
+
+
 
 .container p {
   padding: 10px;
@@ -674,7 +694,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .banner-img-dep4975{
+  .banner-img-dep4975 {
     max-height: 500px !important;
   }
 }
@@ -688,6 +708,7 @@ a {
   font-size: 14px;
   border: 2px solid var(--primary-color);
 }
+
 .hospital-btn-23456:hover {
   color: var(--primary-color);
   background-color: white;
@@ -698,19 +719,27 @@ a {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
-  color: #ff7900; /* Initial text color */
-  background-color: transparent; /* Transparent background */
-  border: 2px solid #ff7900; /* Outline color */
-  border-radius: 5px; /* Optional: Adjust border radius */
+  color: #ff7900;
+  /* Initial text color */
+  background-color: transparent;
+  /* Transparent background */
+  border: 2px solid #ff7900;
+  /* Outline color */
+  border-radius: 5px;
+  /* Optional: Adjust border radius */
   text-align: center;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
+  /* Remove underline */
   cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition effect */
+  transition: all 0.3s ease;
+  /* Smooth transition effect */
 }
 
 .hospital-btn-34567:hover {
-  color: #ffffff; /* Text color on hover */
-  background-color: #ff7900; /* Background color on hover */
-  border-color: #ff7900; /* Border color on hover */
+  color: #ffffff;
+  /* Text color on hover */
+  background-color: #ff7900;
+  /* Background color on hover */
+  border-color: #ff7900;
+  /* Border color on hover */
 }
-

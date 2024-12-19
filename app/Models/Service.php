@@ -23,9 +23,14 @@ class Service extends Model
         'description',
     ];
 
+    /**
+     * Define the relationship with the Department_id model.
+     * Assuming department_id is related to the department_id table.
+     */
     public function department()
     {
-        return $this->belongsTo(Department::class, 'department_id');
+        return $this->belongsTo(Department_id::class, 'department_id');
     }
 }
+
 

@@ -739,19 +739,19 @@
 
 
                 <map name="image-map">
-                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="/neuro-surgery" coords="75,35,275,135" shape="rect">
-                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="/ophthalomology" coords="1008,90,1192,190" shape="rect">
-                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="/ent" coords="1035,230,1232,410" shape="rect">
-                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="/cardiology" coords="992,480,1188,580" shape="rect">
-                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="/gastroenterology" coords="72,575,272,675" shape="rect">
-                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="/gastroenterology" coords="20,790,296,890" shape="rect">
-                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="/orthopaedics" coords="1070,760,1236,860" shape="rect">
-                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="/orthopaedics" coords="1064,1090,1216,1190" shape="rect">
-                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="/orthopaedics" coords="1056,1620,1236,1720" shape="rect">
-                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="/ephrology" coords="10,950,250,1050" shape="rect">
-                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="/urology" coords="870,1340,1276,1520" shape="rect">
-                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="/spine" coords="1060,900,1280,1070" shape="rect">
-                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="/orthopaedics" coords="110,1400,320,1500" shape="rect">
+                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="{{route('neurology')}}" coords="75,35,275,135" shape="rect">
+                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="{{route('ophthalmology')}}" coords="1008,90,1192,190" shape="rect">
+                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="{{route('ent')}}" coords="1035,230,1232,410" shape="rect">
+                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{route('cardiology')}}" coords="992,480,1188,580" shape="rect">
+                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{route('gastroenterology')}}" coords="72,575,272,675" shape="rect">
+                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{route('gastroenterology')}}" coords="20,790,296,890" shape="rect">
+                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{route('orthopaedics')}}" coords="1070,760,1236,860" shape="rect">
+                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{route('orthopaedics')}}" coords="1064,1090,1216,1190" shape="rect">
+                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{route('orthopaedics')}}" coords="1056,1620,1236,1720" shape="rect">
+                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{route('nephrology')}}" coords="10,950,250,1050" shape="rect">
+                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{route('urology')}}" coords="870,1340,1276,1520" shape="rect">
+                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{route('neuro.surgery')}}" coords="1060,900,1280,1070" shape="rect">
+                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{route('orthopaedics')}}" coords="110,1400,320,1500" shape="rect">
                     <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
 
@@ -792,7 +792,7 @@
                             </li>
 
                             <li class="earMPointer vocalcordMPointer">
-                                <a href="/ent"><span class="txt">Vocal Cord</span></a>
+                                <a href="/ent"><span class="txt">Throat</span></a>
                             </li>
 
                             <li class="liverMpointer">
@@ -831,7 +831,7 @@
 
                         <ul class="service-speciality-right body_list right">
                             <li class="brainMpointer">
-                                <a href="/neurology"><span class="txt">Brain</span></a>
+                                <a href="{{route('neurology')}}"><span class="txt">Brain</span></a>
                             </li>
 
                             <li class="noseMpointer">
@@ -1154,7 +1154,7 @@
 
     <!--Our Services End-->
 
-    <!-- Video -->
+    <!-- Video
     <div class="video-wrap">
         <div class="container-fluid p-0">
             <div class="tab-content" id="pills-tabContent">
@@ -1296,65 +1296,9 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- End Video -->
 
-    <!-- Doctors -->
-    <section class="doctors-area ptb-100">
-        <div class="container">
-            <div class="section-title">
-                <h2 class="tmu-primary">Meet Our Doctors</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="doctor-item">
-                        <div class="doctor-top">
-                            <img src="{{asset('img/home/doctor/1.jpg')}}" alt="Doctor">
-                            <a href="appointment.html">Get Appointment</a>
-                        </div>
-                        <div class="doctor-bottom">
-                            <h3>
-                                <a href="doctor-details.html">Dr. Babatunde</a>
-                            </h3>
-                            <span>Neurosurgeon</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="doctor-item">
-                        <div class="doctor-top">
-                            <img src="{{asset('img/home/doctor/2.jpg')}}" alt="Doctor">
-                            <a href="appointment.html">Get Appointment</a>
-                        </div>
-                        <div class="doctor-bottom">
-                            <h3>
-                                <a href="doctor-details.html">Dr. Pooja Soni</a>
-                            </h3>
-                            <span>Neurosurgeon</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6   col-lg-4 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="doctor-item">
-                        <div class="doctor-top">
-                            <img src="{{asset('img/home/doctor/3.jpg')}}" alt="Doctor">
-                            <a href="appointment.html">Get Appointment</a>
-                        </div>
-                        <div class="doctor-bottom">
-                            <h3>
-                                <a href="doctor-details.html">Dr. Sampark Jain</a>
-                            </h3>
-                            <span>Dental Surgeon</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="doctor-btn">
-                <a href="doctor.html">See All</a>
-            </div>
-        </div>
-    </section>
-    <!-- End Doctors -->
 
 
 

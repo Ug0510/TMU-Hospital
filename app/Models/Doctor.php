@@ -5,13 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Edutip extends Model
+class Doctor extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['department_id', 'title', ];
+    protected $table = 'doctors';
 
-    // Define the relationship with the Department model
+    protected $fillable = [
+        'department_id',
+        'name',
+        'designation',
+        'qualifications',
+        'profile path',
+    ];
+
     public function department_id()
     {
         return $this->belongsTo(Department_id::class);

@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'Neuro Surgery, TMU')
+@section('title', 'General Medicine, TMU')
 
 @section('content')
 

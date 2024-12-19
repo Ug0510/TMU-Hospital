@@ -20,8 +20,8 @@ class HOD extends Model
         'quote',
     ];
 
-    public function department()
+    public function department_id()
     {
-        return $this->belongsTo(Department::class);
+        return $this->belongsTo(Department_id::class);
     }
 }

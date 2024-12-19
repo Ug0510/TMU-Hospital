@@ -146,41 +146,44 @@
                                 <a href="{{route('about.us')}}" class="nav-link" data-path="/About-Us">About</a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{route('our.doctors')}}" class="nav-link" data-path="/our-doctors">Our Doctors</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="#" class="nav-link dropdown-toggle">Speciality</a>
                                 <ul class="dropdown-menu">
-
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">GENERAL MEDICINE</a>
+                                        <a href="{{ route('general.medicine') }}" class="nav-link">GENERAL MEDICINE</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">GENERAL SURGERY</a>
+                                        <a href="{{ route('general.surgery') }}" class="nav-link">GENERAL SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="/orthopaedics" class="nav-link">ORTHOPAEDICS</a>
+                                        <a href="{{ route('orthopaedics') }}" class="nav-link">ORTHOPAEDICS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
+                                        <a href="{{ route('ent') }}" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">PSYCHIATRICS</a>
+                                        <a href="{{ route('psychitary') }}" class="nav-link">PSYCHIATRY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">OPTHALMOLOGY (EYE)</a>
+                                        <a href="{{ route('ophthalmology') }}" class="nav-link">OPHTHALMOLOGY (EYE)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">DERMATOLOGY</a>
+                                        <a href="{{ route('dermatology') }}" class="nav-link">DERMATOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">OBSTETRICS & GYNAECOLOGY</a>
+                                        <a href="{{ route('obg') }}" class="nav-link">OBSTETRICS & GYNAECOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">PEDIACTRICS</a>
+                                        <a href="{{ route('pediatrics') }}" class="nav-link">PEDIATRICS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="appointment.html" class="nav-link">RESPIRATORY MEDICINE</a>
+                                        <a href="{{ route('respiratory.medicine') }}" class="nav-link">RESPIRATORY MEDICINE</a>
                                     </li>
-
-
+                                    <li class="nav-item">
+                                        <a href="{{ route('radiology') }}" class="nav-link">RADIOLOGY</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -219,7 +222,7 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('contact.us')}}" class="nav-link" data-path="/Contact-Us">Contact Us</a>
-                            </li>                            
+                            </li>                                                        
                         </ul>
                         <div class="nav-srh">
                             <div class="search-toggle closed">
