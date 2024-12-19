@@ -11,21 +11,9 @@ class Department extends Model
 
     protected $fillable = ['name', 'description', 'bg_image', 'research_description'];
 
-    // Define the relationship with the Service model
-    public function services()
+    // Define the relationship with the department_ID model
+    public function department_id()
     {
-        return $this->hasMany(Service::class, 'department_id');
-    }
-
-    // Define the relationship with the HOD model
-    public function hod()
-    {
-        return $this->hasOne(HOD::class);
-    }
-
-    // Define the relationship with the EduTip model
-    public function edutips()
-    {
-        return $this->hasMany(EduTip::class, 'department_id');
+        return $this->belongsTo(Department_id::class);
     }
 }

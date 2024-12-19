@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="pb-70">
+<footer style="padding-top:40px; padding-bottom:20px;">
 
 
 <div class="container">
@@ -80,29 +80,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-            <div class="footer-item">
-                <div class="footer-feedback">
-                    <h3>Feedback</h3>
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="your_message" rows="5"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <div class="text-left">
-                            <button type="submit" class="btn feedback-btn">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+        </div>     
     </div>
 </div>
 </footer>
