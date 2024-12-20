@@ -155,4 +155,9 @@ class DepartmentController extends Controller
 
         return view("department.super_speciality.$departmentName", compact('department', 'services', 'hod', 'edutips'));
     }
+
 }
+
+
+
+                    
