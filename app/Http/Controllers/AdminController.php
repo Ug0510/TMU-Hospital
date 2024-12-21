@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Department;
+use App\Models\DoctorDesignation;
 use App\Models\Doctor;
 use Illuminate\Http\Request;
 
@@ -29,10 +30,12 @@ class AdminController extends Controller
 
     public function doctors()
     {
-        $doctors = Doctor::with('department')->get();
+        $doctors = Doctor::with(['department', 'designation'])->get();
         $departments = Department::all();
-        return view('dashboard.doctors', compact('doctors', 'departments'));
+        $designations = DoctorDesignation::all();
+        return view('dashboard.doctors', compact('doctors', 'departments', 'designations'));
     }
+
 
     public function new_doctors(Request $request)
     {
@@ -40,8 +43,8 @@ class AdminController extends Controller
         $request->validate([
             'name',
             'qualifications',
-            'designation',
-            'department',
+            'designation_id', // Validate designation ID
+            'department_id', // Validate department ID
             'file', // Validate file type and size
             'status',
         ]);
@@ -53,22 +56,45 @@ class AdminController extends Controller
         }
 
         // Handle file upload with custom directory structure
+        // $file = $request->file('file');
+        // $departmentName = $department->department_name; // Use the department name
+        // $destinationPath = "img/doctors/{$departmentName}";
+        // $fileName = time() . '_' . $file->getClientOriginalName(); // Generate a unique file name
+
+        // // Store the file in the custom directory
+        // $file->storeAs($destinationPath, $fileName, 'public');
+
+        // // Construct the file path
+        // $profilePath = "{$destinationPath}/{$fileName}";
+
         $file = $request->file('file');
-        $departmentName = $department->name; // Use the department name
-        $destinationPath = "img/doctors/{$departmentName}";
-        $fileName = time() . '_' . $file->getClientOriginalName(); // Generate a unique file name
+        $departmentName = $department->department_name; // Use the department name
+        
+        // Define the destination path relative to the public folder
+        $destinationPath = public_path("img/doctors/{$departmentName}");
+        
+        // Generate a unique file name
+        $fileName = time() . '_' . $file->getClientOriginalName();
+        
+        // Ensure the directory exists
+        if (!file_exists($destinationPath)) {
+            mkdir($destinationPath, 0755, true); // Create directory with proper permissions
+        }
+        
+        // Move the file to the public directory
+        $file->move($destinationPath, $fileName);
+        
+        // Construct the file path relative to the public directory
+        $profilePath = "img/doctors/{$departmentName}/{$fileName}";
+        
+        // Save the relative path to the database
 
-        // Store the file in the custom directory
-        $file->storeAs($destinationPath, $fileName, 'public');
-
-        // Construct the file path
-        $profilePath = "{$destinationPath}/{$fileName}";
 
         // Create a new doctor entry
         $doctor = new Doctor();
         $doctor->name = $request->name;
         $doctor->qualifications = $request->qualifications;
-        $doctor->designation = $request->designation;
+        $doctor->designation_id = $request->designation_id;
         $doctor->department_id = $department->department_id; // Store department ID
         $doctor->profile_path = $profilePath; // Store file path
         $doctor->status = $request->status;

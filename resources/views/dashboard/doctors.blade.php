@@ -46,8 +46,12 @@
                                             <label for="">Qualifications</label>
                                             <input type="text" name="qualifications" placeholder=" Enter Qualifications" class="form-control mb-2" id="">
 
-                                            <label for="">Designation</label>
-                                            <input type="text" name="designation" placeholder=" Enter Designation" class="form-control mb-2" id="">
+                                            <label for="designation_id">Designation</label>
+                                            <select id="designation_id" name="designation_id"  class="form-control mb-2"required>
+                                                @foreach ($designations as $designation)
+                                                <option value="{{ $designation->designation_id }}">{{ $designation->designation }}</option>
+                                                @endforeach
+                                            </select>
 
 
                                             <label for="department">Department</label>
@@ -111,9 +115,9 @@
 
                                     <tr>
                                         <td>{{ $doctor->name}}</td>
-                                        <td>{{ $doctor->designation }}</td>
+                                        <td>{{ $doctor->designation->designation ?? 'No Designation' }}</td>
                                         <td>{{ $doctor->qualifications}}</td>
-                                        <td>{{ $doctor->department->name ?? 'N/A' }}</td>
+                                        <td>{{ $doctor->department->department_name ?? 'N/A' }}</td>
                                         <td>
                                             <div class="badge {{ $doctor->status == 'Y' ? 'badge-success' : 'badge-danger' }}">
                                                 {{ $doctor->status == 'Y' ? 'Active' : 'Inactive' }}
