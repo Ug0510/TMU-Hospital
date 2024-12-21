@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('departments', function (Blueprint $table) {
-            $table->id(); // Primary key
+            $table->department_id(); // Primary key
             $table->string('url_name'); // Department name
             $table->string('name'); // Department name
             $table->string('bg_image'); // path to the banner image

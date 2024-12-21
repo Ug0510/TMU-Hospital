@@ -69,7 +69,7 @@ class AdminController extends Controller
         $doctor->name = $request->name;
         $doctor->qualifications = $request->qualifications;
         $doctor->designation = $request->designation;
-        $doctor->department_id = $department->id; // Store department ID
+        $doctor->department_id = $department->department_id; // Store department ID
         $doctor->profile_path = $profilePath; // Store file path
         $doctor->status = $request->status;
         $doctor->save();
