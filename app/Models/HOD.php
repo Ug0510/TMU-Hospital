@@ -14,10 +14,9 @@ class HOD extends Model
     protected $fillable = [
         'department_id',
         'name',
-        'title',
+        'designation',
         'qualifications',
-        'image',
-        'quote',
+        'profile_path',
     ];
 
     public function department_id()

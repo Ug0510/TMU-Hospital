@@ -17,10 +17,11 @@ class Doctor extends Model
         'designation',
         'qualifications',
         'profile path',
+        'status',
     ];
 
-    public function department_id()
+    public function department()
     {
-        return $this->belongsTo(Department_id::class);
+        return $this->belongsTo(Department::class,'department_id');
     }
 }

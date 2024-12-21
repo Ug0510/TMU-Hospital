@@ -204,4 +204,9 @@ class DepartmentController extends Controller
         $hod = HOD::where('department_id', $department_id->department_id)->first();
         return view('department.dignosis.radiology', compact('department_id', 'department', 'services', 'edutips', 'hod'));
     }
+
 }
+
+
+
+                    
