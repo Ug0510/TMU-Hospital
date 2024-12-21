@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', [HospitalController::class, 'home'])->name('home');
 Route::get('/contact-us', [HospitalController::class, 'contact_us'])->name('contact.us');
@@ -39,3 +40,12 @@ Route::get('/pediatrics', [DepartmentController::class, 'pediatrics'])->name('pe
 
 //Search route
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+
+// Admin Routes
+
+Route::get('/admin', [AdminController::class, 'index'])->name('home');
+Route::get('/admin-departments', [AdminController::class, 'departments'])->name('departments');
+Route::POST('/add-new-department', [AdminController::class, 'new_departments'])->name('new.departments');
+
+Route::get('/admin-department-doctors', [AdminController::class, 'doctors'])->name('doctors');
+Route::POST('/add-new-doctors', [AdminController::class, 'new_doctors'])->name('new.doctors');
