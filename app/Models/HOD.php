@@ -14,14 +14,13 @@ class HOD extends Model
     protected $fillable = [
         'department_id',
         'name',
-        'title',
+        'designation',
         'qualifications',
-        'image',
-        'quote',
+        'profile_path',
     ];
 
-    public function department_id()
+    public function department()
     {
-        return $this->belongsTo(Department_id::class);
+        return $this->belongsTo(Department::class);
     }
 }

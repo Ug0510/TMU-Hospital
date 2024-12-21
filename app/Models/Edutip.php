@@ -12,8 +12,8 @@ class Edutip extends Model
     protected $fillable = ['department_id', 'title', ];
 
     // Define the relationship with the Department model
-    public function department_id()
+    public function department()
     {
-        return $this->belongsTo(Department_id::class);
+        return $this->belongsTo(Department::class);
     }
 }

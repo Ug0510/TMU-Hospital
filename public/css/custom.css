@@ -743,3 +743,16 @@ a {
   border-color: #ff7900;
   /* Border color on hover */
 }
+
+
+.hospital-item .hospital-left-one-4256:before {
+  position: absolute;
+  content: "";
+  right: 52px;
+  bottom: -5px;
+  width: 80%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 15px;
+  background-color: #FF7900;
+}

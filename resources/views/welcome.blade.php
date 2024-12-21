@@ -282,48 +282,39 @@
             <div class="row m-0 align-items-center">
                 <div class="col-lg-6 p-0">
                     <div class="hospital-item">
-                        <!-- <a class="hospital-play-btn popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto">
-                                <i class="icofont-ui-play"></i>
-                            </a> -->
+                        
                         <div class="row m-0">
-                            <div class="col-lg-6 p-0 w-50">
-                                <div class="hospital-left-one">
-                                    <img src="{{asset('img/home/about2.jpg')}}" alt="About">
-                                </div>
-                            </div>
-                            <div class="col-6 p-0 m-auto">
-                                <div class="hospital-left-two">
-                                    <img src="{{asset('img/home/about3.jpg')}}" alt="About">
+                            <div class="p-0">
+                                <div class="hospital-left-one-4256" style="padding-left: 10%;">
+                                    <img src="{{asset('img/home/about/2.jpg')}}" alt="About" style="width: 90%;border-radius:15px;">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="hospital-item hospital-right">
+                    <div class="hospital-item hospital-right" style="margin-left: 30px;">
                         <h2 class="tmu-primary">About Our Hospital</h2>
-                        <p>
-                            Teerthanker Mahaveer Medical College Hospital has widely expanded various clinical
-                            departments with a provision of super specialty care with growing spectrum of disease and
-                            increasing demand of such facilities. The Hospital is the apex health institution and
-                            provides tertiary care to the entire population of Moradabad and adjoining districts besides
-                            imparting clinical training to the students.
+                        <p class="pb-0 mb-3 text-justify">
+                            TMU hospital is a hub of safety and advanced care, offering an extensive range of super-specialty services. It provides advanced and comprehensive primary, secondary, and tertiary care, serving as a vital resource for the community.
+                            <br/><b>It provides-</b>
+                            24/7 medical facility with an 800+ bed super-specialty hospital on campus Hands-on practical experience opportunities for medical, nursing, and allied health students Comprehensive critical and emergency healthcare services.
                         </p>
-                        <ul>
-                            <li>
+                        <!-- <ul class="mb-3">
+                            <li class="pb-0 mb-2">
                                 <i class="icofont-check-circled"></i>
                                 Explore Our Departments
                             </li>
-                            <li>
+                            <li class="pb-0 mb-2">
                                 <i class="icofont-check-circled"></i>
                                 Meet Our Specialists
                             </li>
-                            <li>
+                            <li class="pb-0 mb-2">
                                 <i class="icofont-check-circled"></i>
                                 Contact Us for More Information
                             </li>
-                        </ul>
-                        <a class="hospital-btn px-4 py-3" href="about.html">Know More</a>
+                        </ul> -->
+                        <a class="hospital-btn px-3 py-2" href="about.html">Know More</a>
                     </div>
                 </div>
             </div>
