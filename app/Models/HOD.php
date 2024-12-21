@@ -19,8 +19,9 @@ class HOD extends Model
         'profile_path',
     ];
 
+    // Define the relationship with the Department model
     public function department()
     {
-        return $this->belongsTo(Department::class);
+        return $this->hasOne(Department::class, 'hod_id'); // This links back to departments
     }
 }
