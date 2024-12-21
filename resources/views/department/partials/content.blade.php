@@ -25,7 +25,7 @@
     <div class="row ">
         <div class="col-md-6 pt-0 pt-md-5 pt-lg-3 ">
             <h1 class=" ps-md-5 ps-0 mt-5 mb-2 banner-main-heading"><span class="heading1234">Welcome to
-                    Department of </span> <span style="font-weight:700!important;color:#ff7900!important">{{$department->name}}</span>
+                    Department of </span> <span style="font-weight:700!important;color:#ff7900!important">{{$department_id->department_name}}</span>
             </h1>
             <div class="d-none d-md-flex gap-3 mt-3 ps-sm-5 ps-0 pt-md-3 pt-lg-5 pt-0 justify-content-left">
                 <a href="{{route('contact.us')}}" class="hospital-btn-23456 tmu-btn  px-4 py-2">
@@ -153,9 +153,9 @@
 <section class="symptoms-area pb-70 mt-5">
     <div class="container">
         <div class="row align-items-center justify-content-center">
-            <div class="col-md-6">
-                <div class="symptoms-img">
-                    <img src="{{ asset('img/departments/patient_education.jpg') }}" alt="Symptoms">
+            <div class="col-md-6 ">
+                <div class="symptoms-img h-50">
+                    <img src="{{ asset('img/departments/patient_education.jpg') }}" alt="Symptoms" style="max-height:60vh;">
                 </div>
             </div>
             <div class="col-md-6">

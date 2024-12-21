@@ -166,18 +166,18 @@ class DepartmentController extends Controller
         return view('department.multi_speciality.respiratory_medicine', compact('department_id', 'department', 'services', 'edutips', 'hod'));
     }
 
-    public function psychitary()
-    {
-        $department_id = Department_id::where('department_name', 'psychitary')->first();
-        if (!$department_id) {
-            return redirect('/');
-        }
-        $department = Department::where('department_id', $department_id->department_id)->first();
-        $services = Service::where('department_id', $department_id->department_id)->get();
-        $edutips = Edutip::where('department_id', $department_id->department_id)->get();
-        $hod = HOD::where('department_id', $department_id->department_id)->first();
-        return view('department.multi_speciality.psychitary', compact('department_id', 'department', 'services', 'edutips', 'hod'));
-    }
+    // public function psychitary()
+    // {
+    //     $department_id = Department_id::where('department_name', 'psychitary')->first();
+    //     if (!$department_id) {
+    //         return redirect('/');
+    //     }
+    //     $department = Department::where('department_id', $department_id->department_id)->first();
+    //     $services = Service::where('department_id', $department_id->department_id)->get();
+    //     $edutips = Edutip::where('department_id', $department_id->department_id)->get();
+    //     $hod = HOD::where('department_id', $department_id->department_id)->first();
+    //     return view('department.multi_speciality.psychitary', compact('department_id', 'department', 'services', 'edutips', 'hod'));
+    // }
 
     public function dermatology()
     {
@@ -205,6 +205,45 @@ class DepartmentController extends Controller
         return view('department.dignosis.radiology', compact('department_id', 'department', 'services', 'edutips', 'hod'));
     }
 
+    public function general_medicine()
+    {
+        $department_id = Department_id::where('department_name', 'general medicine')->first();
+        if (!$department_id) {
+            return redirect('/');
+        }
+        $department = Department::where('department_id', $department_id->department_id)->first();
+        $services = Service::where('department_id', $department_id->department_id)->get();
+        $edutips = Edutip::where('department_id', $department_id->department_id)->get();
+        $hod = HOD::where('department_id', $department_id->department_id)->first();
+        return view('department.multi_speciality.general_medicine', compact('department_id', 'department', 'services', 'edutips', 'hod'));
+    }
+    
+    public function general_surgery()
+    {
+        $department_id = Department_id::where('department_name', 'general surgery')->first();
+        if (!$department_id) {
+            return redirect('/');
+        }
+        $department = Department::where('department_id', $department_id->department_id)->first();
+        $services = Service::where('department_id', $department_id->department_id)->get();
+        $edutips = Edutip::where('department_id', $department_id->department_id)->get();
+        $hod = HOD::where('department_id', $department_id->department_id)->first();
+        return view('department.multi_speciality.general_surgery', compact('department_id', 'department', 'services', 'edutips', 'hod'));
+    }
+
+
+    public function psychitary()
+    {
+        
+        $department = Department::where('department_name', 'psychitary')->first();
+        if (!$department) {
+            return redirect('/');
+        }
+        $services = Service::where('department_id', $department->id)->get();
+        $edutips = Edutip::where('department_id', $department->id)->get();
+        $hod = $department->hod;
+        return view('department.multi_speciality.psychitary', compact('department', 'services', 'hod', 'edutips'));
+    }
 }
 
 
