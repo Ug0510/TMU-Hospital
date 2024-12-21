@@ -54,7 +54,7 @@
                                             <select name="department_id" class="form-control mb-2" id="department" required>
                                                 <option value="" disabled selected>Select Department</option>
                                                 @foreach ($departments as $department)
-                                                <option value="{{ $department->department_id }}">{{ $department->name }}</option>
+                                                <option value="{{ $department->department_id }}">{{ $department->department_name }}</option>
                                                 @endforeach
                                             </select>
 
