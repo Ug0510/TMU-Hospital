@@ -40,4 +40,5 @@ Route::get('/admin', [AdminController::class, 'index'])->name('home');
 Route::get('/admin-departments', [AdminController::class, 'departments'])->name('departments');
 Route::POST('/add-new-department', [AdminController::class, 'new_departments'])->name('new.departments');
 
-Route::get('/admin-department-hod', [AdminController::class, 'hod'])->name('hod');
+Route::get('/admin-department-doctors', [AdminController::class, 'doctors'])->name('doctors');
+Route::POST('/add-new-doctors', [AdminController::class, 'new_doctors'])->name('new.doctors');
