@@ -19,8 +19,8 @@ class HOD extends Model
         'profile_path',
     ];
 
-    public function department_id()
+    public function department()
     {
-        return $this->belongsTo(Department_id::class);
+        return $this->belongsTo(Department::class);
     }
 }
