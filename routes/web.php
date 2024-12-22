@@ -50,3 +50,4 @@ Route::POST('/add-new-department', [AdminController::class, 'new_departments'])-
 Route::get('/admin-department-doctors', [AdminController::class, 'doctors'])->name('doctors');
 Route::POST('/add-new-doctors', [AdminController::class, 'new_doctors'])->name('new.doctors');
 Route::POST('/update-doctors/{doctor_id}', [AdminController::class, 'update_doctors'])->name('update.doctors');
+Route::get('/delete-doctors/{doctor_id}', [AdminController::class, 'delete_doctors'])->name('delete.doctors');

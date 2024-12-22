@@ -36,6 +36,13 @@ class AdminController extends Controller
         return view('dashboard.doctors', compact('doctors', 'departments', 'designations'));
     }
 
+    public function delete_doctors($doctor_id)
+    {
+        $doctor = Doctor::find($doctor_id);
+        $doctor->delete();
+        return redirect()->back()->with('success', 'Doctor details deleted successfully!');
+    }
+
 
     public function new_doctors(Request $request)
     {
