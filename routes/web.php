@@ -5,6 +5,7 @@ use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', [HospitalController::class, 'home'])->name('home');
 Route::get('/contact-us', [HospitalController::class, 'contact_us'])->name('contact.us');
@@ -42,6 +43,9 @@ Route::get('/pediatrics', [DepartmentController::class, 'pediatrics'])->name('pe
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 // Admin Routes
+
+
+Route::get('/admin/login', [AuthController::class, 'login'])->name('login');
 
 Route::get('/admin', [AdminController::class, 'index'])->name('home');
 Route::get('/admin-departments', [AdminController::class, 'departments'])->name('departments');
