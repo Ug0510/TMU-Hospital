@@ -69,24 +69,24 @@ class AdminController extends Controller
 
         $file = $request->file('file');
         $departmentName = $department->department_name; // Use the department name
-        
+
         // Define the destination path relative to the public folder
         $destinationPath = public_path("img/doctors/{$departmentName}");
-        
+
         // Generate a unique file name
         $fileName = time() . '_' . $file->getClientOriginalName();
-        
+
         // Ensure the directory exists
         if (!file_exists($destinationPath)) {
             mkdir($destinationPath, 0755, true); // Create directory with proper permissions
         }
-        
+
         // Move the file to the public directory
         $file->move($destinationPath, $fileName);
-        
+
         // Construct the file path relative to the public directory
         $profilePath = "img/doctors/{$departmentName}/{$fileName}";
-        
+
         // Save the relative path to the database
 
 
@@ -101,5 +101,71 @@ class AdminController extends Controller
         $doctor->save();
 
         return redirect()->back()->with('success', 'Doctor added successfully!');
+    }
+
+    public function update_doctors(Request $request, $doctor_id)
+    {
+        // Validate the incoming request
+        $request->validate([
+            'doctor_id',
+            'name',
+            'qualifications',
+            'designation_id', // Validate designation ID
+            'department_id', // Validate department ID
+            'file', // Validate file type and size
+            'status',
+        ]);
+
+
+        // Fetch the doctor record
+        $doctor = Doctor::find($doctor_id);
+        if (!$doctor) {
+            return redirect()->back()->withErrors(['doctor_id' => 'Doctor not found.']);
+        }
+
+        // Fetch the department using the name provided
+        $department = Department::find($request->department_id);
+        if (!$department) {
+            return redirect()->back()->withErrors(['department_id' => 'Invalid department selected.']);
+        }
+
+        // Handle file upload with custom directory structure
+
+        $file = $request->file('file');
+        if ($file) {
+            // Handle new file upload
+            $departmentName = Department::find($request->department_id)->department_name;
+            $destinationPath = public_path("img/doctors/{$departmentName}");
+            $fileName = time() . '_' . $file->getClientOriginalName();
+
+            // Ensure the directory exists
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            // Move the file
+            $file->move($destinationPath, $fileName);
+
+            // Construct the new file path
+            $profilePath = "img/doctors/{$departmentName}/{$fileName}";
+        } else {
+            // Use the existing file path if no new file is uploaded
+            $profilePath = $doctor->profile_path;
+        }
+
+        // Save the relative path to the database
+
+
+        // Create a new doctor entry
+        $doctor = Doctor::find($request->input('doctor_id'));
+        $doctor->name = $request->name;
+        $doctor->qualifications = $request->qualifications;
+        $doctor->designation_id = $request->designation_id;
+        $doctor->department_id = $department->department_id; // Store department ID
+        $doctor->profile_path = $profilePath; // Store file path
+        $doctor->status = $request->status;
+        $doctor->save();
+
+        return redirect()->back()->with('success', 'Doctor Updated successfully!');
     }
 }
