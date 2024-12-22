@@ -110,6 +110,7 @@
                                         <th>Department</th>
                                         <th>Status</th>
                                         <th>Update</th>
+                                        <th>Delete</th>
 
                                     </tr>
                                 </thead>
@@ -217,6 +218,9 @@
                                                 </div>
                                             </div>
 
+                                        </td>
+                                        <td>
+                                            <a href="{{route('delete.doctors',['doctor_id' => $doctor->doctor_id])}}" class="btn btn-danger" >Delete</a>
                                         </td>
                                     </tr>
 
