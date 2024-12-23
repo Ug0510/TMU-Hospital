@@ -22,9 +22,9 @@ class SearchController extends Controller
         }
 
         // Search in the 'departments' table
-        $departmentIdsFromDepartments = Department::where('name', 'LIKE', "%{$query}%")
+        $departmentIdsFromDepartments = Department::where('department_name', 'LIKE', "%{$query}%")
                                 ->orWhere('description', 'LIKE', "%{$query}%")
-                                ->pluck('id');
+                                ->pluck('department_id');
 
         // Search in the 'services' table
         $departmentIdsFromServices = Service::where('title', 'LIKE', "%{$query}%")
@@ -42,13 +42,17 @@ class SearchController extends Controller
                             ->unique();
 
         // Fetch the departments based on the combined IDs
-        $departments = Department::whereIn('id', $allDepartmentIds)->get();
+        $departments = Department::whereIn('department_id', $allDepartmentIds)->get();
 
         // Map the departments to the expected JSON structure
         $results = $departments->map(function($department) {
+            $route = $department->department_type === 'super' 
+                ? route('speciality', ['slug' => $department->slug]) 
+                : route('department', ['slug' => $department->slug]);
+        
             return [
-                'name' => $department->name,
-                'link' => url('/'.urlencode($department->url_name)) // Assuming you have a route for department details
+                'name' => $department->department_name,
+                'link' => $route
             ];
         });
 

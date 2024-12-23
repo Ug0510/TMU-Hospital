@@ -736,13 +736,13 @@
                     <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{ route('speciality', ['slug' => 'cardiology']) }}" coords="992,480,1188,580" shape="rect">
                     <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="72,575,272,675" shape="rect">
                     <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="20,790,296,890" shape="rect">
-                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1070,760,1236,860" shape="rect">
-                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1064,1090,1216,1190" shape="rect">
-                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1056,1620,1236,1720" shape="rect">
+                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1070,760,1236,860" shape="rect">
+                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1064,1090,1216,1190" shape="rect">
+                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1056,1620,1236,1720" shape="rect">
                     <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{ route('speciality', ['slug' => 'nephrology']) }}" coords="10,950,250,1050" shape="rect">
                     <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{ route('speciality', ['slug' => 'urology']) }}" coords="870,1340,1276,1520" shape="rect">
                     <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" coords="1060,900,1280,1070" shape="rect">
-                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="110,1400,320,1500" shape="rect">
+                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="110,1400,320,1500" shape="rect">
                     <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
 
@@ -791,7 +791,7 @@
                             </li>
 
                             <li class="handMpointer">
-                                <a href="/orthopaedics"><span class="txt">Arm</span></a>
+                                <a href="/orthopedic"><span class="txt">Arm</span></a>
                             </li>
 
                             <li class="kidneysMpointer">
@@ -807,7 +807,7 @@
                             </li>
 
                             <li class="thighMpointer">
-                                <a href="/orthopaedics"><span class="txt">Thigh</span></a>
+                                <a href="/orthopedic"><span class="txt">Thigh</span></a>
                             </li>
 
                             <li class="thighMpointer vericoseMpointer">
@@ -815,7 +815,7 @@
                             </li>
 
                             <li class="footMpointer">
-                                <a href="/orthopaedics"><span class="txt">Foot</span></a>
+                                <a href="/orthopedic"><span class="txt">Foot</span></a>
                             </li>
                         </ul>
 
@@ -838,7 +838,7 @@
                             </li>
 
                             <li class="elbowMpointer">
-                                <a href="/orthopaedics"><span class="txt">Elbow</span></a>
+                                <a href="/orthopedic"><span class="txt">Elbow</span></a>
                             </li>
 
                             <li class="spineMpointer">
@@ -846,15 +846,15 @@
                             </li>
 
                             <li class="hipMpointer">
-                                <a href="/orthopaedics"><span class="txt">Hip</span></a>
+                                <a href="/orthopedic"><span class="txt">Hip</span></a>
                             </li>
 
                             <li class="kneeMpointer">
-                                <a href="/orthopaedics"><span class="txt">Knee</span></a>
+                                <a href="/orthopedic"><span class="txt">Knee</span></a>
                             </li>
 
                             <li class="ankleMpointer">
-                                <a href="/orthopaedics"><span class="txt">Ankle</span></a>
+                                <a href="/orthopedic"><span class="txt">Ankle</span></a>
                             </li>
                         </ul>
                     </div>

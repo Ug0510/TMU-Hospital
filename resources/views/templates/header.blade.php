@@ -158,7 +158,7 @@
                                         <a href="{{ route('department', ['slug' => 'general-surgery']) }}" class="nav-link">GENERAL SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('department', ['slug' => 'orthopaedics']) }}" class="nav-link">ORTHOPAEDICS</a>
+                                        <a href="{{ route('department', ['slug' => 'orthopedic']) }}" class="nav-link">ORTHOPAEDICS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ route('department', ['slug' => 'ent']) }}" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
