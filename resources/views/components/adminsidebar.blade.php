@@ -15,7 +15,7 @@
         <div class="collapse" id="ui-basic">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{route('departments')}}">All Department</a></li>
-            <li class="nav-item"> <a class="nav-link" href="">HOD</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{route('hods')}}">HOD</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Services</a></li>
             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Edutips</a></li>
           </ul>

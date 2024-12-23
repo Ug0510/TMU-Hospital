@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Department;
 use App\Models\DoctorDesignation;
 use App\Models\Doctor;
+use App\Models\HOD;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -174,5 +175,117 @@ class AdminController extends Controller
         $doctor->save();
 
         return redirect()->back()->with('success', 'Doctor Updated successfully!');
+    }
+
+    public function hods()
+    {
+        $hods = HOD::with(['doctor'])->get();
+        $doctors = Doctor::all();
+        $departments = Department::all();
+        return view('dashboard.hods', compact('hods', 'doctors', 'departments'));
+    }
+
+    public function delete_hods($hod_id)
+    {
+        $hod = HOD::find($hod_id);
+        $hod->delete();
+        return redirect()->back()->with('success', 'HOD details deleted successfully!');
+    }
+
+
+    public function new_hods(Request $request)
+    {
+        // Validate the incoming request
+        $request->validate([
+            'doctor_id', // Ensure doctor exists
+            'department_id', // Ensure department exists
+            'image_url', // Validate image file
+            'quote', // Limit quote length
+            'title', // Validate title
+            'status', // Ensure status is Y or N
+            'priority', // Validate priority as positive integer
+        ]);
+
+        // Handle file upload
+        $imageUrl = null;
+
+        if ($request->hasFile('image_url')) {
+            $file = $request->file('image_url');
+            $destinationPath = public_path('img/hods');
+            $fileName = time() . '_' . preg_replace('/[^a-zA-Z0-9._-]/', '', $file->getClientOriginalName());
+
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $fileName);
+            $imageUrl = "img/hods/{$fileName}";
+        }
+
+        // Create a new HOD entry
+        HOD::create([
+            'doctor_id' => $request->doctor_id,
+            'department_id' => $request->department_id, // Add department_id
+            'image_url' => $imageUrl,
+            'quote' => $request->quote,
+            'title' => $request->title,
+            'status' => $request->status,
+            'priority' => $request->priority,
+        ]);
+
+        // Redirect back with success message
+        return redirect()->back()->with('success', 'HOD added successfully!');
+    }
+
+    public function getDoctorsByDepartment($department_id)
+    {
+        $doctors = Doctor::where('department_id', $department_id)->get(['doctor_id', 'name']);
+        return response()->json($doctors); // Directly return the array
+    }
+
+    public function update_hods(Request $request, $hod_id)
+    {
+        // Validate the incoming request
+        $request->validate([
+            'doctor_id' => 'required|exists:doctors,doctor_id',
+            'image_url' => 'nullable|file|mimes:jpeg,png,jpg|max:2048',
+            'quote' => 'required|string',
+            'title' => 'required|string|max:100',
+            'status' => 'required|in:Y,N',
+            'priority' => 'required|integer|min:0',
+        ]);
+
+        // Fetch the HOD record
+        $hod = HOD::find($hod_id);
+        if (!$hod) {
+            return redirect()->back()->withErrors(['hod_id' => 'HOD not found.']);
+        }
+
+        // Handle file upload
+        $file = $request->file('image_url');
+        if ($file) {
+            $destinationPath = public_path('img/hods');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+
+            if (!file_exists($destinationPath)) {
+                mkdir($destinationPath, 0755, true);
+            }
+
+            $file->move($destinationPath, $fileName);
+            $imageUrl = "img/hods/{$fileName}";
+        } else {
+            $imageUrl = $hod->image_url; // Use existing image URL
+        }
+
+        // Update the HOD record
+        $hod->doctor_id = $request->doctor_id;
+        $hod->image_url = $imageUrl;
+        $hod->quote = $request->quote;
+        $hod->title = $request->title;
+        $hod->status = $request->status;
+        $hod->priority = $request->priority;
+        $hod->save();
+
+        return redirect()->back()->with('success', 'HOD updated successfully!');
     }
 }
