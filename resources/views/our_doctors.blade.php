@@ -32,7 +32,7 @@
 
                                 <!-- Designation -->
                                 <p class="card-text text-center mt-0 pt-0 pb-0 mb-0" style="color: #333; font-size: 14px;">
-                                    {{ $doctor->designation }}
+                                    {{ $doctor->designation->designation }}
                                 </p>
 
                                 <!-- Qualifications -->

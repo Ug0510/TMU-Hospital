@@ -285,7 +285,7 @@
                         
                         <div class="row m-0">
                             <div class="p-0">
-                                <div class="hospital-left-one-4256" style="padding-left: 10%;">
+                                <div style="padding-left: 10%;">
                                     <img src="{{asset('img/home/about/2.jpg')}}" alt="About" style="width: 90%;border-radius:15px;">
                                 </div>
                             </div>
@@ -730,19 +730,19 @@
 
 
                 <map name="image-map">
-                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="{{route('neurology')}}" coords="75,35,275,135" shape="rect">
-                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="{{route('ophthalmology')}}" coords="1008,90,1192,190" shape="rect">
-                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="{{route('ent')}}" coords="1035,230,1232,410" shape="rect">
-                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{route('cardiology')}}" coords="992,480,1188,580" shape="rect">
-                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{route('gastroenterology')}}" coords="72,575,272,675" shape="rect">
-                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{route('gastroenterology')}}" coords="20,790,296,890" shape="rect">
-                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{route('orthopaedics')}}" coords="1070,760,1236,860" shape="rect">
-                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{route('orthopaedics')}}" coords="1064,1090,1216,1190" shape="rect">
-                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{route('orthopaedics')}}" coords="1056,1620,1236,1720" shape="rect">
-                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{route('nephrology')}}" coords="10,950,250,1050" shape="rect">
-                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{route('urology')}}" coords="870,1340,1276,1520" shape="rect">
-                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{route('neuro.surgery')}}" coords="1060,900,1280,1070" shape="rect">
-                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{route('orthopaedics')}}" coords="110,1400,320,1500" shape="rect">
+                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="{{ route('speciality', ['slug' => 'neurology']) }}" coords="75,35,275,135" shape="rect">
+                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="{{ route('department', ['slug' => 'ophthalmology']) }}" coords="1008,90,1192,190" shape="rect">
+                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="{{ route('department', ['slug' => 'ent']) }}" coords="1035,230,1232,410" shape="rect">
+                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{ route('speciality', ['slug' => 'cardiology']) }}" coords="992,480,1188,580" shape="rect">
+                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="72,575,272,675" shape="rect">
+                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="20,790,296,890" shape="rect">
+                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1070,760,1236,860" shape="rect">
+                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1064,1090,1216,1190" shape="rect">
+                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="1056,1620,1236,1720" shape="rect">
+                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{ route('speciality', ['slug' => 'nephrology']) }}" coords="10,950,250,1050" shape="rect">
+                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{ route('speciality', ['slug' => 'urology']) }}" coords="870,1340,1276,1520" shape="rect">
+                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" coords="1060,900,1280,1070" shape="rect">
+                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopaedics']) }}" coords="110,1400,320,1500" shape="rect">
                     <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
 
@@ -822,7 +822,7 @@
 
                         <ul class="service-speciality-right body_list right">
                             <li class="brainMpointer">
-                                <a href="{{route('neurology')}}"><span class="txt">Brain</span></a>
+                                <a href="/neurology"><span class="txt">Brain</span></a>
                             </li>
 
                             <li class="noseMpointer">

@@ -22,6 +22,6 @@ class HOD extends Model
     // Define the relationship with the Department model
     public function department()
     {
-        return $this->hasOne(Department::class, 'hod_id'); // This links back to departments
+        return $this->belongsTo(Department::class, 'department_id'); // This links back to departments
     }
 }

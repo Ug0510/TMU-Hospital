@@ -14,36 +14,40 @@ Route::get('/blog-details', [HospitalController::class, 'blog_details'])->name('
 Route::get('/book-appointment', [HospitalController::class, 'book_appointment'])->name('book.appointment');
 Route::get('/our-doctors', [HospitalController::class, 'our_doctors'])->name('our.doctors');
 
-//Super Speciality Routes 
-Route::get('/cardiology', [DepartmentController::class, 'cardiology'])->name('cardiology');
-Route::get('/nephrology', [DepartmentController::class, 'nephrology'])->name('nephrology');
-Route::get('/neurology', [DepartmentController::class, 'neurology'])->name('neurology');
-Route::get('/neuro-surgery', [DepartmentController::class, 'neuro_surgery'])->name('neuro.surgery');
-Route::get('/ctvs', [DepartmentController::class, 'ctvs'])->name('ctvs');
-Route::get('/plastic-surgery', [DepartmentController::class, 'plastic_Surgery'])->name('plastic.surgery');
-Route::get('/gastroenterology', [DepartmentController::class, 'gastroenterology'])->name('gastroenterology');
-Route::get('/urology', [DepartmentController::class, 'urology'])->name('urology');
+//Super Speciality Routes
+Route::get('/speciality/{slug}', [DepartmentController::class, 'speciality'])->name('speciality');
+
+// Route::get('/cardiology', [DepartmentController::class, 'cardiology'])->name('cardiology');
+// Route::get('/nephrology', [DepartmentController::class, 'nephrology'])->name('nephrology');
+// Route::get('/neurology', [DepartmentController::class, 'neurology'])->name('neurology');
+// Route::get('/neuro-surgery', [DepartmentController::class, 'neuro_surgery'])->name('neuro.surgery');
+// Route::get('/ctvs', [DepartmentController::class, 'ctvs'])->name('ctvs');
+// Route::get('/plastic-surgery', [DepartmentController::class, 'plastic_Surgery'])->name('plastic.surgery');
+// Route::get('/gastroenterology', [DepartmentController::class, 'gastroenterology'])->name('gastroenterology');
+// Route::get('/urology', [DepartmentController::class, 'urology'])->name('urology');
 
 
-//Multi Speciality Routes 
-Route::get('/ent', [DepartmentController::class, 'ent'])->name('ent');
-Route::get('/ophthalmology', [DepartmentController::class, 'ophthalmology'])->name('ophthalmology');
-Route::get('/respiratory-medicine', [DepartmentController::class, 'respiratory_medicine'])->name('respiratory.medicine');
-Route::get('/psychitary', [DepartmentController::class, 'psychitary'])->name('psychitary');
-Route::get('/dermatology', [DepartmentController::class, 'dermatology'])->name('dermatology');
-Route::get('/radiology', [DepartmentController::class, 'radiology'])->name('radiology');
-Route::get('/general-medicine', [DepartmentController::class, 'general_medicine'])->name('general.medicine');
-Route::get('/general-surgery', [DepartmentController::class, 'general_surgery'])->name('general.surgery');
-Route::get('/orthopaedics', [DepartmentController::class, 'orthopaedics'])->name('orthopaedics');
-Route::get('/obg', [DepartmentController::class, 'obg'])->name('obg');
-Route::get('/pediatrics', [DepartmentController::class, 'pediatrics'])->name('pediatrics');
+//Multi Speciality Routes
+Route::get('/department/{slug}', [DepartmentController::class, 'department'])->name('department');
+
+// Route::get('/ent', [DepartmentController::class, 'ent'])->name('ent');
+// Route::get('/ophthalmology', [DepartmentController::class, 'ophthalmology'])->name('ophthalmology');
+// Route::get('/respiratory-medicine', [DepartmentController::class, 'respiratory_medicine'])->name('respiratory.medicine');
+// Route::get('/psychitary', [DepartmentController::class, 'psychitary'])->name('psychitary');
+// Route::get('/dermatology', [DepartmentController::class, 'dermatology'])->name('dermatology');
+// Route::get('/radiology', [DepartmentController::class, 'radiology'])->name('radiology');
+// Route::get('/general-medicine', [DepartmentController::class, 'general_medicine'])->name('general.medicine');
+// Route::get('/general-surgery', [DepartmentController::class, 'general_surgery'])->name('general.surgery');
+// Route::get('/orthopaedics', [DepartmentController::class, 'orthopaedics'])->name('orthopaedics');
+// Route::get('/obg', [DepartmentController::class, 'obg'])->name('obg');
+// Route::get('/pediatrics', [DepartmentController::class, 'pediatrics'])->name('pediatrics');
 
 //Search route
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 // Admin Routes
 
-Route::get('/admin', [AdminController::class, 'index'])->name('home');
+Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
 Route::get('/admin-departments', [AdminController::class, 'departments'])->name('departments');
 Route::POST('/add-new-department', [AdminController::class, 'new_departments'])->name('new.departments');
 

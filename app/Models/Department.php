@@ -45,7 +45,7 @@ class Department extends Model
     // Define the relationship with the HOD model
     public function hod()
     {
-        return $this->belongsTo(HOD::class, 'hod_id'); // Linking hod_id with hods table
+        return $this->hasOne(HOD::class, 'department_id'); 
     }
 
     // Define the relationship with the EduTip model

@@ -158,6 +158,45 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
     imageMapResize();
+
+    
+        document.addEventListener("DOMContentLoaded", () => {
+            const descriptionContainers = document.querySelectorAll(".description-container");
+    
+            descriptionContainers.forEach(container => {
+                const button = container.parentElement.querySelector(".read-more-btn");
+    
+                // Check if the content is overflowing
+                const isOverflowing = container.scrollHeight > container.offsetHeight;
+    
+                if (isOverflowing) {
+                    button.style.display = "block"; // Show the button if content overflows
+                } else {
+                    button.style.display = "none"; // Hide the button if content fits
+                }
+    
+                button.addEventListener("click", () => {
+                    container.classList.toggle("expanded");
+                    button.textContent = container.classList.contains("expanded") ? "Read Less" : "Read More";
+                });
+            });
+    
+            // Handle window resize
+            window.addEventListener("resize", () => {
+                descriptionContainers.forEach(container => {
+                    const button = container.parentElement.querySelector(".read-more-btn");
+                    const isOverflowing = container.scrollHeight > container.offsetHeight;
+    
+                    if (isOverflowing) {
+                        button.style.display = "block";
+                    } else {
+                        button.style.display = "none";
+                        container.classList.remove("expanded");
+                        button.textContent = "Read More";
+                    }
+                });
+            });
+        });
 </script>
 
 <!-- Js for our services section  -->

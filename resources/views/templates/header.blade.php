@@ -152,37 +152,37 @@
                                 <a href="#" class="nav-link dropdown-toggle">Speciality</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{ route('general.medicine') }}" class="nav-link">GENERAL MEDICINE</a>
+                                        <a href="{{ route('department', ['slug' => 'general-medicine']) }}" class="nav-link">GENERAL MEDICINE</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('general.surgery') }}" class="nav-link">GENERAL SURGERY</a>
+                                        <a href="{{ route('department', ['slug' => 'general-surgery']) }}" class="nav-link">GENERAL SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('orthopaedics') }}" class="nav-link">ORTHOPAEDICS</a>
+                                        <a href="{{ route('department', ['slug' => 'orthopaedics']) }}" class="nav-link">ORTHOPAEDICS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('ent') }}" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
+                                        <a href="{{ route('department', ['slug' => 'ent']) }}" class="nav-link">ENT (EYE, NOSE & THROAT)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('psychitary') }}" class="nav-link">PSYCHIATRY</a>
+                                        <a href="{{ route('department', ['slug' => 'psychiatry']) }}" class="nav-link">PSYCHIATRY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('ophthalmology') }}" class="nav-link">OPHTHALMOLOGY (EYE)</a>
+                                        <a href="{{ route('department', ['slug' => 'ophthalmology']) }}" class="nav-link">OPHTHALMOLOGY (EYE)</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('dermatology') }}" class="nav-link">DERMATOLOGY</a>
+                                        <a href="{{ route('department', ['slug' => 'dermatology']) }}" class="nav-link">DERMATOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('obg') }}" class="nav-link">OBSTETRICS & GYNAECOLOGY</a>
+                                        <a href="{{ route('department', ['slug' => 'obg']) }}" class="nav-link">OBSTETRICS & GYNAECOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('pediatrics') }}" class="nav-link">PEDIATRICS</a>
+                                        <a href="{{ route('department', ['slug' => 'pediatrics']) }}" class="nav-link">PEDIATRICS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('respiratory.medicine') }}" class="nav-link">RESPIRATORY MEDICINE</a>
+                                        <a href="{{ route('department', ['slug' => 'respiratory-medicine']) }}" class="nav-link">RESPIRATORY MEDICINE</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('radiology') }}" class="nav-link">RADIOLOGY</a>
+                                        <a href="{{ route('department', ['slug' => 'radiology']) }}" class="nav-link">RADIOLOGY</a>
                                     </li>
                                 </ul>
                             </li>
@@ -190,28 +190,28 @@
                                 <a href="#" class="nav-link dropdown-toggle">Super Speciality</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{route('cardiology')}}" class="nav-link">CARDIOLOGY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'cardiology']) }}" class="nav-link">CARDIOLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('nephrology')}}" class="nav-link">NEPHROLOGY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'nephrology']) }}" class="nav-link">NEPHROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('neurology')}}" class="nav-link">NEUROLOGY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'neurology']) }}" class="nav-link">NEUROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('neuro.surgery')}}" class="nav-link">NEURO SURGERY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" class="nav-link">NEURO SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('ctvs')}}" class="nav-link">CTVS</a>
+                                        <a href="{{ route('speciality', ['slug' => 'ctvs']) }}" class="nav-link">CTVS</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('plastic.surgery')}}" class="nav-link">PLASTIC SURGERY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}" class="nav-link">PLASTIC SURGERY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('gastroenterology')}}" class="nav-link">GASTROENTEROLOGY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" class="nav-link">GASTROENTEROLOGY</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{route('urology')}}" class="nav-link">UROLOGY</a>
+                                        <a href="{{ route('speciality', ['slug' => 'urology']) }}" class="nav-link">UROLOGY</a>
                                     </li>
 
 

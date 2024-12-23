@@ -7,7 +7,7 @@ use App\Models\Department;
 use App\Models\Service;
 use App\Models\Edutip;
 use App\Models\Doctor;
-
+use App\Models\DoctorDesignation;
 
 class HospitalController extends Controller
 {
@@ -59,8 +59,20 @@ class HospitalController extends Controller
             $query->where('department_id', $request->department_id);
         }
 
-        // Fetch doctors, sorted alphabetically by name
-        $doctors = $query->orderBy('name')->get();
+        // Fetch doctors
+        $doctors = $query->get();
+
+        // Sort doctors by designation priority and then by name
+        $doctors = $doctors->sort(function ($a, $b) {
+            $priorityA = $a->designation->priority ?? 0;
+            $priorityB = $b->designation->priority ?? 0;
+
+            if ($priorityA === $priorityB) {
+                return strcmp($a->name, $b->name);
+            }
+
+            return $priorityB - $priorityA;
+        });
 
         return view('our_doctors', compact('doctors', 'departments'));
     }
