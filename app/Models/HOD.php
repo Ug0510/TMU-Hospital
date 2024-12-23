@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class HOD extends Model
 {
     use HasFactory;
@@ -12,16 +14,23 @@ class HOD extends Model
     protected $table = 'hods';
 
     protected $fillable = [
+        'doctor_id',
         'department_id',
-        'name',
-        'designation',
-        'qualifications',
-        'profile_path',
+        'image_url',
+        'quote',
+        'title',
+        'status',
+        'priority',
     ];
 
     // Define the relationship with the Department model
     public function department()
     {
-        return $this->hasOne(Department::class, 'hod_id'); // This links back to departments
+        return $this->belongsTo(Department::class, 'department_id', 'department_id');
+    }
+    // doctors table relation
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class, 'doctor_id', 'doctor_id');
     }
 }
