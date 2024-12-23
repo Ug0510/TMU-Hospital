@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
+
 class HOD extends Model
 {
     use HasFactory;
@@ -12,11 +14,13 @@ class HOD extends Model
     protected $table = 'hods';
 
     protected $fillable = [
+        'doctor_id',
         'department_id',
-        'name',
-        'designation',
-        'qualifications',
-        'profile_path',
+        'image_url',
+        'quote',
+        'title',
+        'status',
+        'priority',
     ];
 
     // Define the relationship with the Department model

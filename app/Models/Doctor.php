@@ -20,6 +20,7 @@ class Doctor extends Model
 
     // Fillable columns for mass assignment
     protected $fillable = [
+        'doctor_id',
         'department_id',
         'designation_id',
         'name',

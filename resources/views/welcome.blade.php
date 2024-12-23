@@ -1,4 +1,4 @@
-<!-- resources/views/pages/home.blade.php -->
+<!-- resources/views/pages/dashboard.blade.php -->
 @extends('layout.app')
 
 @section('title', 'TMH')
@@ -7,7 +7,7 @@
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
-    <!-- Home Slider -->
+    <!-- Dashboard Slider -->
     <div class="home-slider owl-theme owl-carousel">
         <div class="slider-item one slider-item-img">
             <div class="d-table">
@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-    <!-- End Home Slider -->
+    <!-- End Dashboard Slider -->
 
     <!-- Counter -->
     <div class="counter-area">
@@ -277,7 +277,7 @@
     <section class="hospital-area pb-70">
         <div class="container-fluid p-0">
             <div class="hospital-shape">
-                <img src="{{asset('img/home/about1.png')}}" alt="Shape">
+                <img src="{{asset('img/dashboard/about1.png')}}" alt="Shape">
             </div>
             <div class="row m-0 align-items-center">
                 <div class="col-lg-6 p-0">
@@ -725,7 +725,7 @@
                 <h2 class="tmu-primary">Various Specialities</h2>
             </div>
             <div class="row justify-content-center flex w-100" style=" align-items: center; justify-content: center; position: relative;">
-                <img src="{{asset('img/home/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
+                <img src="{{asset('img/dashboard/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
 
 
 
@@ -771,7 +771,7 @@
 
 
                     <div class="structure male">
-                        <img src="{{asset('img/home/human_body_manmap.png')}}" alt="Man Body">
+                        <img src="{{asset('img/dashboard/human_body_manmap.png')}}" alt="Man Body">
 
                         <ul class="service-speciality-left body_list left">
                             <li class="eyeMpointer">
@@ -948,7 +948,7 @@
             </div>
             <div class="col-lg-5 pr-0">
                 <div class="speciality-item speciality-right speciality-right-two d-flex justify-content-center">
-                    <img src="{{asset('img/home/expertise1.jpg')}}" alt="Speciality">
+                    <img src="{{asset('img/dashboard/expertise1.jpg')}}" alt="Speciality">
                     <div class="speciality-emergency">
                         <div class="speciality-icon">
                             <i class="icofont-ui-call"></i>
@@ -1002,7 +1002,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/home/doctor.png')}}"
+                                            <img src="{{asset('img/dashboard/doctor.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1015,7 +1015,7 @@
                                     <img width="514" height="400" src="https://www.medanta.org/storage/services/January2024//bqt2PdNyaR2Ut6TdYi8hHNXjtz5cib-metaMTIucG5n-.png" alt="homecare">
                                 </div>
                                 <div class="card-desk">
-                                    <div class="heading-md font600 card-title-1 hidden-xs mb-2">Home Nursing</div>
+                                    <div class="heading-md font600 card-title-1 hidden-xs mb-2">Dashboard Nursing</div>
                                     <div class="card-text truncate">
                                         <p>We continue to give you the best care possible with all the comforts, even after you reach home</p>
                                     </div>
@@ -1026,7 +1026,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/home/homecare.png')}}"
+                                            <img src="{{asset('img/dashboard/dashboardcare.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1052,7 +1052,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/home/strecher.png')}}"
+                                            <img src="{{asset('img/dashboard/strecher.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1078,7 +1078,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/home/report.png')}}"
+                                            <img src="{{asset('img/dashboard/report.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1305,7 +1305,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/1.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/1.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1333,7 +1333,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/2.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/2.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1361,7 +1361,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/3.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/3.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">

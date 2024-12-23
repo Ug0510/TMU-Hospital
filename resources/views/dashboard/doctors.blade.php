@@ -24,6 +24,7 @@
                                 Add New
                             </button>
                         </div>
+                        <!-- ADD NEW MODEL -->
                         <div class="modal" id="addNewModal">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -46,8 +47,12 @@
                                             <label for="">Qualifications</label>
                                             <input type="text" name="qualifications" placeholder=" Enter Qualifications" class="form-control mb-2" id="">
 
-                                            <label for="">Designation</label>
-                                            <input type="text" name="designation" placeholder=" Enter Designation" class="form-control mb-2" id="">
+                                            <label for="designation_id">Designation</label>
+                                            <select id="designation_id" name="designation_id" class="form-control mb-2" required>
+                                                @foreach ($designations as $designation)
+                                                <option value="{{ $designation->designation_id }}">{{ $designation->designation }}</option>
+                                                @endforeach
+                                            </select>
 
 
                                             <label for="department">Department</label>
@@ -104,20 +109,118 @@
                                         <th>qualifications</th>
                                         <th>Department</th>
                                         <th>Status</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    @php
+                                    $i=0;
+                                    @endphp
+
                                     @foreach ($doctors as $doctor)
 
+                                    @php
+                                    $i++;
+                                    @endphp
                                     <tr>
                                         <td>{{ $doctor->name}}</td>
-                                        <td>{{ $doctor->designation }}</td>
+                                        <td>{{ $doctor->designation->designation ?? 'No Designation' }}</td>
                                         <td>{{ $doctor->qualifications}}</td>
-                                        <td>{{ $doctor->department->name ?? 'N/A' }}</td>
+                                        <td>{{ $doctor->department->department_name ?? 'N/A' }}</td>
                                         <td>
                                             <div class="badge {{ $doctor->status == 'Y' ? 'badge-success' : 'badge-danger' }}">
                                                 {{ $doctor->status == 'Y' ? 'Active' : 'Inactive' }}
                                             </div>
+                                        </td>
+                                        <td class="font-weight-medium">
+
+                                            <div class="d-flex justify-content-end">
+                                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal{{ $i }}">
+                                                    Update
+                                                </button>
+                                            </div>
+                                            <!-- ADD NEW MODEL -->
+                                            <div class="modal" id="updateModal{{ $i }}">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+
+                                                        <!-- Modal Header -->
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title">Update Doctor</h4>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                        </div>
+
+                                                        <!-- Modal body -->
+                                                        <div class="modal-body">
+
+                                                            <form action="{{ route('update.doctors', ['doctor_id' => $doctor->doctor_id]) }}" method="POST" enctype="multipart/form-data">
+                                                                @csrf
+
+                                                                <label for="">Doctor Name</label>
+                                                                <input type="text" name="name" value="{{ $doctor->name}}" placeholder=" Enter Name" class="form-control mb-2" id="">
+
+                                                                <label for="">Qualifications</label>
+                                                                <input type="text" name="qualifications" value="{{ $doctor-> qualifications}}" placeholder=" Enter Qualifications" class="form-control mb-2" id="">
+
+                                                                <label for="designation_id">Designation</label>
+                                                                <select id="designation_id" name="designation_id" class="form-control mb-2" required>
+                                                                    @foreach ($designations as $designation)
+                                                                    <option value="{{ $designation->designation_id }}" {{ $doctor->designation_id == $designation->designation_id ? 'selected' : '' }}  >{{ $designation->designation }}</option>
+                                                                    @endforeach
+                                                                </select>
+
+
+                                                                <label for="department">Department</label>
+                                                                <select name="department_id" class="form-control mb-2" id="department" required>
+                                                                    <option value="" disabled selected>Select Department</option>
+                                                                    @foreach ($departments as $department)
+                                                                    <option value="{{ $department->department_id }}" {{ $doctor->department_id == $department->department_id ? 'selected' : '' }}  >{{ $department->department_name }}</option>
+                                                                    @endforeach
+                                                                </select>
+
+                                                                <label for="">Upload Research Image</label>
+                                                                <input type="File" name="file" class="form-control mb-2" id="">
+
+                                                                <label for="">Status</label>
+                                                                <select class="form-select" aria-label="Default select example" name="status">
+                                                                    <!-- <option value="{{ $doctor->status}}">{{ $doctor->status}}</option> -->
+                                                                    <option value="Y" {{ $doctor->status == 'Y' ? 'selected' : '' }} >Active</option>
+                                                                    <option value="N" {{ $doctor->status == 'N' ? 'selected' : '' }} >In-Active</option>
+                                                                </select>
+
+
+                                                                <input type="hidden" name="doctor_id" value="{{ $doctor-> doctor_id}}">
+
+                                                                <input type="submit" name="save" class="btn btn-success" value="Save Changes">
+
+                                                                @if ($errors->any())
+                                                                <div class="alert alert-danger">
+                                                                    <ul>
+                                                                        @foreach ($errors->all() as $error)
+                                                                        <li>{{ $error }}</li>
+                                                                        @endforeach
+                                                                    </ul>
+                                                                </div>
+                                                                @endif
+
+
+                                                            </form>
+
+
+                                                        </div>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                        <td>
+                                            <a href="{{route('delete.doctors',['doctor_id' => $doctor->doctor_id])}}" class="btn btn-danger" >Delete</a>
                                         </td>
                                     </tr>
 

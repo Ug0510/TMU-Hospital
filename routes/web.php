@@ -1,10 +1,33 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+
+
+require __DIR__.'/auth.php';
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
+
+
+
 
 Route::get('/', [HospitalController::class, 'home'])->name('home');
 Route::get('/contact-us', [HospitalController::class, 'contact_us'])->name('contact.us');
@@ -51,5 +74,22 @@ Route::get('/admin', [AdminController::class, 'index'])->name('dashboard');
 Route::get('/admin-departments', [AdminController::class, 'departments'])->name('departments');
 Route::POST('/add-new-department', [AdminController::class, 'new_departments'])->name('new.departments');
 
+// Doctors
 Route::get('/admin-department-doctors', [AdminController::class, 'doctors'])->name('doctors');
 Route::POST('/add-new-doctors', [AdminController::class, 'new_doctors'])->name('new.doctors');
+Route::POST('/update-doctors/{doctor_id}', [AdminController::class, 'update_doctors'])->name('update.doctors');
+Route::get('/delete-doctors/{doctor_id}', [AdminController::class, 'delete_doctors'])->name('delete.doctors');
+
+// Hods
+Route::get('/admin-department-hods', [AdminController::class, 'hods'])->name('hods');
+Route::post('/add-new-hods', [AdminController::class, 'new_hods'])->name('new.hods');
+Route::get('/get-doctors-by-department/{department_id}', [AdminController::class, 'getDoctorsByDepartment'])->name('get.doctors.by.department');
+
+Route::post('/update-hods/{hod_id}', [AdminController::class, 'update_hods'])->name('update.hods');
+Route::get('/delete-hods/{hod_id}', [AdminController::class, 'delete_hods'])->name('delete.hods');
+
+
+
+
+
+

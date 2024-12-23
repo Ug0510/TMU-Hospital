@@ -24,7 +24,4 @@ class DoctorDesignation extends Model
         'designation',
         'status',
     ];
-
-    // Default timestamps
-    public $timestamps = false; // Disable timestamps if not included in the table
 }
