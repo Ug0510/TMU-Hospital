@@ -152,6 +152,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         });
     });
     
+    document.addEventListener("DOMContentLoaded", function () {
+        const voidLinks = document.querySelectorAll('a[href="javascript:void(0);"]');
+        
+        voidLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent the default click behavior
+            });
+        });
+    });
+    
     
     
 </script>

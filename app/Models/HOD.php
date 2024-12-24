@@ -28,4 +28,8 @@ class HOD extends Model
     {
         return $this->belongsTo(Department::class, 'department_id'); // This links back to departments
     }
+    public function doctor()
+    {
+        return $this->belongsTo(Doctor::class, 'doctor_id', 'doctor_id');
+    }
 }

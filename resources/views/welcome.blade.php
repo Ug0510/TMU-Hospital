@@ -1,4 +1,4 @@
-<!-- resources/views/pages/dashboard.blade.php -->
+<!-- resources/views/pages/home.blade.php -->
 @extends('layout.app')
 
 @section('title', 'TMH')
@@ -7,7 +7,7 @@
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
-    <!-- Dashboard Slider -->
+    <!-- Home Slider -->
     <div class="home-slider owl-theme owl-carousel">
         <div class="slider-item one slider-item-img">
             <div class="d-table">
@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-    <!-- End Dashboard Slider -->
+    <!-- End Home Slider -->
 
     <!-- Counter -->
     <div class="counter-area">
@@ -277,16 +277,44 @@
     <section class="hospital-area pb-70">
         <div class="container-fluid p-0">
             <div class="hospital-shape">
-                <img src="{{asset('img/dashboard/about1.png')}}" alt="Shape">
+                <img src="{{asset('img/home/about1.png')}}" alt="Shape">
             </div>
             <div class="row m-0 align-items-center">
                 <div class="col-lg-6 p-0">
                     <div class="hospital-item">
-                        
                         <div class="row m-0">
                             <div class="p-0">
                                 <div style="padding-left: 10%;">
-                                    <img src="{{asset('img/home/about/2.jpg')}}" alt="About" style="width: 90%;border-radius:15px;">
+                                    <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item p-2 active">
+                                                <img src="{{asset('img/home/about/new/1.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/2.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/3.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/4.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/5.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/6.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/7.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+                                            <div class="carousel-item p-2">
+                                                <img src="{{asset('img/home/about/new/8.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -294,27 +322,22 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hospital-item hospital-right" style="margin-left: 30px;">
-                        <h2 class="tmu-primary">About Our Hospital</h2>
-                        <p class="pb-0 mb-3 text-justify">
+                        <div class="section-title pb-0 mb-0">
+                            <h2 class="tmu-primary">About Our Hospital</h2>
+                        </div>
+                        <p class="pb-0 mb-3 " style="text-align:justify!important;">
                             TMU hospital is a hub of safety and advanced care, offering an extensive range of super-specialty services. It provides advanced and comprehensive primary, secondary, and tertiary care, serving as a vital resource for the community.
-                            <br/><b>It provides-</b>
+                            <br /><br /><b>It provides-</b>
                             24/7 medical facility with an 800+ bed super-specialty hospital on campus Hands-on practical experience opportunities for medical, nursing, and allied health students Comprehensive critical and emergency healthcare services.
                         </p>
-                        <!-- <ul class="mb-3">
-                            <li class="pb-0 mb-2">
-                                <i class="icofont-check-circled"></i>
-                                Explore Our Departments
-                            </li>
-                            <li class="pb-0 mb-2">
-                                <i class="icofont-check-circled"></i>
-                                Meet Our Specialists
-                            </li>
-                            <li class="pb-0 mb-2">
-                                <i class="icofont-check-circled"></i>
-                                Contact Us for More Information
-                            </li>
-                        </ul> -->
-                        <a class="hospital-btn px-3 py-2" href="about.html">Know More</a>
+                        <div class="carousel-buttons">
+                            <button class="owl-prev col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="prev">
+                                <i class="icofont-simple-left"></i>
+                            </button>
+                            <button class="owl-next col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="next">
+                                <i class="icofont-simple-right"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -330,263 +353,120 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item ">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <!-- <a href="service-details.html">Read More</a> -->
-                                    <!-- <p>Compassionate care, advanced treatments, experienced specialists, modern facilities</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <p>Compassionate care, advanced treatments, experienced specialists, modern
-                                        facilities</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="service-item two">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <!-- <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="service-item three">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-patient-file"></i>
-                                    <h3>Pathology</h3>
-                                    <!-- <p>Comprehensive tests, precise results, advanced technology, expert team, reliable care</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-patient-file"></i>
-                                    <h3>Pathology</h3>
-                                    <p>Comprehensive tests, precise results, advanced technology, expert team, reliable
-                                        care</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".9s">
-                    <div class="service-item four">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-tooth"></i>
-                                    <h3>Dental Care</h3>
-                                    <!-- <p>Quality dental treatments, experienced dentists, modern equipment, gentle care</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-tooth"></i>
-                                    <h3>Dental Care</h3>
-                                    <p>Quality dental treatments, experienced dentists, modern equipment, gentle care
-                                    </p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
                     <div class="service-item">
                         <div class="d-table">
                             <div class="d-table-cell">
                                 <div class="service-front">
                                     <i class="icofont-heart-beat-alt"></i>
                                     <h3>Cardiology</h3>
-                                    <!-- <p>Cardiac care, advanced treatments, experienced cardiologists, comprehensive services</p> -->
                                 </div>
-                                <div class="service-end">
-                                    <i class="icofont-heart-beat-alt"></i>
-                                    <h3>Cardiology</h3>
-                                    <p>Cardiac care, advanced treatments, experienced cardiologists, comprehensive
-                                        services</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="service-item two">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-drug"></i>
-                                    <h3>Medicine</h3>
-                                    <!-- <p>Comprehensive medical care, expert physicians, advanced treatments, compassionate care</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-drug"></i>
-                                    <h3>Medicine</h3>
-                                    <p>Comprehensive medical care, expert physicians, advanced treatments, compassionate
-                                        care</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="service-item three">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-dna-alt-1"></i>
-                                    <h3>Neurology</h3>
-                                    <!-- <p>Expert neurologists, advanced treatments, comprehensive care, modern technology</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-dna-alt-1"></i>
-                                    <h3>Neurology</h3>
-                                    <br>
-                                    <!-- <p>Expert neurologists, advanced treatments, comprehensive care, modern technology</p> -->
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp">
-                    <div class="service-item four">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-ambulance-cross"></i>
-                                    <h3>Ambulance</h3>
-                                    <!-- <p>24/7 emergency services, rapid response, well-equipped, professional care</p> -->
-                                </div>
-                                <!-- <div class="service-end">
-                                        <i class="icofont-ambulance-cross"></i>
-                                        <h3>Ambulance</h3>
-                                        <br>
-                                        <p>24/7 emergency services, rapid response, well-equipped, professional care</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item ">
+                    <div class="service-item two service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <!-- <a href="service-details.html">Read More</a> -->
-                                    <!-- <p>Compassionate care, advanced treatments, experienced specialists, modern facilities</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <p>Compassionate care, advanced treatments, experienced specialists, modern
-                                        facilities</p>
-                                    <a href="service-details.html">Read More</a>
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/neurology.svg')}}" alt="Neurology" class="service-icon-custom-b" />
+                                    <h3>Neurology</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="service-item two">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <!-- <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="service-item three">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-patient-file"></i>
-                                    <h3>Pathology</h3>
-                                    <!-- <p>Comprehensive tests, precise results, advanced technology, expert team, reliable care</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-patient-file"></i>
-                                    <h3>Pathology</h3>
-                                    <p>Comprehensive tests, precise results, advanced technology, expert team, reliable
-                                        care</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".9s">
-                    <div class="service-item four">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-tooth"></i>
-                                    <h3>Dental Care</h3>
-                                    <!-- <p>Quality dental treatments, experienced dentists, modern equipment, gentle care</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-tooth"></i>
-                                    <h3>Dental Care</h3>
-                                    <p>Quality dental treatments, experienced dentists, modern equipment, gentle care
-                                    </p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- divs after this will be eliminated from page on tablet and phone view -->
-            <div class="d-none d-flex row" id="more-content">
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item">
+                    <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-heart-beat-alt"></i>
-                                    <h3>Cardiology</h3>
-                                    <!-- <p>Cardiac care, advanced treatments, experienced cardiologists, comprehensive services</p> -->
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/plastic-surgery.svg')}}" alt="Plastic Surgery" class="service-icon-custom-b" />
+                                    <h3>Plastic Surgery</h3>
                                 </div>
-                                <div class="service-end">
-                                    <i class="icofont-heart-beat-alt"></i>
-                                    <h3>Cardiology</h3>
-                                    <p>Cardiac care, advanced treatments, experienced cardiologists, comprehensive
-                                        services</p>
-                                    <a href="service-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/nephrology.svg')}}" alt="Nephrology" class="service-icon-custom-b" />
+                                    <h3>Nephrology</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item two service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/ctvs.svg')}}" alt="CTVS" class="service-icon-custom-b" />
+                                    <h3>CTVS</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item three service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/neuro-surgery.svg')}}" alt="Neuro Surgery" class="service-icon-custom-b" />
+                                    <h3>Neuro Surgery</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/urology.svg')}}" alt="Urology" class="service-icon-custom-b" />
+                                    <h3>Urology</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item two service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/gastroenterology.svg')}}" alt="Gastro" class="service-icon-custom-b" />
+                                    <h3>Gastro</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item three service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/surgery.svg')}}" alt="Surgery" class="service-icon-custom-b" />
+                                    <h3>Surgery</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/orthopedic.svg')}}" alt="orthopedic" class="service-icon-custom-b" />
+                                    <h3>Orthopedic</h3>
                                 </div>
                             </div>
                         </div>
@@ -599,94 +479,66 @@
                                 <div class="service-front">
                                     <i class="icofont-drug"></i>
                                     <h3>Medicine</h3>
-                                    <!-- <p>Comprehensive medical care, expert physicians, advanced treatments, compassionate care</p> -->
                                 </div>
-                                <div class="service-end">
-                                    <i class="icofont-drug"></i>
-                                    <h3>Medicine</h3>
-                                    <p>Comprehensive medical care, expert physicians, advanced treatments, compassionate
-                                        care</p>
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".7s">
-                    <div class="service-item three">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-dna-alt-1"></i>
-                                    <h3>Neurology</h3>
-                                    <!-- <p>Expert neurologists, advanced treatments, comprehensive care, modern technology</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-dna-alt-1"></i>
-                                    <h3>Neurology</h3>
-                                    <br>
-                                    <!-- <p>Expert neurologists, advanced treatments, comprehensive care, modern technology</p> -->
-                                    <a href="service-details.html">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp">
-                    <div class="service-item four">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-ambulance-cross"></i>
-                                    <h3>Ambulance</h3>
-                                    <!-- <p>24/7 emergency services, rapid response, well-equipped, professional care</p> -->
-                                </div>
-                                <!-- <div class="service-end">
-                                        <i class="icofont-ambulance-cross"></i>
-                                        <h3>Ambulance</h3>
-                                        <br>
-                                        <p>24/7 emergency services, rapid response, well-equipped, professional care</p>
-                                        <a href="service-details.html">Read More</a>
-                                    </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item ">
+                    <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <!-- <a href="service-details.html">Read More</a> -->
-                                    <!-- <p>Compassionate care, advanced treatments, experienced specialists, modern facilities</p> -->
-                                </div>
-                                <div class="service-end">
-                                    <i class="icofont-doctor"></i>
-                                    <h3>Expert Doctor</h3>
-                                    <p>Compassionate care, advanced treatments, experienced specialists, modern
-                                        facilities</p>
-                                    <a href="service-details.html">Read More</a>
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/ent.svg')}}" alt="ent" class="service-icon-custom-b" />
+                                    <h3>ENT</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".5s">
-                    <div class="service-item two">
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <!-- <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p> -->
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/psychiatary.svg')}}" alt="Psychiatary" class="service-icon-custom-b" />
+                                    <h3>Psychiatary</h3>
                                 </div>
-                                <div class="service-end">
-                                    <i class="icofont-prescription"></i>
-                                    <h3>Diagnosis</h3>
-                                    <p>High-tech diagnostics, accurate results, comprehensive tests, expert analysis</p>
-                                    <a href="service-details.html">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item two service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/eye.svg')}}" alt="Opthalmology" class="service-icon-custom-b" />
+                                    <h3>Opthalmology</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item three service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/derma.svg')}}" alt="Dermatology" class="service-icon-custom-b" />
+                                    <h3>Dermatology</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service-item service-icon-2345">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <div class="service-icon-front service-front">
+                                    <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
+                                    <h3>Gynocology</h3>
                                 </div>
                             </div>
                         </div>
@@ -725,7 +577,7 @@
                 <h2 class="tmu-primary">Various Specialities</h2>
             </div>
             <div class="row justify-content-center flex w-100" style=" align-items: center; justify-content: center; position: relative;">
-                <img src="{{asset('img/dashboard/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
+                <img src="{{asset('img/home/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
 
 
 
@@ -771,7 +623,7 @@
 
 
                     <div class="structure male">
-                        <img src="{{asset('img/dashboard/human_body_manmap.png')}}" alt="Man Body">
+                        <img src="{{asset('img/home/human_body_manmap.png')}}" alt="Man Body">
 
                         <ul class="service-speciality-left body_list left">
                             <li class="eyeMpointer">
@@ -791,7 +643,7 @@
                             </li>
 
                             <li class="handMpointer">
-                                <a href="/orthopedic"><span class="txt">Arm</span></a>
+                                <a href="/orthopaedics"><span class="txt">Arm</span></a>
                             </li>
 
                             <li class="kidneysMpointer">
@@ -807,7 +659,7 @@
                             </li>
 
                             <li class="thighMpointer">
-                                <a href="/orthopedic"><span class="txt">Thigh</span></a>
+                                <a href="/orthopaedics"><span class="txt">Thigh</span></a>
                             </li>
 
                             <li class="thighMpointer vericoseMpointer">
@@ -815,7 +667,7 @@
                             </li>
 
                             <li class="footMpointer">
-                                <a href="/orthopedic"><span class="txt">Foot</span></a>
+                                <a href="/orthopaedics"><span class="txt">Foot</span></a>
                             </li>
                         </ul>
 
@@ -838,7 +690,7 @@
                             </li>
 
                             <li class="elbowMpointer">
-                                <a href="/orthopedic"><span class="txt">Elbow</span></a>
+                                <a href="/orthopaedics"><span class="txt">Elbow</span></a>
                             </li>
 
                             <li class="spineMpointer">
@@ -846,15 +698,15 @@
                             </li>
 
                             <li class="hipMpointer">
-                                <a href="/orthopedic"><span class="txt">Hip</span></a>
+                                <a href="/orthopaedics"><span class="txt">Hip</span></a>
                             </li>
 
                             <li class="kneeMpointer">
-                                <a href="/orthopedic"><span class="txt">Knee</span></a>
+                                <a href="/orthopaedics"><span class="txt">Knee</span></a>
                             </li>
 
                             <li class="ankleMpointer">
-                                <a href="/orthopedic"><span class="txt">Ankle</span></a>
+                                <a href="/orthopaedics"><span class="txt">Ankle</span></a>
                             </li>
                         </ul>
                     </div>
@@ -948,7 +800,7 @@
             </div>
             <div class="col-lg-5 pr-0">
                 <div class="speciality-item speciality-right speciality-right-two d-flex justify-content-center">
-                    <img src="{{asset('img/dashboard/expertise1.jpg')}}" alt="Speciality">
+                    <img src="{{asset('img/home/expertise1.jpg')}}" alt="Speciality">
                     <div class="speciality-emergency">
                         <div class="speciality-icon">
                             <i class="icofont-ui-call"></i>
@@ -1002,7 +854,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/dashboard/doctor.png')}}"
+                                            <img src="{{asset('img/home/doctor.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1015,7 +867,7 @@
                                     <img width="514" height="400" src="https://www.medanta.org/storage/services/January2024//bqt2PdNyaR2Ut6TdYi8hHNXjtz5cib-metaMTIucG5n-.png" alt="homecare">
                                 </div>
                                 <div class="card-desk">
-                                    <div class="heading-md font600 card-title-1 hidden-xs mb-2">Dashboard Nursing</div>
+                                    <div class="heading-md font600 card-title-1 hidden-xs mb-2">Home Nursing</div>
                                     <div class="card-text truncate">
                                         <p>We continue to give you the best care possible with all the comforts, even after you reach home</p>
                                     </div>
@@ -1026,7 +878,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/dashboard/dashboardcare.png')}}"
+                                            <img src="{{asset('img/home/homecare.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1052,7 +904,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/dashboard/strecher.png')}}"
+                                            <img src="{{asset('img/home/strecher.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1078,7 +930,7 @@
                                                 <span></span> </a>
                                         </div>
                                         <div class="services-logo">
-                                            <img src="{{asset('img/dashboard/report.png')}}"
+                                            <img src="{{asset('img/home/report.png')}}"
                                                 alt="homecare-logo" width="100" height="100">
                                         </div>
                                     </div>
@@ -1305,7 +1157,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/1.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/1.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1333,7 +1185,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/2.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/2.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1361,7 +1213,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/3.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/3.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">

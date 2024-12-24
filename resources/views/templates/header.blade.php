@@ -149,7 +149,7 @@
                                 <a href="{{route('our.doctors')}}" class="nav-link" data-path="/our-doctors">Our Doctors</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Speciality</a>
+                                <a href="javascript:void(0);" class="nav-link dropdown-toggle">Speciality</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="{{ route('department', ['slug' => 'general-medicine']) }}" class="nav-link">GENERAL MEDICINE</a>
@@ -187,7 +187,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link dropdown-toggle">Super Speciality</a>
+                                <a href="javascript:void(0);" class="nav-link dropdown-toggle">Super Speciality</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
                                         <a href="{{ route('speciality', ['slug' => 'cardiology']) }}" class="nav-link">CARDIOLOGY</a>

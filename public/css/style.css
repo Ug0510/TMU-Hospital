@@ -739,12 +739,12 @@ button:focus {
 }
 /* .service-item:hover .service-front {
     display: none;
-} */
-/* .service-item:hover .service-front i{ */
-    /* font-size: 35px; */
-    /* transform: scale(0.8); */
-/* } */
-/* .service-item:hover .service-end {
+}
+.service-item:hover .service-front i{ 
+    font-size: 35px;
+    transform: scale(0.8);
+ }
+.service-item:hover .service-end {
     display: block;
     transform: scale(1);
 } */
