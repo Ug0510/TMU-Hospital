@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'TMU Hospital')</title>
+    <title>@yield('title', 'TMU Hospital')</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -32,6 +33,8 @@
     <link rel="stylesheet" href="{{ asset('css/theme-dark.css') }}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <!-- Testimonial CSS -->
+    <link rel="stylesheet" href="{{ asset('css/testimonial.css')}}">
     <!-- Testimonial CSS -->
     <link rel="stylesheet" href="{{ asset('css/testimonial.css')}}">
 
@@ -98,15 +101,19 @@
                             <ul>
                                 <li>
                                     <a href="https://www.facebook.com/tmumbd/" target="_blank">
+                                    <a href="https://www.facebook.com/tmumbd/" target="_blank">
                                         <i class="icofont-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://x.com/Tmumbd" target="_blank">
+                                    <a href="https://x.com/Tmumbd" target="_blank">
                                         <i class="icofont-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="https://www.instagram.com/tmu.updates/" target="_blank">
+                                        <i class="icofont-instagram"></i>
                                     <a href="https://www.instagram.com/tmu.updates/" target="_blank">
                                         <i class="icofont-instagram"></i>
                                     </a>
@@ -144,8 +151,13 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('about.us')}}" class="nav-link" data-path="/About-Us">About</a>
+                                <a href="{{route('home')}}" class="nav-link" data-path="/">Home</a>
                             </li>
                             <li class="nav-item">
+                                <a href="{{route('about.us')}}" class="nav-link" data-path="/About-Us">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('our.doctors')}}" class="nav-link" data-path="/our-doctors">Our Doctors</a>
                                 <a href="{{route('our.doctors')}}" class="nav-link" data-path="/our-doctors">Our Doctors</a>
                             </li>
                             <li class="nav-item">
@@ -219,12 +231,16 @@
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('blog')}}" class="nav-link" data-path="/Blog">Blogs</a>
+                                <a href="{{route('blog')}}" class="nav-link" data-path="/Blog">Blogs</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{route('contact.us')}}" class="nav-link" data-path="/Contact-Us">Contact Us</a>
                             </li>                                                        
+                                <a href="{{route('contact.us')}}" class="nav-link" data-path="/Contact-Us">Contact Us</a>
+                            </li>                                                        
                         </ul>
                         <div class="nav-srh">
+                            <div class="search-toggle closed">
                             <div class="search-toggle closed">
                                 <button class="search-icon icon-search"><i class="icofont-search-1"></i></button>
                                 <button class="search-icon icon-close"><i class="icofont-close"></i></button>
@@ -235,7 +251,13 @@
                                     <button type="submit" class="search-icon">
                                         <i class="icofont-search-1"></i>
                                     </button>
+                                <form id="search-form">
+                                    <input type="text" class="src-input" id="search-terms" placeholder="Search here..." autocomplete="off" />
+                                    <button type="submit" class="search-icon">
+                                        <i class="icofont-search-1"></i>
+                                    </button>
                                 </form>
+                                <ul id="search-results" class="search-results"></ul>
                                 <ul id="search-results" class="search-results"></ul>
                             </div>
                         </div>
@@ -245,3 +267,4 @@
         </div>
     </div>
     <!-- End Navbar Area -->
+

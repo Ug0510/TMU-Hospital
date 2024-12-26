@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 
 
+
+
 class HOD extends Model
 {
     use HasFactory;
@@ -15,14 +17,20 @@ class HOD extends Model
 
     protected $fillable = [
         'doctor_id',
+        'doctor_id',
         'department_id',
+        'image_url',
+        'quote',
         'image_url',
         'quote',
         'title',
         'status',
         'priority',
+        'status',
+        'priority',
     ];
 
+    // Define the relationship with the Department model
     // Define the relationship with the Department model
     public function department()
     {

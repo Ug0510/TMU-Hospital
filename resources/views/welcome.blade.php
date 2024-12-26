@@ -3,12 +3,16 @@
 
 @section('title', 'TMH')
 
+@section('title', 'TMH')
+
 @section('content')
+
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
-    <!-- Home Slider -->
+    <!-- Dashboard Slider -->
     <div class="home-slider owl-theme owl-carousel">
+        <div class="slider-item one slider-item-img">
         <div class="slider-item one slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -56,6 +60,25 @@
             </div>
         </div>
         <div class="slider-item three slider-item-img">
+                            <!-- <div class="slider-shape">
+                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
+                                </div> -->
+                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
+                            <p class="invisible">
+                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
+                                state-of-the-art facilities and experienced medical professionals ensure you receive the
+                                best treatment available. Trust us to be your partner in achieving optimal health and a
+                                brighter future. </p>
+                            <div class="common-btn invisible">
+                                <a href="appointment.html">Get Appointment</a>
+                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item three slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -83,6 +106,7 @@
 
     <!-- Counter -->
     <div class="counter-area">
+        <div class="container d-none d-md-block">
         <div class="container d-none d-md-block">
             <div class="row counter-bg second">
                 <div class="col-sm-6 col-md-3 col-lg-3">
@@ -186,8 +210,70 @@
     </div>
     <!-- End Counter -->
 
+
+        <div class="counter-area-carousel owl-carousel d-block d-md-none ">
+            <div class="container pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-patient-bed"></i>
+                            <h3>
+                                <span class="odometer" data-count="900">00</span>
+                            </h3>
+                            <p>Bed Capacity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-people"></i>
+                            <h3>
+                                <span class="odometer" data-count="1200">00</span>
+                                <!-- <span class="target">+</span> -->
+                            </h3>
+                            <p>Employees Including Doctors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-doctor-alt"></i>
+                            <h3>
+                                <span class="odometer" data-count="20">00</span>
+                            </h3>
+                            <p>Daily Average Surgeries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container  pb-4">
+                <div class="row counter-bg second">
+                    <div class="col-sm-6 col-md-3 col-lg-3">
+                        <div class="counter-item">
+                            <i class="icofont-badge"></i>
+                            <h3>
+                                <span class="odometer" data-count="20">00</span>
+                            </h3>
+                            <p>Specialities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- End Counter -->
+
     <!-- Outer links options section Start -->
     <section>
+        <div class="container mt-0 mt-md-3 mb-5">
         <div class="container mt-0 mt-md-3 mb-5">
             <div class="overview-booking snipcss-t88io">
                 <div class="overview-section">
@@ -277,7 +363,7 @@
     <section class="hospital-area pb-70">
         <div class="container-fluid p-0">
             <div class="hospital-shape">
-                <img src="{{asset('img/home/about1.png')}}" alt="Shape">
+                <img src="{{asset('img/dashboard/about1.png')}}" alt="Shape">
             </div>
             <div class="row m-0 align-items-center">
                 <div class="col-lg-6 p-0">
@@ -545,8 +631,10 @@
                     </div>
                 </div>
 
+
             </div>
 
+            <a href="javascript:void(0)" onclick="showMoreContent()" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect view-more-btn">View More</a>
             <a href="javascript:void(0)" onclick="showMoreContent()" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect view-more-btn">View More</a>
 
         </div>
@@ -568,9 +656,26 @@
         }
     </script>
 
+    <script>
+        function showMoreContent() {
+            var moreContent = document.getElementById('more-content');
+            var viewMoreButton = document.querySelector('.view-more-btn');
+
+            if (moreContent.classList.contains('d-none')) {
+                moreContent.classList.remove('d-none') // Show the hidden content
+                viewMoreButton.innerHTML = 'View Less'; // Change button text
+            } else {
+                moreContent.classList.add('d-none') // Hide the content
+                viewMoreButton.innerHTML = 'View More'; // Change button text back
+            }
+        }
+    </script>
+
 
     <!-- Interactive body map Mobile-->
+    <!-- Interactive body map Mobile-->
 
+    <section class="services-area services-area-mob pb-70" style=" justify-content: center; align-items: center;">
     <section class="services-area services-area-mob pb-70" style=" justify-content: center; align-items: center;">
         <div class="container">
             <div class="section-title">
@@ -597,6 +702,9 @@
                     <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="110,1400,320,1500" shape="rect">
                     <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
+
+
+
 
 
 
@@ -729,6 +837,7 @@
                         <h2 class="tmu-primary">Our Expertise</h2>
                     </div>
                     <div class="speciality-item d-none d-md-block">
+                    <div class="speciality-item d-none d-md-block">
                         <div class="row m-0">
                             <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="speciality-inner">
@@ -796,11 +905,47 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="speciality-item-carousel speciality-item d-block d-md-none owl-carousel pt-1 pb-4">
+                        <div class="row m-0 pt-3">
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Cardiac Care</h3>
+                                    <p>Angiography, angioplasty, bypass surgery, and pacemaker implantation.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Advanced Tests</h3>
+                                    <p>MRI, Spiral CT, Color Doppler, Neurology Lab, and Endoscopy services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 pt-3">
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Emergency Services</h3>
+                                    <p>24/7 comprehensive trauma, surgical, and medical emergency care.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="speciality-inner">
+                                    <i class="icofont-check-circled"></i>
+                                    <h3>Specialty Surgery</h3>
+                                    <p>Arthroscopy, neurosurgery, IVF, and advanced orthopedic procedures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-5 pr-0">
                 <div class="speciality-item speciality-right speciality-right-two d-flex justify-content-center">
-                    <img src="{{asset('img/home/expertise1.jpg')}}" alt="Speciality">
+                    <img src="{{asset('img/dashboard/expertise1.jpg')}}" alt="Speciality">
                     <div class="speciality-emergency">
                         <div class="speciality-icon">
                             <i class="icofont-ui-call"></i>
@@ -817,6 +962,9 @@
     <!--Our Services-->
 
     <section class="mb-5 pb-3 services-section">
+    <!--Our Services-->
+
+    <section class="mb-5 pb-3 services-section">
         <div class="container-fluid m-0">
             <div class="row">
                 <div class="section-title d-block d-md-none mt-4 mb-2">
@@ -827,6 +975,7 @@
                         <b style="font-weight: 700; color:#fff">Our </b> <br />
                         <span class="tmu-primary-orange underline-white">Services</span>
                     </h2>
+                    <div class="align-self-end mb-5">
                     <div class="align-self-end mb-5">
                         <div class="custom-nav row d-none d-md-block">
                             <button class="owl-prev col service-carousel-btn my-1 my-lg-0"><i class="icofont-simple-left"></i></button>
@@ -844,6 +993,7 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2 active">Second Opinion</div>
+                                    <div class="card-text truncate">
                                     <div class="card-text truncate">
                                         <p>Confirm diagnosis and take informed decision of treatment plan with some of experts</p>
                                     </div>
@@ -894,6 +1044,7 @@
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">e-ICU</div>
                                     <div class="card-text truncate">
+                                    <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
                                     </div>
@@ -919,6 +1070,7 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">Health Check</div>
+                                    <div class="card-text truncate">
                                     <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
@@ -995,6 +1147,9 @@
         </div>
     </section>
 
+    <!--Our Services End-->
+
+    <!-- Video
     <!--Our Services End-->
 
     <!-- Video
@@ -1140,6 +1295,7 @@
             </ul>
         </div>
     </div> -->
+    </div> -->
     <!-- End Video -->
 
 
@@ -1157,7 +1313,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/1.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/1.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1185,7 +1341,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/2.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/2.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1213,7 +1369,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/home/blog/3.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/dashboard/blog/3.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">

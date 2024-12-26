@@ -35,6 +35,32 @@ class Department extends Model
 
     // Timestamps are enabled by default
     public $timestamps = true;
+    // Set the primary key if it's not the default 'id'
+    protected $primaryKey = 'department_id';
+
+    // Set the key type to 'int' since department_id is an integer
+    protected $keyType = 'int';
+
+    // Set $incrementing to true to make 'department_id' auto-incrementing
+    public $incrementing = true;
+
+    // Fillable columns for mass assignment
+    protected $fillable = [
+        'department_name', 
+        'bg_image', 
+        'description', 
+        'research_description', 
+        'phone', 
+        'status', 
+        'hod', 
+        'hod_id', 
+        'department_type', 
+        'priority', 
+        'slug'
+    ];
+
+    // Timestamps are enabled by default
+    public $timestamps = true;
 
     // Define the relationship with the Service model
     public function services()

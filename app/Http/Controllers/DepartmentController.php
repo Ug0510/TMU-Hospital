@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Department;
 use App\Models\Department_id;
+use App\Models\Department_id;
 use App\Models\Service;
+use App\Models\Edutip;
+use App\Models\HOD;
 use App\Models\Edutip;
 use App\Models\HOD;
 
