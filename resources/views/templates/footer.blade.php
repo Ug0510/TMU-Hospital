@@ -1,6 +1,5 @@
 <!-- Footer -->
 <footer style="padding-top:40px; padding-bottom:20px;">
-<footer style="padding-top:40px; padding-bottom:20px;">
 
 
 <div class="container">
@@ -74,7 +73,6 @@
                         </li>
                         <li>
                             <a href="service-details.html">Ambulance Sevices</a>
-                            <a href="service-details.html">Ambulance Sevices</a>
                         </li>
                         <li>
                             <a href="service-details.html">Medicine</a>
@@ -82,7 +80,6 @@
                     </ul>
                 </div>
             </div>
-        </div>     
         </div>     
     </div>
 </div>
@@ -95,8 +92,6 @@
     <div class="copyright-item">
         <p>© <span>TMU Hospital </span> is Proudly Owned by <a href="https://tmu.ac.in"
                 target="_blank">TMU</a></p>
-        <p>© <span>TMU Hospital </span> is Proudly Owned by <a href="https://tmu.ac.in"
-                target="_blank">TMU</a></p>
     </div>
 </div>
 </div>
@@ -106,39 +101,26 @@
 <!-- Essential JS -->
 <script src="{{asset('js/jquery.min.js')}}"></script>
 <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-<script src="{{asset('js/jquery.min.js')}}"></script>
-<script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
 <!-- Owl Carousel JS -->
-<script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 <!-- Meanmenu JS -->
 <script src="{{asset('js/jquery.meanmenu.js')}}"></script>
-<script src="{{asset('js/jquery.meanmenu.js')}}"></script>
 <!-- Slider Slider JS -->
-<script src="{{asset('js/slick.min.js')}}"></script>
 <script src="{{asset('js/slick.min.js')}}"></script>
 <!-- Magnific Popup -->
 <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
 <!-- Wow JS -->
-<script src="{{asset('js/wow.min.js')}}"></script>
 <script src="{{asset('js/wow.min.js')}}"></script>
 <!-- Form Ajaxchimp JS -->
 <script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
-<script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
 <!-- Form Validator JS -->
 <script src="{{asset('js/form-validator.min.js')}}"></script>
-<script src="{{asset('js/form-validator.min.js')}}"></script>
 <!-- Contact JS -->
-<script src="{{asset('js/contact-form-script.js')}}"></script>
 <script src="{{asset('js/contact-form-script.js')}}"></script>
 <!-- Odometer JS -->
 <script src="{{asset('js/odometer.min.js')}}"></script>
 <script src="{{asset('js/jquery.appear.min.js')}}"></script>
-<script src="{{asset('js/odometer.min.js')}}"></script>
-<script src="{{asset('js/jquery.appear.min.js')}}"></script>
 <!-- Custom JS -->
-<script src="{{asset('js/custom.js')}}"></script>
 <script src="{{asset('js/custom.js')}}"></script>
 <!-- Owl Carousel2 JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
@@ -231,7 +213,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
 $(document).ready(function () {
     var owl = $(".services-section .owl-carousel");
-    var owl = $(".services-section .owl-carousel");
     owl.owlCarousel({
         loop: true,
         margin: 10,
@@ -262,117 +243,6 @@ $(document).ready(function () {
         owl.trigger("next.owl.carousel");
     });
 });
-
-$(document).ready(function () {
-    var owl = $(".hospital-awards .owl-carousel");
-    owl.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: false,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        responsive: {
-            0: {
-                items: 1,
-                dots: true,
-            },
-
-            786: {
-                items: 2,
-            },
-            1240: {
-                items: 3,
-            },
-        },
-    });
-
-    $(".owl-prev").click(function () {
-        owl.trigger("prev.owl.carousel");
-    });
-
-    $(".owl-next").click(function () {
-        owl.trigger("next.owl.carousel");
-    });
-});
-
-
-$(document).ready(function () {
-    var owl = $(".patient-testimonial");
-    owl.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        responsive: {
-            0: {
-                items: 1,
-                dots: true,
-            },
-
-            786: {
-                items: 2,
-            },
-            1240: {
-                items: 3,
-            },
-        },
-    });
-}); 
-
-
-$(document).ready(function () {
-    var owl = $(".counter-area-carousel");
-    owl.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-            0: {
-                items: 1,
-                dots: true,
-            },
-
-            786: {
-                items: 2,
-            },
-            1240: {
-                items: 3,
-            },
-        },
-    });
-});
-
-$(document).ready(function () {
-    var owl = $(".speciality-item-carousel");
-    owl.owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-            0: {
-                items: 1,
-                dots: true,
-            },
-
-            786: {
-                items: 2,
-            },
-            1240: {
-                items: 3,
-            },
-        },
-    });
-});
-
 
 $(document).ready(function () {
     var owl = $(".hospital-awards .owl-carousel");

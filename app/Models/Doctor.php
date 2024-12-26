@@ -41,4 +41,8 @@ class Doctor extends Model
     {
         return $this->belongsTo(DoctorDesignation::class, 'designation_id', 'designation_id');
     }
+    public function hod()
+{
+    return $this->hasOne(Hod::class, 'doctor_id', 'doctor_id');
+}
 }

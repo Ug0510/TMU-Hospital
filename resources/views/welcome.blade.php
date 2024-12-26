@@ -3,16 +3,12 @@
 
 @section('title', 'TMH')
 
-@section('title', 'TMH')
-
 @section('content')
-
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
-    <!-- Dashboard Slider -->
+    <!-- Home Slider -->
     <div class="home-slider owl-theme owl-carousel">
-        <div class="slider-item one slider-item-img">
         <div class="slider-item one slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
@@ -60,25 +56,6 @@
             </div>
         </div>
         <div class="slider-item three slider-item-img">
-                            <!-- <div class="slider-shape">
-                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
-                                </div> -->
-                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
-                            <p class="invisible">
-                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
-                                state-of-the-art facilities and experienced medical professionals ensure you receive the
-                                best treatment available. Trust us to be your partner in achieving optimal health and a
-                                brighter future. </p>
-                            <div class="common-btn invisible">
-                                <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="about.html">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-item three slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
@@ -106,7 +83,6 @@
 
     <!-- Counter -->
     <div class="counter-area">
-        <div class="container d-none d-md-block">
         <div class="container d-none d-md-block">
             <div class="row counter-bg second">
                 <div class="col-sm-6 col-md-3 col-lg-3">
@@ -210,70 +186,8 @@
     </div>
     <!-- End Counter -->
 
-
-        <div class="counter-area-carousel owl-carousel d-block d-md-none ">
-            <div class="container pb-4">
-                <div class="row counter-bg second">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-patient-bed"></i>
-                            <h3>
-                                <span class="odometer" data-count="900">00</span>
-                            </h3>
-                            <p>Bed Capacity</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container  pb-4">
-                <div class="row counter-bg second">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-people"></i>
-                            <h3>
-                                <span class="odometer" data-count="1200">00</span>
-                                <!-- <span class="target">+</span> -->
-                            </h3>
-                            <p>Employees Including Doctors</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container  pb-4">
-                <div class="row counter-bg second">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-doctor-alt"></i>
-                            <h3>
-                                <span class="odometer" data-count="20">00</span>
-                            </h3>
-                            <p>Daily Average Surgeries</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container  pb-4">
-                <div class="row counter-bg second">
-                    <div class="col-sm-6 col-md-3 col-lg-3">
-                        <div class="counter-item">
-                            <i class="icofont-badge"></i>
-                            <h3>
-                                <span class="odometer" data-count="20">00</span>
-                            </h3>
-                            <p>Specialities</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <!-- End Counter -->
-
     <!-- Outer links options section Start -->
     <section>
-        <div class="container mt-0 mt-md-3 mb-5">
         <div class="container mt-0 mt-md-3 mb-5">
             <div class="overview-booking snipcss-t88io">
                 <div class="overview-section">
@@ -363,7 +277,7 @@
     <section class="hospital-area pb-70">
         <div class="container-fluid p-0">
             <div class="hospital-shape">
-                <img src="{{asset('img/dashboard/about1.png')}}" alt="Shape">
+                <img src="{{asset('img/home/about1.png')}}" alt="Shape">
             </div>
             <div class="row m-0 align-items-center">
                 <div class="col-lg-6 p-0">
@@ -431,13 +345,14 @@
     </section>
     <!-- End About -->
 
-    <!-- Services -->
+
     <section class="services-area pb-70">
         <div class="container">
             <div class="section-title">
                 <h2 class="tmu-primary">Our Departments</h2>
             </div>
             <div class="row justify-content-center">
+                <!-- Visible Departments -->
                 <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
                     <div class="service-item">
                         <div class="d-table">
@@ -582,100 +497,85 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item service-icon-2345">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/psychiatary.svg')}}" alt="Psychiatary" class="service-icon-custom-b" />
-                                    <h3>Psychiatary</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item two service-icon-2345">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/eye.svg')}}" alt="Opthalmology" class="service-icon-custom-b" />
-                                    <h3>Opthalmology</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item three service-icon-2345">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/derma.svg')}}" alt="Dermatology" class="service-icon-custom-b" />
-                                    <h3>Dermatology</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                    <div class="service-item service-icon-2345">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
-                                    <h3>Gynocology</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- Add more visible departments here as needed -->
 
-
+                <!-- Hidden Departments -->
+                <div class="d-none d-md-flex row" id="more-content" style="margin-right:0!important; margin-left:0!important; padding:0!important;">
+                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="service-item service-icon-2345">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/psychiatary.svg')}}" alt="Psychiatary" class="service-icon-custom-b" />
+                                        <h3>Psychiatry</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="service-item two service-icon-2345">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/eye.svg')}}" alt="Opthalmology" class="service-icon-custom-b" />
+                                        <h3>Opthalmology</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="service-item three service-icon-2345">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/derma.svg')}}" alt="Dermatology" class="service-icon-custom-b" />
+                                        <h3>Dermatology</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="service-item service-icon-2345">
+                            <div class="d-table">
+                                <div class="d-table-cell">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
+                                        <h3>Gynecology</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add other hidden departments here as needed -->
+                </div>
             </div>
 
+            <!-- View More Button -->
             <a href="javascript:void(0)" onclick="showMoreContent()" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect view-more-btn">View More</a>
-            <a href="javascript:void(0)" onclick="showMoreContent()" class="text-center w-100 d-block d-lg-none tmu-primary-orange link-after-effect view-more-btn">View More</a>
-
         </div>
     </section>
-    <!-- End Services -->
 
     <script>
         function showMoreContent() {
-            var moreContent = document.getElementById('more-content');
-            var viewMoreButton = document.querySelector('.view-more-btn');
+            const moreContent = document.getElementById('more-content');
+            const viewMoreButton = document.querySelector('.view-more-btn');
 
             if (moreContent.classList.contains('d-none')) {
-                moreContent.classList.remove('d-none') // Show the hidden content
-                viewMoreButton.innerHTML = 'View Less'; // Change button text
+                moreContent.classList.remove('d-none'); // Show the hidden content
+                viewMoreButton.innerHTML = 'View Less'; // Update button text
             } else {
-                moreContent.classList.add('d-none') // Hide the content
-                viewMoreButton.innerHTML = 'View More'; // Change button text back
-            }
-        }
-    </script>
-
-    <script>
-        function showMoreContent() {
-            var moreContent = document.getElementById('more-content');
-            var viewMoreButton = document.querySelector('.view-more-btn');
-
-            if (moreContent.classList.contains('d-none')) {
-                moreContent.classList.remove('d-none') // Show the hidden content
-                viewMoreButton.innerHTML = 'View Less'; // Change button text
-            } else {
-                moreContent.classList.add('d-none') // Hide the content
-                viewMoreButton.innerHTML = 'View More'; // Change button text back
+                moreContent.classList.add('d-none'); // Hide the content
+                viewMoreButton.innerHTML = 'View More'; // Reset button text
             }
         }
     </script>
 
 
     <!-- Interactive body map Mobile-->
-    <!-- Interactive body map Mobile-->
 
-    <section class="services-area services-area-mob pb-70" style=" justify-content: center; align-items: center;">
     <section class="services-area services-area-mob pb-70" style=" justify-content: center; align-items: center;">
         <div class="container">
             <div class="section-title">
@@ -702,9 +602,6 @@
                     <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="110,1400,320,1500" shape="rect">
                     <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
                 </map>
-
-
-
 
 
 
@@ -837,7 +734,6 @@
                         <h2 class="tmu-primary">Our Expertise</h2>
                     </div>
                     <div class="speciality-item d-none d-md-block">
-                    <div class="speciality-item d-none d-md-block">
                         <div class="row m-0">
                             <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="speciality-inner">
@@ -905,47 +801,11 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="speciality-item-carousel speciality-item d-block d-md-none owl-carousel pt-1 pb-4">
-                        <div class="row m-0 pt-3">
-                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="speciality-inner">
-                                    <i class="icofont-check-circled"></i>
-                                    <h3>Cardiac Care</h3>
-                                    <p>Angiography, angioplasty, bypass surgery, and pacemaker implantation.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="speciality-inner">
-                                    <i class="icofont-check-circled"></i>
-                                    <h3>Advanced Tests</h3>
-                                    <p>MRI, Spiral CT, Color Doppler, Neurology Lab, and Endoscopy services.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row m-0 pt-3">
-                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="speciality-inner">
-                                    <i class="icofont-check-circled"></i>
-                                    <h3>Emergency Services</h3>
-                                    <p>24/7 comprehensive trauma, surgical, and medical emergency care.</p>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="speciality-inner">
-                                    <i class="icofont-check-circled"></i>
-                                    <h3>Specialty Surgery</h3>
-                                    <p>Arthroscopy, neurosurgery, IVF, and advanced orthopedic procedures.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-5 pr-0">
                 <div class="speciality-item speciality-right speciality-right-two d-flex justify-content-center">
-                    <img src="{{asset('img/dashboard/expertise1.jpg')}}" alt="Speciality">
+                    <img src="{{asset('img/home/expertise1.jpg')}}" alt="Speciality">
                     <div class="speciality-emergency">
                         <div class="speciality-icon">
                             <i class="icofont-ui-call"></i>
@@ -962,9 +822,6 @@
     <!--Our Services-->
 
     <section class="mb-5 pb-3 services-section">
-    <!--Our Services-->
-
-    <section class="mb-5 pb-3 services-section">
         <div class="container-fluid m-0">
             <div class="row">
                 <div class="section-title d-block d-md-none mt-4 mb-2">
@@ -975,7 +832,6 @@
                         <b style="font-weight: 700; color:#fff">Our </b> <br />
                         <span class="tmu-primary-orange underline-white">Services</span>
                     </h2>
-                    <div class="align-self-end mb-5">
                     <div class="align-self-end mb-5">
                         <div class="custom-nav row d-none d-md-block">
                             <button class="owl-prev col service-carousel-btn my-1 my-lg-0"><i class="icofont-simple-left"></i></button>
@@ -993,7 +849,6 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2 active">Second Opinion</div>
-                                    <div class="card-text truncate">
                                     <div class="card-text truncate">
                                         <p>Confirm diagnosis and take informed decision of treatment plan with some of experts</p>
                                     </div>
@@ -1044,7 +899,6 @@
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">e-ICU</div>
                                     <div class="card-text truncate">
-                                    <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
                                     </div>
@@ -1070,7 +924,6 @@
                                 </div>
                                 <div class="card-desk">
                                     <div class="heading-md font600 card-title hidden-xs mb-2">Health Check</div>
-                                    <div class="card-text truncate">
                                     <div class="card-text truncate">
                                         <p>Take charge of your well-being with a health experience customised for you
                                         </p>
@@ -1147,9 +1000,6 @@
         </div>
     </section>
 
-    <!--Our Services End-->
-
-    <!-- Video
     <!--Our Services End-->
 
     <!-- Video
@@ -1295,8 +1145,42 @@
             </ul>
         </div>
     </div> -->
-    </div> -->
     <!-- End Video -->
+
+    <section class="expertise-area pb-70 ps-5 pt-5">
+        <div class="row" style="margin: 0;padding: 0;">
+            <!-- Left Section: Title, Logo, and Description -->
+            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                <div class="section-title">
+                    <h2 class="tmu-primary">Free Women’s Delivery Services</h2>
+                    <!-- Logo div added between h2 and p -->
+                    <div class="logo text-center">
+                        <img src="{{asset('/img/home/events.webp')}}" alt="Logo" style="width: 11rem; height: auto;">
+                    </div>
+                    <p class="text-center" style="font-size: 18px; color: #555; max-width: 700px; margin: 0 auto;">
+                        Our hospital is dedicated to providing exceptional care for all, especially women. We organize free health camps and offer free delivery services to ensure every woman receives the care and support she deserves.
+                    </p>
+                    <div class="text-center">
+                        <button class="justify-content-center" style="margin-top: 30px; padding: 12px 25px; font-size: 16px; color: #fff; background-color: #0056b3; border: none; border-radius: 5px; cursor: pointer;">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Section: Banner or Collage of Images -->
+            <div class="col-lg-6 text-center">
+                <!-- Collage or Banner Section -->
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+
+                    <img src="{{asset('/img/home/collage.webp')}}" alt="Collage Image 3" style="width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
 
 
@@ -1313,7 +1197,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/1.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/1.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1341,7 +1225,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/2.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/2.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">
@@ -1369,7 +1253,7 @@
                     <div class="blog-item">
                         <div class="blog-top">
                             <a href="/Blog-Details">
-                                <img src="{{asset('img/dashboard/blog/3.jpg')}}" alt="Blog">
+                                <img src="{{asset('img/home/blog/3.jpg')}}" alt="Blog">
                             </a>
                         </div>
                         <div class="blog-bottom">

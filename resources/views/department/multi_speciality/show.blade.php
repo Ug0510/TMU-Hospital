@@ -336,7 +336,7 @@
                     <h4><i class="bi bi-quote" style="font-size:50px; color: #737373;"></i>{!! $hod->quote ?? 'No quote available' !!}</h4>
                     <p class="mt-3 mt-md-4 mb-1">- {{ $hod->doctors->name ?? 'HOD Name' }}</p>
                     <span class="fw-bold mb-1 fs-12">{{ $hod->title ?? 'HOD Title' }}</span><br>
-                    <span class="fs-12">{{ $hod->qualifications ?? 'HOD Qualifications' }}</span>
+                    <span class="fs-12">{{ $hod->doctors->qualifications ?? 'HOD Qualifications' }}</span>
                 </div>
             </div>
         </div>

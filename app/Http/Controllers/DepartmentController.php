@@ -4,13 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Department;
-use App\Models\Department_id;
-use App\Models\Department_id;
 use App\Models\Service;
 use App\Models\Edutip;
 use App\Models\HOD;
-use App\Models\Edutip;
-use App\Models\HOD;
+use App\Models\Doctor;
+
 
 class DepartmentController extends Controller
 {
@@ -23,7 +21,7 @@ class DepartmentController extends Controller
         }
         $services = Service::where('department_id', $department->department_id)->get();
         $edutips = Edutip::where('department_id', $department->department_id)->get();
-        $hod = HOD::where('department_id', $department->department_id)->first();
+        $hod = HOD::with('doctor')->where('department_id', $department->department_id)->first();
         
         return view('department.super_speciality.show', compact('department', 'services', 'hod', 'edutips'));
     
@@ -36,7 +34,7 @@ class DepartmentController extends Controller
         }
         $services = Service::where('department_id', $department->department_id)->get();
         $edutips = Edutip::where('department_id', $department->department_id)->get();
-        $hod = HOD::where('department_id', $department->department_id)->first();
+        $hod = HOD::with('doctor')->where('department_id', $department->department_id)->first();
         
         return view('department.multi_speciality.show', compact('department', 'services', 'hod', 'edutips'));
     }
