@@ -36,6 +36,8 @@ Route::get('/contact-us', [HospitalController::class, 'contact_us'])->name('cont
 Route::get('/about-us', [HospitalController::class, 'about_us'])->name('about.us');
 Route::get('/blog', [HospitalController::class, 'blog'])->name('blog');
 Route::get('/blog-details', [HospitalController::class, 'blog_details'])->name('blog.details');
+Route::get('/news', [HospitalController::class, 'news'])->name('news');
+Route::get('/news-details', [HospitalController::class, 'news_details'])->name('news.details');
 Route::get('/book-appointment', [HospitalController::class, 'book_appointment'])->name('book.appointment');
 Route::get('/our-doctors', [HospitalController::class, 'our_doctors'])->name('our.doctors');
 

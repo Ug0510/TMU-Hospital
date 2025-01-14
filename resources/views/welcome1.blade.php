@@ -7,23 +7,310 @@
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
+
+<style>
+        .popup4523 {
+            position: fixed;
+            bottom: -250px;
+            /* Start the popup off-screen at the bottom */
+            right: 20px;
+            width: 330px;
+            height: 225px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: bottom 1.0s ease-in-out;
+            /* Smooth animation */
+            z-index: 9999;
+        }
+
+        /* When popup is visible, set bottom to 50% (centered vertically) */
+        .popup4523.visible {
+            bottom: 30%;
+            transform: translateY(50%);
+            /* Adjusts to be exactly centered */
+        }
+
+        .popup-header4523 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #001155;
+            color: #fff;
+            padding: 8px;
+            cursor: grab;
+            user-select: none;
+            height: 35px;
+        }
+
+        .popup-controls4523 button {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .popup-controls4523 button:hover {
+            opacity: 0.8;
+        }
+
+        .popup-content4523 {
+            padding: 3px;
+            color: #333;
+        }
+
+        #minimizedIcon4523.hidden {
+            display: none;
+        }
+
+        #minimizedIcon4523 {
+            position: fixed;
+            bottom: 38px;
+            right: 100px;
+            background: #ff7700;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 9999999999;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .live-indicator4523 {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: red;
+            border-radius: 50%;
+            animation: pulse4523 1.5s infinite;
+        }
+
+        .text-convocation4523 {
+            margin-left: 3px;
+            color: #fff;
+        }
+
+        @keyframes pulse4523 {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.5);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .video-container4523 {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* Aspect ratio for 16:9 videos */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container4523 iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .popup4523::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            cursor: se-resize;
+            background: transparent;
+        }
+
+        .popup4523::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            cursor: sw-resize;
+            background: transparent;
+        }
+    </style>
+
+    <div id="popup4523" class="popup4523">
+        <div class="popup-header4523">
+            <span>Convocation - 2024</span>
+            <div class="popup-controls4523">
+                <button id="closeBtn4523">X</button>
+            </div>
+        </div>
+        <div class="popup-content4523">
+            <div class="video-container4523">
+                <!-- <iframe
+                    id="videoIframe4523"
+                    src="https://www.youtube.com/@TeerthankerMahaveerUniversity/streams"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe> -->
+            </div>
+        </div>
+    </div>
+
+    <button id="minimizedIcon4523" class="hidden" style="display: none;">
+        <span class="live-indicator4523"></span>
+        <span style="color:#FF0000;">Live</span>
+        <span class="text-convocation4523">Convocation</span>
+    </button>
+
+    <script>
+        const popup4523 = document.getElementById('popup4523');
+        const closeBtn4523 = document.getElementById('closeBtn4523');
+        const minimizedIcon4523 = document.getElementById('minimizedIcon4523');
+        const mainContent4523 = document.querySelector('.main-content4523'); // Assuming this is the content behind the popup
+
+        const videoAspectRatio4523 = 1.77; // Width:Height for 16:9 video
+        const headerHeight4523 = 35; // Additional height for the popup header
+
+        let isDragging4523 = false;
+        let offsetX4523, offsetY4523;
+
+        popup4523.querySelector('.popup-header4523').addEventListener('mousedown', (e) => {
+            isDragging4523 = true;
+            offsetX4523 = e.clientX - popup4523.offsetLeft;
+            offsetY4523 = e.clientY - popup4523.offsetTop;
+            popup4523.style.cursor = 'grabbing';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDragging4523) {
+                popup4523.style.left = `${e.clientX - offsetX4523}px`;
+                popup4523.style.top = `${e.clientY - offsetY4523}px`;
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging4523 = false;
+            popup4523.style.cursor = 'grab';
+        });
+
+        let isResizing4523 = false;
+        let isResizingBottomLeft4523 = false;
+        let isResizingBottomRight4523 = false;
+
+        popup4523.addEventListener('mousedown', (e) => {
+            const rect = popup4523.getBoundingClientRect();
+            if (e.offsetX < 20 && e.offsetY > rect.height - 20) {
+                isResizingBottomLeft4523 = true;
+                isResizing4523 = true;
+                mainContent4523.style.pointerEvents = 'none';
+            }
+            if (e.offsetX > rect.width - 20 && e.offsetY > rect.height - 20) {
+                isResizingBottomRight4523 = true;
+                isResizing4523 = true;
+                mainContent4523.style.pointerEvents = 'none';
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isResizing4523) {
+                const rect = popup4523.getBoundingClientRect();
+
+                let newWidth;
+                let newHeight;
+
+                if (isResizingBottomLeft4523) {
+                    newWidth = rect.right - e.clientX;
+                    newHeight = newWidth / videoAspectRatio4523 + headerHeight4523;
+
+                    if (newWidth >= 300) {
+                        popup4523.style.width = `${newWidth}px`;
+                        popup4523.style.height = `${newHeight}px`;
+
+                        popup4523.style.left = `${e.clientX}px`;
+                    }
+                }
+
+                if (isResizingBottomRight4523) {
+                    newWidth = e.clientX - rect.left;
+                    newHeight = newWidth / videoAspectRatio4523 + headerHeight4523;
+
+                    if (newWidth >= 300) {
+                        popup4523.style.width = `${newWidth}px`;
+                        popup4523.style.height = `${newHeight}px`;
+                    }
+                }
+            }
+        });
+
+        document.addEventListener('mouseup', () => {
+            isResizing4523 = false;
+            isResizingBottomLeft4523 = false;
+            isResizingBottomRight4523 = false;
+            mainContent4523.style.pointerEvents = 'auto';
+        });
+
+        closeBtn4523.addEventListener('click', () => {
+            popup4523.style.display = 'none';
+            minimizedIcon4523.style.display = 'flex';
+            minimizedIcon4523.classList.remove('hidden');
+        });
+
+        minimizedIcon4523.addEventListener('click', () => {
+            popup4523.style.display = 'block';
+            minimizedIcon4523.style.display = 'none';
+            minimizedIcon4523.classList.add('hidden');
+        });
+
+        window.onload = () => {
+            setTimeout(() => {
+                popup4523.classList.add('visible');
+            }, 100);
+        };
+    </script>
+
+
+
+
+
+
+
     <!-- Home Slider -->
     <div class="home-slider owl-theme owl-carousel">
         <div class="slider-item one slider-item-img">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div class="container">
-                        <div class="slider-text pt-5">
+                        <div class="slider-text">
                             <!-- <div class="slider-shape">
                                     <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
                                 </div> -->
                             <h1>Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
-                            <p class="pb-2 mb-2">
+                            <p>
                                 At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
                                 state-of-the-art facilities and experienced medical professionals ensure you receive the
                                 best treatment available. Trust us to be your partner in achieving optimal health and a
                                 brighter future. </p>
-                            <div class="common-btn pt-0">
+                            <div class="common-btn">
                                 <a href="appointment.html">Get Appointment</a>
                                 <a class="cmn-btn-right" href="about.html">Learn More</a>
                             </div>
@@ -91,7 +378,7 @@
                         <h3>
                             <span class="odometer" data-count="900">00</span>
                         </h3>
-                        <p class="text-center">Bed Capacity</p>
+                        <p>Bed Capacity</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3">
@@ -101,7 +388,7 @@
                             <span class="odometer" data-count="1200">00</span>
                             <!-- <span class="target">+</span> -->
                         </h3>
-                        <p class="text-center">Employees Including Doctors</p>
+                        <p>Employees Including Doctors</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3">
@@ -110,7 +397,7 @@
                         <h3>
                             <span class="odometer" data-count="20">00</span>
                         </h3>
-                        <p class="text-center">Daily Average Surgeries</p>
+                        <p>Daily Average Surgeries</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3">
@@ -119,7 +406,7 @@
                         <h3>
                             <span class="odometer" data-count="20">00</span>
                         </h3>
-                        <p class="text-center">Specialities</p>
+                        <p>Specialities</p>
                     </div>
                 </div>
             </div>
@@ -135,7 +422,7 @@
                             <h3>
                                 <span class="odometer" data-count="900">00</span>
                             </h3>
-                            <p class="text-center">Bed Capacity</p>
+                            <p>Bed Capacity</p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +436,7 @@
                                 <span class="odometer" data-count="1200">00</span>
                                 <!-- <span class="target">+</span> -->
                             </h3>
-                            <p class="text-center">Employees Including Doctors</p>
+                            <p>Employees Including Doctors</p>
                         </div>
                     </div>
                 </div>
@@ -162,7 +449,7 @@
                             <h3>
                                 <span class="odometer" data-count="20">00</span>
                             </h3>
-                            <p class="text-center">Daily Average Surgeries</p>
+                            <p>Daily Average Surgeries</p>
                         </div>
                     </div>
                 </div>
@@ -175,7 +462,7 @@
                             <h3>
                                 <span class="odometer" data-count="20">00</span>
                             </h3>
-                            <p class="text-center">Specialities</p>
+                            <p>Specialities</p>
                         </div>
                     </div>
                 </div>
@@ -288,28 +575,28 @@
                                     <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item p-2 active">
-                                                <img src="{{asset('img/home/about/new/1.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/1.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/2.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/2.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/3.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/3.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/4.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/4.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/5.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/5.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/6.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/6.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/7.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/7.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
                                             <div class="carousel-item p-2">
-                                                <img src="{{asset('img/home/about/new/8.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
+                                                <img src="{{asset('img/home/about/new/8.png')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
                                             </div>
 
                                         </div>
@@ -544,30 +831,6 @@
                                     <div class="service-icon-front service-front">
                                         <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
                                         <h3>Gynecology</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="service-item two service-icon-2345">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/pediatrics.svg')}}" alt="pediatrics" class="service-icon-custom-b" />
-                                        <h3>Pediatrics</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-4 col-lg-2 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="service-item three service-icon-2345">
-                            <div class="d-table">
-                                <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/respiratory.svg')}}" alt="Respiratory" class="service-icon-custom-b" />
-                                        <h3>Respiratory</h3>
                                     </div>
                                 </div>
                             </div>
@@ -1171,6 +1434,38 @@
     </div> -->
     <!-- End Video -->
 
+    <section class="expertise-area pb-70 ps-5 pt-5">
+        <div class="row" style="margin: 0;padding: 0;">
+            <!-- Left Section: Title, Logo, and Description -->
+            <div class="col-lg-6 d-flex flex-column justify-content-between">
+                <div class="section-title">
+                    <h2 class="tmu-primary">Free Women’s Delivery Services</h2>
+                    <!-- Logo div added between h2 and p -->
+                    <div class="logo text-center">
+                        <img src="{{asset('/img/home/events.webp')}}" alt="Logo" style="width: 11rem; height: auto;">
+                    </div>
+                    <p class="text-center" style="font-size: 18px; color: #555; max-width: 700px; margin: 0 auto;">
+                        Our hospital is dedicated to providing exceptional care for all, especially women. We organize free health camps and offer free delivery services to ensure every woman receives the care and support she deserves.
+                    </p>
+                    <div class="text-center">
+                        <button class="justify-content-center" style="margin-top: 30px; padding: 12px 25px; font-size: 16px; color: #fff; background-color: #0056b3; border: none; border-radius: 5px; cursor: pointer;">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Section: Banner or Collage of Images -->
+            <div class="col-lg-6 text-center">
+                <!-- Collage or Banner Section -->
+                <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+
+                    <img src="{{asset('/img/home/collage.webp')}}" alt="Collage Image 3" style="width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                </div>
+            </div>
+        </div>
+
 
     </section>
 
@@ -1179,7 +1474,7 @@
 
 
     <!-- Blog -->
-    <!-- <section class="blog-area pt-100 pb-70">
+    <section class="blog-area pt-100 pb-70">
         <div class="container">
             <div class="section-title">
                 <h2>Our Latest Blogs</h2>
@@ -1271,591 +1566,9 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <!-- End Blog -->
 </div>
 
 
-
-
-
-
-<div class="container m-0 p-5 nw2345 my-5" style="max-width: 95%;">
-    <div class="section-title">
-        <h2 class="tmu-primary">News & Events</h2>
-    </div>
-    <div class="row">
-        <div class="col-lg-8 col-md-12">
-            <div class="row g-4">
-                <!-- Blogs Section -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="section-card-unique-1">
-                        <div class="owl-carousel owl-theme blogs-carousel-unique-1 pb-3">
-                            <div class="item p-0">
-                                <div class="blog-card">
-                                    <!-- Image Section -->
-                                    <div class="blog-card-image">
-                                        <img src="https://picsum.photos/300/180?random=1" class="img-fluid mb-0" alt="Blog 1">
-                                    </div>
-                                    <!-- Text Section -->
-                                    <div class="blog-card-text p-2">
-                                        <p class="blog-date text-muted">January 3, 2025</p>
-                                        <h5 class="blog-title">Blog 1</h5>
-                                        <p class="blog-description">Learn about the latest advancements in health care...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item p-0">
-                                <div class="blog-card">
-                                    <!-- Image Section -->
-                                    <div class="blog-card-image">
-                                        <img src="https://picsum.photos/300/180?random=2" class="img-fluid mb-0" alt="Blog 2">
-                                    </div>
-                                    <!-- Text Section -->
-                                    <div class="blog-card-text p-2">
-                                        <p class="blog-date text-muted">January 2, 2025</p>
-                                        <h5 class="blog-title">Blog 2</h5>
-                                        <p class="blog-description">Explore how technology is transforming patient care...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item p-0">
-                                <div class="blog-card">
-                                    <!-- Image Section -->
-                                    <div class="blog-card-image">
-                                        <img src="https://picsum.photos/300/180?random=3" class="img-fluid mb-0" alt="Blog 3">
-                                    </div>
-                                    <!-- Text Section -->
-                                    <div class="blog-card-text p-2">
-                                        <p class="blog-date text-muted">January 1, 2025</p>
-                                        <h5 class="blog-title">Blog 3</h5>
-                                        <p class="blog-description">Expert tips for maintaining a healthy lifestyle...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News Section -->
-                <div class="col-lg-6 col-md-6">
-                    <div class="section-card-unique-2">
-                        <div class="news-card">
-                            <!-- Card 1 -->
-                            <div class="news-card-item">
-                                <div class="news-card-left">
-                                    <img src="https://picsum.photos/120/80?random=4" class="img-fluid rounded" alt="News 1">
-                                </div>
-                                <div class="news-card-right">
-                                    <p class="news-date text-muted">January 3, 2025</p>
-                                    <h5 class="news-title text-break">Medanta raises awareness on pediatric blood cancer...</h5>
-                                    <a href="#" class="view-news">Read News</a>
-                                </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="news-card-item">
-                                <div class="news-card-left">
-                                    <img src="https://picsum.photos/120/80?random=5" class="img-fluid rounded" alt="News 2">
-                                </div>
-                                <div class="news-card-right">
-                                    <p class="news-date text-muted">January 2, 2025</p>
-                                    <h5 class="news-title text-break">Discover how deep brain stimulation saved lives...</h5>
-                                    <a href="#" class="view-news">Read News</a>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="news-card-item">
-                                <div class="news-card-left">
-                                    <img src="https://picsum.photos/120/80?random=6" class="img-fluid rounded" alt="News 3">
-                                </div>
-                                <div class="news-card-right">
-                                    <p class="news-date text-muted">January 1, 2025</p>
-                                    <h5 class="news-title text-break">Advanced treatments for thalassemia unveiled...</h5>
-                                    <a href="#" class="view-news">Read News</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4 col-md-12 side-overlay-carousel-design-c">
-
-            <!-- Free Services Section -->
-
-            <div class="col-lg-12 col-md-6 ">
-                <div class="section-card-unique-1">
-                    <div class="owl-carousel owl-theme blogs-carousel-unique-1 pb-3">
-                        <div class="item p-0">
-                            <div class="blog-card">
-                                <div class="blog-card-text-h p-3">
-                                    <h4>Free Services and Camps</h4>
-
-                                </div>
-                                <!-- Image Section -->
-                                <div class="event-card-image">
-                                    <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Blog 1" style="border-radius: 0px;">
-                                </div>
-                                <h5 class="blog-title">Free Childbirth Delivery Services</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-    <!-- Owl Carousel Styles -->
-    <style>
-        .nw2345 {
-            background-color: #f8fbff;
-        }
-
-        .section-card-unique-1,
-        .section-card-unique-2,
-        .section-card-unique-3 {
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
-            border-radius: 8px;
-            height: 100%;
-        }
-
-        .section-card-unique-2 {
-            box-shadow: none !important;
-
-        }
-
-        .section-header-unique-1,
-        .section-header-unique-2,
-        .section-header-unique-3 {
-            background-color: #e74c3c;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .view-details-unique-1,
-        .view-details-unique-2,
-        .view-details-unique-3 {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-
-        .view-details-unique-1:hover,
-        .view-details-unique-2:hover,
-        .view-details-unique-3:hover {
-            text-decoration: underline;
-        }
-
-        .owl-carousel .item {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .owl-carousel .item img {
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .section-card-unique-1 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-        }
-
-        .blog-card {
-            display: flex;
-            flex-direction: column;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-
-        .blog-card-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .blog-card-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3 / 1.8;
-            /* 3:2 ratio */
-            border-radius: 8px 8px 0 0;
-        }
-
-        .blog-card-text {
-            padding: 15px;
-            background-color: #f9f9f9;
-        }
-
-        .blog-card-text p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
-
-        .blog-date {
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .blog-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .blog-description {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .view-details-unique-1 {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .view-details-unique-1:hover {
-            text-decoration: underline;
-        }
-
-        .section-card-unique-2 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .news-card {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 15px;
-        }
-
-        .news-card-item {
-            display: flex;
-            border-bottom: 1px solid #f1f1f1;
-            padding-bottom: 15px;
-        }
-
-        .news-card-left {
-            width: 40%;
-            display: flex;
-            align-items: center;
-            /* Center the image vertically */
-            justify-content: center;
-            /* Center the image horizontally */
-        }
-
-        .news-card-left img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        .news-card-right {
-            width: 60%;
-            padding: 10px 0px 10px 10px;
-        }
-
-        .news-card-right p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
-
-        .news-date {
-            font-size: 0.9rem;
-            color: #888;
-        }
-
-        .news-title {
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
-
-        .view-news {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .view-news:hover {
-            text-decoration: underline;
-        }
-
-        .section-card-unique-3 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-        }
-
-        .section-header-unique-3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-align: left;
-            color: #333;
-        }
-
-        /* Tab Navigation */
-        .event-tabs {
-            display: flex;
-            gap: 10px;
-            padding: 0px 10px;
-            margin-bottom: 15px;
-        }
-
-        .event-tab {
-            flex: 1;
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .event-tab.active {
-            background-color: #e74c3c;
-            color: #ffffff;
-        }
-
-        .event-tab:hover {
-            background-color: #e74c3c;
-            color: #ffffff;
-        }
-
-        /* Event List */
-        .event-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .event-list {
-            display: none;
-        }
-
-        .event-list.active {
-            display: block;
-        }
-
-        .event-card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 0px 10px;
-        }
-
-        .event-card p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
-
-        .event-date-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f8f8;
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            margin-right: 15px;
-        }
-
-        .event-card-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-        }
-
-        .event-card-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3 / 2.3;
-            /* 3:2 ratio */
-            border-radius: 8px 8px 0 0;
-        }
-
-        .event-day {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
-
-        .event-month {
-            font-size: 0.9rem;
-            color: #888;
-            margin: 0;
-        }
-
-        .event-details {
-            flex: 1;
-        }
-
-        .event-title {
-            font-size: 1rem;
-            font-weight: bold;
-            margin: 0 0 5px;
-        }
-
-        .event-location {
-            font-size: 0.9rem;
-            color: #888;
-            margin: 0 0 10px;
-        }
-
-        .view-details-unique-3 {
-            color: #e74c3c;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .view-details-unique-3:hover {
-            text-decoration: underline;
-        }
-
-        hr {
-            margin: 15px 0;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
-
-        /* styles.css */
-        .blog-card-text-h {
-            /* background: linear-gradient(45deg, #e74c3c, #f39c12); */
-            /* Stylish gradient background */
-            border-radius: 8px 8px 0px 0px;
-            /* Rounded corners */
-            padding: 16px;
-            /* Inner padding for spacing */
-            color: #ffffff;
-            /* Text color */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            /* Subtle shadow for text */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Box shadow for depth */
-            font-family: 'Poppins', sans-serif;
-            /* Modern font */
-        }
-
-        .blog-card-text-h h4 {
-            font-size: 1.5rem;
-            /* Adjust the heading size */
-            margin: 0;
-            /* Remove default margin */
-            font-weight: bold;
-            /* Bold text for emphasis */
-            text-align: center;
-            /* Center-align the heading */
-        }
-
-        .side-overlay-carousel-design-c {
-            background-color: #001055;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-    </style>
-
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Include Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            // Initialize Blogs Carousel
-            $(".blogs-carousel-unique-1").owlCarousel({
-                items: 1,
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                nav: false,
-                dots: true,
-            });
-
-            // Initialize News Carousel
-            // $(".news-carousel-unique-2").owlCarousel({
-            //     items: 1,
-            //     margin: 10,
-            //     loop: true,
-            //     autoplay: true,
-            //     autoplayTimeout: 3000,
-            //     autoplayHoverPause: true,
-            //     nav: true,
-            //     dots: true,
-            // });
-
-            // Initialize Events Carousel
-            $(".events-carousel-unique-3").owlCarousel({
-                items: 1,
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                nav: false,
-                dots: true,
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.event-tab');
-            const lists = document.querySelectorAll('.event-list');
-
-            tabs.forEach((tab) => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabs.forEach((t) => t.classList.remove('active'));
-                    // Add active class to the clicked tab
-                    this.classList.add('active');
-
-                    // Hide all lists and show the targeted list
-                    const target = this.getAttribute('data-target');
-                    lists.forEach((list) => {
-                        if (list.id === target) {
-                            list.classList.add('active');
-                        } else {
-                            list.classList.remove('active');
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-    @endsection
+@endsection

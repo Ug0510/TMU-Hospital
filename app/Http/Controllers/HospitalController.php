@@ -36,6 +36,16 @@ class HospitalController extends Controller
         return view('blog_details');
     }
 
+    public function news()
+    {
+        return view('news');
+    }
+
+    public function news_details()
+    {
+        return view('news_details');
+    }
+
     public function test()
     {
         return view('test');

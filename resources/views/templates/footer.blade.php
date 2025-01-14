@@ -3,7 +3,7 @@
 
 
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center g-5">
         <div class="col-sm-6 col-lg-4">
             <div class="footer-item">
                 <div class="footer-contact">
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
+        <div class="col-sm-6 col-lg-2">
             <div class="footer-item">
                 <div class="footer-quick">
                     <h3>Our Services</h3>
@@ -76,6 +76,39 @@
                         </li>
                         <li>
                             <a href="service-details.html">Medicine</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>     
+        <div class="col-sm-6 col-lg-3">
+            <div class="footer-item">
+                <div class="footer-quick">
+                    <h3>Super Speciality</h3>
+                    <ul>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'cardiology']) }}" class="nav-link">CARDIOLOGY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'nephrology']) }}" class="nav-link">NEPHROLOGY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'neurology']) }}" class="nav-link">NEUROLOGY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" class="nav-link">NEURO SURGERY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'ctvs']) }}" class="nav-link">CTVS</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}" class="nav-link">PLASTIC SURGERY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" class="nav-link">GASTROENTEROLOGY</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('speciality', ['slug' => 'urology']) }}" class="nav-link">UROLOGY</a>
                         </li>
                     </ul>
                 </div>

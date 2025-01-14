@@ -292,12 +292,16 @@ button:focus {
 .nav-srh .search-area {
     position: absolute;
     right: 8px;
-    bottom: -105px;
+    top : 50px;
+    /*bottom: -105px; Adjust to place dropdown correctly */
     z-index: 5;
     transition: 0.5s all ease;
     max-height: 0;
     overflow: hidden;
     background-color: #fff;
+    width: 400px; /* Adjust width */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; /* Rounded corners */
 }
 .nav-srh .search-area .search-icon {
     vertical-align: middle;
@@ -316,17 +320,41 @@ button:focus {
     outline: none;
     padding-left: 20px;
     margin: 0;
-    width: 300px;
-    background-color: rgba(221, 221, 221, 0.5019607843);
+    width: calc(100% - 60px); /* Adjust width considering padding */
+    background-color: rgba(221, 221, 221, 0.5);
     border: 1px solid #ddd;
     font-size: 15px;
     height: 45px;
-    border-radius: 0;
+    border-radius: 4px; /* Rounded corners */
 }
 .nav-srh .search-area.opened {
     max-height: 100px;
     padding: 20px 25px;
     box-shadow: 0 0 15px rgba(221, 221, 221, 0.5019607843);
+}
+.nav-srh .search-area.opened {
+    max-height: 250px; /* Adjusted height to accommodate input and results */
+    padding: 20px 25px;
+}
+
+.nav-srh .search-area .search-results {
+    max-height: 150px; /* Height for 6 rows (approx. 25px per row) */
+    overflow-y: auto; /* Scrollable if more than 6 results */
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #ddd;
+}
+
+.nav-srh .search-area .search-results li {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.nav-srh .search-area .search-results li:hover {
+    background-color: #f7f7f7;
 }
 /* .menu-shrink {
     box-shadow: 0 0 15px 0 #ddd;
