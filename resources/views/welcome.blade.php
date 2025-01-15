@@ -2042,7 +2042,7 @@
         font-size: 2rem;
         font-weight: bold;
         color: #001055;
-        text-align: right;
+        /* text-align: right; */
     }
 
     /* Blogs Section Styles */

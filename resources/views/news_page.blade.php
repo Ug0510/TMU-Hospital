@@ -13,22 +13,22 @@
         height: 80px;
         text-align: left;
         position: relative;
-
-        &:before {
-            position: absolute;
-            content: '';
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            opacity: .60;
-            background-color: rgb(255, 255, 255);
-        }
     }
+
+    .page-title-area-news:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .60;
+        background-color: rgb(255, 255, 255);
+    }
+
 
     .page-title-item {
         position: relative;
-        margin-top: -80px;
     }
 
     .page-title-item h2 {
@@ -47,7 +47,7 @@
     .page-title-item ul li {
         list-style-type: none;
         display: inline-block;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
         font-weight: 600;
         font-size: 15px;
         margin-right: 3px;
@@ -56,7 +56,7 @@
 
     .page-title-item ul li a {
         display: inline-block;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
     }
 
     .page-title-item ul li a:hover {
@@ -95,8 +95,8 @@
         border-bottom: 1px solid #dee8f5;
         position: relative;
         padding-left: 20px;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     .news-details-category ul li:hover a {
@@ -273,7 +273,7 @@
     <div class="d-table">
         <div class="d-table-cell">
             <div class="page-title-item">
-                <ul >
+                <ul>
                     <li>
                         <i class="icofont-hospital pe-2" style="font-size:13px;"></i>
                         <a href="index.html">Home</a>
@@ -405,7 +405,7 @@
             <div class="col-lg-3">
                 <div class="blog-details-item">
                     <div class="news-details-recent">
-                        <h3>Recent Blogs</h3>
+                        <h3>Recent News</h3>
                         <ul>
                             <li>
                                 <img src="{{asset('img/blogs/3.jpg')}}" alt="Recent">
