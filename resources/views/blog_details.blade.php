@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', 'BLog_Details')
+@section('title', 'Blog_Details')
 
 @section('content')
         <!-- Page Title -->

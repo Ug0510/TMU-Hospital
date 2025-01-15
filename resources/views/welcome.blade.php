@@ -606,26 +606,27 @@
                 <h2 class="tmu-primary">Various Specialities</h2>
             </div>
             <div class="row justify-content-center flex w-100" style=" align-items: center; justify-content: center; position: relative;">
-                <img src="{{asset('img/home/human_body_map.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
+                <img src="{{asset('img/home/human_body_map1.png')}}" usemap="#image-map" alt="Man Body" class="map-image">
 
 
 
                 <map name="image-map">
-                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="{{ route('speciality', ['slug' => 'neurology']) }}" coords="75,35,275,135" shape="rect">
-                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="{{ route('department', ['slug' => 'ophthalmology']) }}" coords="1008,90,1192,190" shape="rect">
-                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="{{ route('department', ['slug' => 'ent']) }}" coords="1035,230,1232,410" shape="rect">
-                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{ route('speciality', ['slug' => 'cardiology']) }}" coords="992,480,1188,580" shape="rect">
-                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="72,575,272,675" shape="rect">
-                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="20,790,296,890" shape="rect">
-                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1070,760,1236,860" shape="rect">
-                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1064,1090,1216,1190" shape="rect">
-                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="1056,1620,1236,1720" shape="rect">
-                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{ route('speciality', ['slug' => 'nephrology']) }}" coords="10,950,250,1050" shape="rect">
-                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{ route('speciality', ['slug' => 'urology']) }}" coords="870,1340,1276,1520" shape="rect">
-                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" coords="1060,900,1280,1070" shape="rect">
-                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="110,1400,320,1500" shape="rect">
-                    <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="30,1800,300,1980" shape="rect">
+                    <area target="_self" id="Brain" alt="Brain" title="Brain" href="{{ route('speciality', ['slug' => 'neurology']) }}" coords="25,12,91,45" shape="rect">
+                    <area target="_self" id="Eye" alt="Eye" title="Eye" href="{{ route('department', ['slug' => 'ophthalmology']) }}" coords="336,30,397,63" shape="rect">
+                    <area target="_self" id="Vocal-Cord" alt="Vocal-Cord" title="Vocal-Cord" href="{{ route('department', ['slug' => 'ent']) }}" coords="345,77,411,137" shape="rect">
+                    <area target="_self" id="Heart" alt="Heart" title="Heart" href="{{ route('speciality', ['slug' => 'cardiology']) }}" coords="330,160,396,193" shape="rect">
+                    <area target="_self" id="Liver" alt="Liver" title="Liver" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="24,192,91,225" shape="rect">
+                    <area target="_self" id="Stomach" alt="Stomach" title="Stomach" href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" coords="6,263,99,297" shape="rect">
+                    <area target="_self" id="Arm" alt="Arm" title="Arm" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="357,253,412,287" shape="rect">
+                    <area target="_self" id="Hip" alt="Hip" title="Hip" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="354,363,405,397" shape="rect">
+                    <area target="_self" id="Knee" alt="Knee" title="Knee" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="352,540,412,573" shape="rect">
+                    <area target="_self" id="Kidney" alt="Kindney" title="Kindney" href="{{ route('speciality', ['slug' => 'nephrology']) }}" coords="3,317,83,350" shape="rect">
+                    <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{ route('speciality', ['slug' => 'urology']) }}" coords="290,447,425,507" shape="rect">
+                    <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" coords="353,300,426,357" shape="rect">
+                    <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="37,467,107,500" shape="rect">
+                    <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="10,600,100,660" shape="rect">
                 </map>
+
 
 
 
@@ -1280,11 +1281,138 @@
 
 
 
-<div class="container m-0 p-5 nw2345 my-5" style="max-width: 95%;">
+<!-- <div class="container m-0 p-5 pe-0 nw2345 my-5 side-overlay-carousel-design-c" style="max-width: 100%;">
     <div class="section-title">
         <h2 class="tmu-primary">News & Events</h2>
     </div>
     <div class="row">
+        <div class="col-lg-8 col-md-12">
+            <div class="row g-4">
+                 Blogs Section 
+                <div class="col-lg-6 col-md-6">
+                    <div class="section-card-unique-1">
+                        <div class="owl-carousel owl-theme blogs-carousel-unique-1 pb-3">
+                            <div class="item p-0">
+                                <div class="blog-card">
+                                     Image Section 
+                                    <div class="blog-card-image">
+                                        <img src="https://picsum.photos/300/180?random=1" class="img-fluid mb-0" alt="Blog 1">
+                                    </div>
+                                     Text Section 
+                                    <div class="blog-card-text p-2">
+                                        <p class="blog-date text-muted">January 3, 2025</p>
+                                        <h5 class="blog-title">Blog 1</h5>
+                                        <p class="blog-description">Learn about the latest advancements in health care...</p>
+                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item p-0">
+                                <div class="blog-card">
+                                     Image Section 
+                                    <div class="blog-card-image">
+                                        <img src="https://picsum.photos/300/180?random=2" class="img-fluid mb-0" alt="Blog 2">
+                                    </div>
+                                     Text Section 
+                                    <div class="blog-card-text p-2">
+                                        <p class="blog-date text-muted">January 2, 2025</p>
+                                        <h5 class="blog-title">Blog 2</h5>
+                                        <p class="blog-description">Explore how technology is transforming patient care...</p>
+                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item p-0">
+                                <div class="blog-card">
+                                     Image Section
+                                    <div class="blog-card-image">
+                                        <img src="https://picsum.photos/300/180?random=3" class="img-fluid mb-0" alt="Blog 3">
+                                    </div>
+                                     Text Section 
+                                    <div class="blog-card-text p-2">
+                                        <p class="blog-date text-muted">January 1, 2025</p>
+                                        <h5 class="blog-title">Blog 3</h5>
+                                        <p class="blog-description">Expert tips for maintaining a healthy lifestyle...</p>
+                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                News Section 
+                <div class="col-lg-6 col-md-6">
+                    <div class="section-card-unique-2">
+                        <div class="news-card">
+                            Card 1 
+                            <div class="news-card-item">
+                                <div class="news-card-left">
+                                    <img src="https://picsum.photos/120/80?random=4" class="img-fluid rounded" alt="News 1">
+                                </div>
+                                <div class="news-card-right">
+                                    <p class="news-date text-muted">January 3, 2025</p>
+                                    <h5 class="news-title text-break">Medanta raises awareness on pediatric blood cancer...</h5>
+                                    <a href="#" class="view-news">Read News</a>
+                                </div>
+                            </div>
+                            Card 2
+                            <div class="news-card-item">
+                                <div class="news-card-left">
+                                    <img src="https://picsum.photos/120/80?random=5" class="img-fluid rounded" alt="News 2">
+                                </div>
+                                <div class="news-card-right">
+                                    <p class="news-date text-muted">January 2, 2025</p>
+                                    <h5 class="news-title text-break">Discover how deep brain stimulation saved lives...</h5>
+                                    <a href="#" class="view-news">Read News</a>
+                                </div>
+                            </div>
+                            Card 
+                            <div class="news-card-item">
+                                <div class="news-card-left">
+                                    <img src="https://picsum.photos/120/80?random=6" class="img-fluid rounded" alt="News 3">
+                                </div>
+                                <div class="news-card-right">
+                                    <p class="news-date text-muted">January 1, 2025</p>
+                                    <h5 class="news-title text-break">Advanced treatments for thalassemia unveiled...</h5>
+                                    <a href="#" class="view-news">Read News</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12 ">
+            <div class="section-card-unique-1" style="border: none;">
+                <div class="blog-card" style="background-color: transparent;">
+                     Heading Section
+                    <div class="blog-card-text-h p-3" style="background-color: transparent;">
+                        <h4 style="color: #ffffff; font-size: 1.8rem; font-weight: bold; text-align: center;">Free Services and Camps</h4>
+                    </div>
+                    Image Section 
+                    <div class="event-card-image" style="padding: 20px 0; text-align: center;">
+                        <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Event Image" style="border-radius: 8px; max-width: 100%; height: auto;">
+                    </div>
+                    Button Section
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="#" class="btn btn-light btn-lg" style="color: #001055; font-weight: bold; padding: 10px 30px; border-radius: 25px;">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div> -->
+
+
+<div class="container-fluid m-0 p-5 pe-0 nw2345 my-5" style="position: relative; max-width: 100%;">
+    <div class="section-title pb-5">
+        <h2 class="tmu-primary" style="right: 50px; z-index: 5;">News & Events</h2>
+    </div>
+    <div class="row me-0">
         <div class="col-lg-8 col-md-12">
             <div class="row g-4">
                 <!-- Blogs Section -->
@@ -1382,28 +1510,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-4 p-0"></div> <!-- Placeholder to match layout -->
+    </div>
+    <div class="side-overlay-carousel-design-c">
+        <div class="section-card-unique-1 pt-5" style="border: none;">
+            <div class="blog-card" style="background-color: transparent;">
 
-        <div class="col-lg-4 col-md-12 side-overlay-carousel-design-c">
-
-            <!-- Free Services Section -->
-
-            <div class="col-lg-12 col-md-6 ">
-                <div class="section-card-unique-1">
-                    <div class="owl-carousel owl-theme blogs-carousel-unique-1 pb-3">
-                        <div class="item p-0">
-                            <div class="blog-card">
-                                <div class="blog-card-text-h p-3">
-                                    <h4>Free Services and Camps</h4>
-
-                                </div>
-                                <!-- Image Section -->
-                                <div class="event-card-image">
-                                    <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Blog 1" style="border-radius: 0px;">
-                                </div>
-                                <h5 class="blog-title">Free Childbirth Delivery Services</h5>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Image Section -->
+                <div class="event-card-image" style="padding: 20px 0; text-align: center;">
+                    <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Event Image" style="border-radius: 8px; max-width: 100%; height: auto;">
+                </div>
+                <!-- Button Section -->
+                <div style="text-align: center; margin-top: 20px;">
+                    <a href="#" class="btn btn-light btn-lg" style="color: #001055; font-weight: bold; padding: 10px 30px; border-radius: 25px;">Know More</a>
                 </div>
             </div>
         </div>
@@ -1419,443 +1538,643 @@
 
 
 
-    <!-- Owl Carousel Styles -->
-    <style>
-        .nw2345 {
-            background-color: #f8fbff;
-        }
 
-        .section-card-unique-1,
-        .section-card-unique-2,
-        .section-card-unique-3 {
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
-            border-radius: 8px;
-            height: 100%;
-        }
+<!-- Owl Carousel Styles -->
+<style>
+    .nw2345 {
+        background-color: #f8fbff;
+    }
 
-        .section-card-unique-2 {
-            box-shadow: none !important;
+    .section-card-unique-1,
+    .section-card-unique-2,
+    .section-card-unique-3 {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+        border-radius: 8px;
+        height: 100%;
+    }
 
-        }
+    .section-card-unique-2 {
+        box-shadow: none !important;
 
-        .section-header-unique-1,
-        .section-header-unique-2,
-        .section-header-unique-3 {
-            background-color: #e74c3c;
-            color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            border-radius: 8px 8px 0 0;
-        }
+    }
 
-        .view-details-unique-1,
-        .view-details-unique-2,
-        .view-details-unique-3 {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .section-header-unique-1,
+    .section-header-unique-2,
+    .section-header-unique-3 {
+        background-color: #e74c3c;
+        color: #ffffff;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 8px 8px 0 0;
+    }
 
-
-        .view-details-unique-1:hover,
-        .view-details-unique-2:hover,
-        .view-details-unique-3:hover {
-            text-decoration: underline;
-        }
-
-        .owl-carousel .item {
-            text-align: center;
-            padding: 10px;
-        }
-
-        .owl-carousel .item img {
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .section-card-unique-1 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-        }
-
-        .blog-card {
-            display: flex;
-            flex-direction: column;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    .view-details-unique-1,
+    .view-details-unique-2,
+    .view-details-unique-3 {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 
-        .blog-card-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-        }
+    .view-details-unique-1:hover,
+    .view-details-unique-2:hover,
+    .view-details-unique-3:hover {
+        text-decoration: underline;
+    }
 
-        .blog-card-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3 / 1.8;
-            /* 3:2 ratio */
-            border-radius: 8px 8px 0 0;
-        }
+    .owl-carousel .item {
+        text-align: center;
+        padding: 10px;
+    }
 
-        .blog-card-text {
-            padding: 15px;
-            background-color: #f9f9f9;
-        }
+    .owl-carousel .item img {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
 
-        .blog-card-text p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
+    .section-card-unique-1 {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+    }
 
-        .blog-date {
-            font-size: 0.9rem;
-            color: #888;
-        }
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 
-        .blog-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
 
-        .blog-description {
-            font-size: 1rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
+    .blog-card-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px 8px 0 0;
+    }
 
-        .view-details-unique-1 {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .blog-card-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 1.8;
+        /* 3:2 ratio */
+        border-radius: 8px 8px 0 0;
+    }
 
-        .view-details-unique-1:hover {
-            text-decoration: underline;
-        }
+    .blog-card-text {
+        padding: 15px;
+        background-color: #f9f9f9;
+    }
 
-        .section-card-unique-2 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
+    .blog-card-text p {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
 
-        .news-card {
-            display: flex;
-            flex-direction: column;
-            padding: 0px 15px;
-        }
+    .blog-date {
+        font-size: 0.9rem;
+        color: #888;
+    }
 
-        .news-card-item {
-            display: flex;
-            border-bottom: 1px solid #f1f1f1;
-            padding-bottom: 15px;
-        }
+    .blog-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
 
-        .news-card-left {
-            width: 40%;
-            display: flex;
-            align-items: center;
-            /* Center the image vertically */
-            justify-content: center;
-            /* Center the image horizontally */
-        }
+    .blog-description {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
 
-        .news-card-left img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+    .view-details-unique-1 {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        .news-card-right {
-            width: 60%;
-            padding: 10px 0px 10px 10px;
-        }
+    .view-details-unique-1:hover {
+        text-decoration: underline;
+    }
 
-        .news-card-right p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
+    .section-card-unique-2 {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
 
-        .news-date {
-            font-size: 0.9rem;
-            color: #888;
-        }
+    .news-card {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 15px;
+    }
 
-        .news-title {
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin: 10px 0;
-        }
+    .news-card-item {
+        display: flex;
+        border-bottom: 1px solid #f1f1f1;
+        padding-bottom: 15px;
+    }
 
-        .view-news {
-            color: #e74c3c;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .news-card-left {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        /* Center the image vertically */
+        justify-content: center;
+        /* Center the image horizontally */
+    }
 
-        .view-news:hover {
-            text-decoration: underline;
-        }
+    .news-card-left img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 
-        .section-card-unique-3 {
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-            border-radius: 8px;
-        }
+    .news-card-right {
+        width: 60%;
+        padding: 10px 0px 10px 10px;
+    }
 
-        .section-header-unique-3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            text-align: left;
-            color: #333;
-        }
+    .news-card-right p {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
 
-        /* Tab Navigation */
-        .event-tabs {
-            display: flex;
-            gap: 10px;
-            padding: 0px 10px;
-            margin-bottom: 15px;
-        }
+    .news-date {
+        font-size: 0.9rem;
+        color: #888;
+    }
 
-        .event-tab {
-            flex: 1;
-            padding: 8px 12px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            text-align: center;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #f8f8f8;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    .news-title {
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
 
-        .event-tab.active {
-            background-color: #e74c3c;
-            color: #ffffff;
-        }
+    .view-news {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-        .event-tab:hover {
-            background-color: #e74c3c;
-            color: #ffffff;
-        }
+    .view-news:hover {
+        text-decoration: underline;
+    }
 
-        /* Event List */
-        .event-content {
-            display: flex;
-            flex-direction: column;
-        }
+    .section-card-unique-3 {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+    }
 
-        .event-list {
-            display: none;
-        }
+    .section-header-unique-3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+        color: #333;
+    }
 
-        .event-list.active {
-            display: block;
-        }
+    /* Tab Navigation */
+    .event-tabs {
+        display: flex;
+        gap: 10px;
+        padding: 0px 10px;
+        margin-bottom: 15px;
+    }
 
-        .event-card {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding: 0px 10px;
-        }
+    .event-tab {
+        flex: 1;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-        .event-card p {
-            padding: 0px !important;
-            margin: 0px !important;
-        }
+    .event-tab.active {
+        background-color: #e74c3c;
+        color: #ffffff;
+    }
 
-        .event-date-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #f8f8f8;
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            margin-right: 15px;
-        }
+    .event-tab:hover {
+        background-color: #e74c3c;
+        color: #ffffff;
+    }
 
-        .event-card-image {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px 8px 0 0;
-        }
+    /* Event List */
+    .event-content {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .event-card-image img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 3 / 2.3;
-            /* 3:2 ratio */
-            border-radius: 8px 8px 0 0;
-        }
+    .event-list {
+        display: none;
+    }
 
-        .event-day {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
+    .event-list.active {
+        display: block;
+    }
 
-        .event-month {
-            font-size: 0.9rem;
-            color: #888;
-            margin: 0;
-        }
+    .event-card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        padding: 0px 10px;
+    }
 
-        .event-details {
-            flex: 1;
-        }
+    .event-card p {
+        padding: 0px !important;
+        margin: 0px !important;
+    }
 
-        .event-title {
-            font-size: 1rem;
-            font-weight: bold;
-            margin: 0 0 5px;
-        }
+    .event-date-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        margin-right: 15px;
+    }
 
-        .event-location {
-            font-size: 0.9rem;
-            color: #888;
-            margin: 0 0 10px;
-        }
+    .event-card-image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px 8px 0 0;
+    }
 
-        .view-details-unique-3 {
-            color: #e74c3c;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    .event-card-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2.3;
+        /* 3:2 ratio */
+        border-radius: 8px 8px 0 0;
+    }
 
-        .view-details-unique-3:hover {
-            text-decoration: underline;
-        }
+    .event-day {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
 
-        hr {
-            margin: 15px 0;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
+    .event-month {
+        font-size: 0.9rem;
+        color: #888;
+        margin: 0;
+    }
 
-        /* styles.css */
-        .blog-card-text-h {
-            /* background: linear-gradient(45deg, #e74c3c, #f39c12); */
-            /* Stylish gradient background */
-            border-radius: 8px 8px 0px 0px;
-            /* Rounded corners */
-            padding: 16px;
-            /* Inner padding for spacing */
-            color: #ffffff;
-            /* Text color */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            /* Subtle shadow for text */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Box shadow for depth */
-            font-family: 'Poppins', sans-serif;
-            /* Modern font */
-        }
+    .event-details {
+        flex: 1;
+    }
 
-        .blog-card-text-h h4 {
-            font-size: 1.5rem;
-            /* Adjust the heading size */
-            margin: 0;
-            /* Remove default margin */
-            font-weight: bold;
-            /* Bold text for emphasis */
-            text-align: center;
-            /* Center-align the heading */
-        }
+    .event-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 0 5px;
+    }
 
-        .side-overlay-carousel-design-c {
-            background-color: #001055;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-        }
-    </style>
+    .event-location {
+        font-size: 0.9rem;
+        color: #888;
+        margin: 0 0 10px;
+    }
 
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    .view-details-unique-3 {
+        color: #e74c3c;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-    <!-- Include Owl Carousel JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    .view-details-unique-3:hover {
+        text-decoration: underline;
+    }
 
-    <script>
-        $(document).ready(function() {
-            // Initialize Blogs Carousel
-            $(".blogs-carousel-unique-1").owlCarousel({
-                items: 1,
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                nav: false,
-                dots: true,
-            });
+    hr {
+        margin: 15px 0;
+        border: 0;
+        border-top: 1px solid #eee;
+    }
 
-            // Initialize News Carousel
-            // $(".news-carousel-unique-2").owlCarousel({
-            //     items: 1,
-            //     margin: 10,
-            //     loop: true,
-            //     autoplay: true,
-            //     autoplayTimeout: 3000,
-            //     autoplayHoverPause: true,
-            //     nav: true,
-            //     dots: true,
-            // });
+    /* styles.css */
+    .blog-card-text-h {
+        /* background: linear-gradient(45deg, #e74c3c, #f39c12); */
+        /* Stylish gradient background */
+        border-radius: 8px 8px 0px 0px;
+        /* Rounded corners */
+        padding: 16px;
+        /* Inner padding for spacing */
+        color: #ffffff;
+        /* Text color */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        /* Subtle shadow for text */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Box shadow for depth */
+        font-family: 'Poppins', sans-serif;
+        /* Modern font */
+    }
 
-            // Initialize Events Carousel
-            $(".events-carousel-unique-3").owlCarousel({
-                items: 1,
-                margin: 10,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                nav: false,
-                dots: true,
-            });
+    .blog-card-text-h h4 {
+        font-size: 1.5rem;
+        /* Adjust the heading size */
+        margin: 0;
+        /* Remove default margin */
+        font-weight: bold;
+        /* Bold text for emphasis */
+        text-align: center;
+        /* Center-align the heading */
+    }
+
+    .side-overlay-carousel-design-c {
+        background-color: #001055;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+</style>
+
+<style>
+    /* Adjusted Styles for Blue Backdrop */
+    .side-overlay-carousel-design-c {
+        background-color: #001055;
+        border-radius: 20px 0 0 20px;
+        width: 33.3333%;
+        /* Width for col-5 in Bootstrap (5/12 = 41.67%) */
+        position: absolute;
+        /* Ensures it stays on the right side */
+        right: 0;
+        /* Aligns it to the right of the screen */
+        top: 0;
+        height: 100%;
+        /* Full height */
+        padding: 20px;
+    }
+
+
+    .blog-card-text-h {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .blog-card-text-h h4 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    .event-card-image img {
+        border-radius: 8px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .btn {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        color: #001055;
+    }
+</style>
+
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Include Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initialize Blogs Carousel
+        $(".blogs-carousel-unique-1").owlCarousel({
+            items: 1,
+            margin: 10,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: true,
         });
-    </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('.event-tab');
-            const lists = document.querySelectorAll('.event-list');
+        // Initialize News Carousel
+        // $(".news-carousel-unique-2").owlCarousel({
+        //     items: 1,
+        //     margin: 10,
+        //     loop: true,
+        //     autoplay: true,
+        //     autoplayTimeout: 3000,
+        //     autoplayHoverPause: true,
+        //     nav: true,
+        //     dots: true,
+        // });
 
-            tabs.forEach((tab) => {
-                tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabs.forEach((t) => t.classList.remove('active'));
-                    // Add active class to the clicked tab
-                    this.classList.add('active');
+        // Initialize Events Carousel
+        $(".events-carousel-unique-3").owlCarousel({
+            items: 1,
+            margin: 10,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            nav: false,
+            dots: true,
+        });
+    });
+</script>
 
-                    // Hide all lists and show the targeted list
-                    const target = this.getAttribute('data-target');
-                    lists.forEach((list) => {
-                        if (list.id === target) {
-                            list.classList.add('active');
-                        } else {
-                            list.classList.remove('active');
-                        }
-                    });
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.event-tab');
+        const lists = document.querySelectorAll('.event-list');
+
+        tabs.forEach((tab) => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach((t) => t.classList.remove('active'));
+                // Add active class to the clicked tab
+                this.classList.add('active');
+
+                // Hide all lists and show the targeted list
+                const target = this.getAttribute('data-target');
+                lists.forEach((list) => {
+                    if (list.id === target) {
+                        list.classList.add('active');
+                    } else {
+                        list.classList.remove('active');
+                    }
                 });
             });
         });
-    </script>
+    });
+</script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    @endsection
+<style>
+    /* General Styles */
+    body {
+        background-color: #f8fbff;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #001055;
+        text-align: right;
+    }
+
+    /* Blogs Section Styles */
+    .blogs-section .blog-card {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 15px;
+    }
+
+    .blogs-section .blog-card img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        height: auto;
+    }
+
+    .blogs-section .blog-card h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+
+    .blogs-section .view-details-unique-1 {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .blogs-section .view-details-unique-1:hover {
+        color: #001055;
+    }
+
+    /* News Section Styles */
+    .news-section .news-card-item {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: flex;
+        overflow: hidden;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .news-section .news-card-item img {
+        width: 40%;
+        border-radius: 8px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .news-section .news-card-item h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .news-section .view-news {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .news-section .view-news:hover {
+        color: #001055;
+    }
+
+    /* Events Section Styles */
+    .events-section {
+        background-color: #001055;
+        border-radius: 20px;
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .events-section .event-card {
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 0;
+        text-align: center;
+    }
+
+    .events-section .event-card img {
+        width: 100%;
+        border-radius: 8px;
+        height: auto;
+    }
+
+    .events-section .event-card h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #ffffff;
+    }
+
+    .events-section .btn {
+        color: #001055;
+        background-color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 10px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .events-section .btn:hover {
+        background-color: #001055;
+        color: #ffffff;
+    }
+
+    /* Owl Carousel Styles */
+    .owl-carousel .item {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .owl-carousel .item img {
+        border-radius: 8px;
+    }
+
+    .card-equal-height {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+</style>
+
+
+@endsection

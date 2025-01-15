@@ -51,8 +51,8 @@
     }
 
     .news-image {
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: auto;
         border-radius: 8px;
         object-fit: cover;
     }
@@ -133,15 +133,15 @@
         <!-- Blog Item 1 -->
         <div class="col-12">
             <div class="news-item d-flex flex-column flex-md-row align-items-md-center">
-                <div class="news-date-image d-flex align-items-center mb-3 mb-md-0 me-md-3">
-                    <img src="https://via.placeholder.com/100" alt="Blog Image" class="news-image">
+                <div class=" col-lg-2 news-date-image d-flex align-items-center mb-3 mb-md-0 me-md-3">
+                    <img src="https://picsum.photos/250/200?random=6" alt="Blog Image" class="news-image">
                 </div>
-                <div class="news-content flex-grow-1">
+                <div class="col-lg-7 news-content flex-grow-1">
                     <p class="news-date">18. September 2024</p>
                     <p class="news-title">USZ und Varian unterschreiben Innovationsvertrag</p>
                     <p class="news-description">Details about the innovation agreement signed by USZ and Varian.</p>
                 </div>
-                <div class="news-arrow">
+                <div class="col-lg-3 news-arrow">
                     <i>&#8594;</i>
                 </div>
             </div>
@@ -150,7 +150,7 @@
         <div class="col-12">
             <div class="news-item d-flex flex-column flex-md-row align-items-md-center">
                 <div class="news-date-image d-flex align-items-center mb-3 mb-md-0 me-md-3">
-                    <img src="https://via.placeholder.com/100" alt="Blog Image" class="news-image">
+                    <img src="https://picsum.photos/100/100?random=6" alt="Blog Image" class="news-image">
                 </div>
                 <div class="news-content flex-grow-1">
                     <p class="news-date">11. September 2024</p>
