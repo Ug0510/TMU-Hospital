@@ -5,12 +5,6 @@
 @section('content')
 <!-- Content ============================================= -->
 <style>
-    .tmu-btn.btn-2 {
-        border: 1px solid #001055;
-        background-color: transparent;
-        color: #001055;
-    }
-
     .entry-title h3 {
         font-size: 24px !important;
         padding: 0;
@@ -118,157 +112,246 @@
         }
     }
 
+    .card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #fff;
+    }
+
+    .card .badge {
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    .card .btn {
+        font-weight: bold;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .news-card {
+        cursor: pointer;
+    }
+
+    /* Styling for the news card container */
+    .news-card {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Badge Styling */
+    .news-card .badge {
+        font-size: 0.75rem;
+        font-weight: bold;
+        background-color: #ffc107;
+        /* Vibrant warning color */
+        color: #333;
+    }
+
+    /* Image Styling */
+    .news-card img {
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #fff;
+        object-fit: cover;
+    }
+
+    /* Headings */
+    .news-card a h5 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #000f54;
+        /* Primary text color */
+    }
+
+    .news-card a h5:hover {
+        color: #ff7700;
+    }
+
+    .news-card h5 a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s ease;
+    }
+
+    .news-card h5 a:hover {
+        color: #ff7700;
+    }
+
+    /* Unordered List (ul) and List Items (li) */
+    .news-card ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .news-card ul li {
+        display: inline-block;
+        margin-right: 15px;
+        font-size: 0.875rem;
+        color: #6c757d;
+        /* Muted text color */
+    }
+
+    .news-card ul li i {
+        margin-right: 5px;
+        color: #6c757d;
+        /* Icon color matches badge */
+    }
+
+    /* Paragraph (p) Styling */
+    .news-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #495057;
+        /* Neutral text color */
+        text-align: justify;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Button Styling */
+    .news-card .btn {
+        font-weight: bold;
+        background-color: #ff7700;
+        border: none;
+        color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card .btn:hover {
+        background-color: #001055;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .tmu-btn {
+        border: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .tmu-btn.btn-2 {
+        border: 1px solid #001055;
+        background-color: transparent;
+        color: #001055;
+    }
+
+    .tmu-btn.btn-2:hover {
+        background-color: #0010551e;
+        background-color: #001055;
+        color: #fff;
+    }
 </style>
 
-<section id="content">
-    <div class="content-wrap pb-0">
-        <div class="container-fluid my-0 px-1 px-md-5">
-            <div class="col-md-12 col-lg-12 mt-3 mt-sm-0">
-                <h1 class="text-uppercase tmu-text-primary tmu-page-heading text-center mb-1 mb-md-3">
-                    <span>TMU</span> <span>News</span>
-                </h1>
 
-                <!-- Filter Form Section ============================================= -->
-                <section id="content pb-3 mb-3">
-                    <div class="content-wrap">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <form id="filterForm" method="POST" action="#">
-                                                <div class="row">
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="news_category" class="form-label fw-bold fs-16">News Category</label>
-                                                        <select class="form-select" name="news_category" id="news_category">
-                                                            <option value="">Select Category</option>
-                                                            <option value="1">General News</option>
-                                                            <option value="2">Events</option>
-                                                            <option value="3">Announcements</option>
-                                                        </select>
-                                                    </div>
 
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="college_name" class="form-label fw-bold fs-16">University / College / Department</label>
-                                                        <select class="form-select" name="college_name" id="college_name">
-                                                            <option value="">Select College</option>
-                                                            <option value="1">College of Engineering</option>
-                                                            <option value="2">School of Management</option>
-                                                            <option value="3">School of Arts</option>
-                                                        </select>
-                                                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 m-4">
+            <h1 class="text-center m-0">
+                <span style="font-size:2.5rem; color:#ff7700; font-weight:600;">TMU</span> <span style="font-size:2.5rem; color:#000f54; font-weight:600;">News</span>
+            </h1>
+        </div>
+    </div>
+</div>
 
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="from_date" class="form-label fw-bold fs-16">From</label>
-                                                        <input type="date" name="from_date" id="from_date" class="form-control">
-                                                    </div>
 
-                                                    <div class="col-md-3 mb-3">
-                                                        <label for="to_date" class="form-label fw-bold fs-16">To</label>
-                                                        <input type="date" name="to_date" id="to_date" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="row mt-2">
-                                                    <div class="col-md-12">
-                                                        <button type="submit" class="tmu-btn btn-2 m-0 py-1 px-2 fs-12">Apply Filters</button>
-                                                        <button type="button" class="tmu-btn btn-2 m-0 py-1 px-2 fs-12" onclick="clearFilters();">Clear Filters</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<!-- Filter Form Section ============================================= -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 card">
+
+            <div class="card-body">
+                <form id="filterForm" method="POST" action="#">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="news_category" class="form-label fw-bold fs-16">News Category</label>
+                            <select class="form-select" name="news_category" id="news_category">
+                                <option value="">Select Category</option>
+                                <option value="1">General News</option>
+                                <option value="2">Events</option>
+                                <option value="3">Announcements</option>
+                            </select>
+                        </div>
+
+
+                        <div class="col-md-4 mb-3">
+                            <label for="from_date" class="form-label fw-bold fs-16">From</label>
+                            <input type="date" name="from_date" id="from_date" class="form-control">
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="to_date" class="form-label fw-bold fs-16">To</label>
+                            <input type="date" name="to_date" id="to_date" class="form-control">
                         </div>
                     </div>
-                </section>
-
-                <!-- News Content Section ============================================= -->
-                <section id="content" style="background: #f5f5f5;">
-                    <div class="container">
-                        <div class="content-wrap" id="newsContent">
-                            <div class="row g-4 mb-5" id="news_results">
-                                <!-- Sample News Article -->
-                                <article class="entry event col-12 col-md-6 col-lg-12 mb-4">
-                                    <div class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
-                                        <div class="col-12 col-lg-4 col-xl-3 mb-md-0">
-                                            <a href="#" class="entry-image mb-0 w-100 h-100">
-                                                <img src="https://via.placeholder.com/300x200" alt="News Image" class="rounded-2 object-cover align-items-center">
-                                                <div class="bg-overlay">
-                                                    <div class="bg-overlay-content justify-content-start align-items-start w-100">
-                                                        <div class="badge px-3 py-2 fs-12 rounded-pill">General News</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-12 col-lg-8 col-xl-9 ps-4 pt-1">
-                                            <div class="entry-title nott">
-                                                <h3><a href="#">Exciting Updates from TMU</a></h3>
-                                            </div>
-                                            <div class="entry-meta mt-3">
-                                                <ul>
-                                                    <li><i class="uil uil-schedule"></i> January 15, 2025</li>
-                                                    <li><a href="#"><i class="uil uil-user"></i> Admin</a></li>
-                                                    <li><i class="uil uil-folder-open"></i> <a href="#">General News</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="entry-content my-3">
-                                                <p class="mb-0 text-justify">TMU hosted a series of exciting events last week, including workshops, cultural programs, and guest lectures. Stay tuned for more updates!</p>
-                                            </div>
-                                            <a href="#" class="tmu-btn btn-1 m-0 py-1 px-2">Read More</a>
-                                        </div>
-                                    </div>
-                                </article>
-
-                                <!-- Additional Filler Content -->
-                                <article class="entry event col-12 col-md-6 col-lg-12 mb-4">
-                                    <div class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
-                                        <div class="col-12 col-lg-4 col-xl-3 mb-md-0">
-                                            <a href="#" class="entry-image mb-0 w-100 h-100">
-                                                <img src="https://via.placeholder.com/300x200" alt="News Image" class="rounded-2 object-cover align-items-center">
-                                                <div class="bg-overlay">
-                                                    <div class="bg-overlay-content justify-content-start align-items-start w-100">
-                                                        <div class="badge px-3 py-2 fs-12 rounded-pill">Events</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="col-12 col-lg-8 col-xl-9 ps-4 pt-1">
-                                            <div class="entry-title nott">
-                                                <h3><a href="#">Upcoming Seminar: Innovations in AI</a></h3>
-                                            </div>
-                                            <div class="entry-meta mt-3">
-                                                <ul>
-                                                    <li><i class="uil uil-schedule"></i> February 5, 2025</li>
-                                                    <li><a href="#"><i class="uil uil-user"></i> Admin</a></li>
-                                                    <li><i class="uil uil-folder-open"></i> <a href="#">Events</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="entry-content my-3">
-                                                <p class="mb-0 text-justify">Join us for a seminar on AI innovations, featuring top speakers from the tech industry. Reserve your spot now!</p>
-                                            </div>
-                                            <a href="#" class="tmu-btn btn-1 m-0 py-1 px-2">Read More</a>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <!-- Pagination -->
-                            <div class="pagination">
-                                <ul>
-                                    <li><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                </ul>
-                            </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <button type="submit" class="tmu-btn btn-2 m-0 py-1 px-2 fs-12">Apply Filters</button>
+                            <button type="button" class="tmu-btn btn-2 m-0 py-1 px-2 fs-12" onclick="clearFilters();">Clear Filters</button>
                         </div>
                     </div>
-                </section>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row mt-2 g-4 mb-5" id="news_results">
+        <!-- Card 1 -->
+        <div class="col-12 mb-4 news-card">
+            <div class=" border-0 rounded-5  all-ts">
+                <div class="row g-0 align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-12 col-lg-4  col-xl-3 position-relative">
+                        <img src="https://picsum.photos/300/200" alt="News Image" class="rounded-4 w-100 h-100 p-2" style="object-fit: cover;">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="col-12 col-lg-8 col-xl-9 p-1">
+                        <div class="card-body px-3">
+                            <a href="#" class="text-decoration-none">
+                                <h5 class="card-title fw-bold mb-2 ">
+                                    Teerthanker Mahaveer University celebrated World IP Day
+                                </h5>
+                            </a>
+
+                            <ul class="list-inline small text-muted mb-1">
+                                <li class="list-inline-item"><i class="icofont-calendar"></i> April 30, 2024</li>
+                                <li class="list-inline-item"><i class="icofont-folder-open"></i> Conference-Seminar</li>
+                            </ul>
+                            <p class="card-text">On April 30, 2024, Teerthanker Mahaveer University, one of the best private universities in India, hosted two pivotal sessions ...</p>
+                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 
 
 @endsection
