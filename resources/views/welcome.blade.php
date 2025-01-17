@@ -25,7 +25,7 @@
                                 brighter future. </p>
                             <div class="common-btn pt-0">
                                 <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                 brighter future. </p>
                             <div class="common-btn invisible">
                                 <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                 brighter future. </p>
                             <div class="common-btn invisible">
                                 <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="about.html">Learn More</a>
+                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                                 <img src="https://www.fortishealthcare.com/drupal-data/2023-03/Group%2022247.svg"
                                     alt="image">
                             </div>
-                            <a href="/hospitals?location=all" class="link-over location-pages-link"></a>
+                            <a href="#departments" class="link-over location-pages-link" onclick="scrollToDepartment(event)"></a>
                         </div>
                         <div class="overview-box">
                             <div class="overview-text">
@@ -223,7 +223,7 @@
                                 <img src="https://www.fortishealthcare.com/drupal-data/2023-03/specialityicon%20%281%29.png"
                                     alt="image">
                             </div>
-                            <a href="/specialities?location=all" class="link-over location-pages-link"></a>
+                            <a href="#departments" class="link-over location-pages-link" onclick="scrollToDepartment(event)"></a>
                         </div>
                         <div class="overview-box">
                             <div class="overview-text">
@@ -234,7 +234,7 @@
                                 <img src="https://www.fortishealthcare.com/drupal-data/2023-03/Group%2021927.svg"
                                     alt="image">
                             </div>
-                            <a href="/doctors?location=all" class="link-over location-pages-link"></a>
+                            <a href="{{route('our.doctors')}}" class="link-over location-pages-link"></a>
                         </div>
                     </div>
                 </div>
@@ -346,7 +346,7 @@
     <!-- End About -->
 
 
-    <section class="services-area pb-70">
+    <section class="services-area pb-70" id="departments">
         <div class="container">
             <div class="section-title">
                 <h2 class="tmu-primary">Our Departments</h2>
@@ -357,10 +357,12 @@
                     <div class="service-item">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-heart-beat-alt"></i>
-                                    <h3>Cardiology</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'cardiology']) }}">
+                                    <div class="service-front">
+                                        <i class="icofont-heart-beat-alt"></i>
+                                        <h3>Cardiology</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -369,10 +371,12 @@
                     <div class="service-item two service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/neurology.svg')}}" alt="Neurology" class="service-icon-custom-b" />
-                                    <h3>Neurology</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'neurology']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/neurology.svg')}}" alt="Neurology" class="service-icon-custom-b" />
+                                        <h3>Neurology</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -381,10 +385,12 @@
                     <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/plastic-surgery.svg')}}" alt="Plastic Surgery" class="service-icon-custom-b" />
-                                    <h3>Plastic Surgery</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/plastic-surgery.svg')}}" alt="Plastic Surgery" class="service-icon-custom-b" />
+                                        <h3>Plastic Surgery</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -393,10 +399,12 @@
                     <div class="service-item service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/nephrology.svg')}}" alt="Nephrology" class="service-icon-custom-b" />
-                                    <h3>Nephrology</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'nephrology']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/nephrology.svg')}}" alt="Nephrology" class="service-icon-custom-b" />
+                                        <h3>Nephrology</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -405,10 +413,12 @@
                     <div class="service-item two service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/ctvs.svg')}}" alt="CTVS" class="service-icon-custom-b" />
-                                    <h3>CTVS</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'ctvs']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/ctvs.svg')}}" alt="CTVS" class="service-icon-custom-b" />
+                                        <h3>CTVS</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -417,10 +427,12 @@
                     <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/neuro-surgery.svg')}}" alt="Neuro Surgery" class="service-icon-custom-b" />
-                                    <h3>Neuro Surgery</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/neuro-surgery.svg')}}" alt="Neuro Surgery" class="service-icon-custom-b" />
+                                        <h3>Neuro Surgery</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -429,10 +441,12 @@
                     <div class="service-item service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/urology.svg')}}" alt="Urology" class="service-icon-custom-b" />
-                                    <h3>Urology</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'urology']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/urology.svg')}}" alt="Urology" class="service-icon-custom-b" />
+                                        <h3>Urology</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -441,10 +455,12 @@
                     <div class="service-item two service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/gastroenterology.svg')}}" alt="Gastro" class="service-icon-custom-b" />
-                                    <h3>Gastro</h3>
-                                </div>
+                                <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/gastroenterology.svg')}}" alt="Gastro" class="service-icon-custom-b" />
+                                        <h3>Gastro</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -453,10 +469,12 @@
                     <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/surgery.svg')}}" alt="Surgery" class="service-icon-custom-b" />
-                                    <h3>Surgery</h3>
-                                </div>
+                                <a href="{{ route('department', ['slug' => 'general-surgery']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/surgery.svg')}}" alt="Surgery" class="service-icon-custom-b" />
+                                        <h3>Surgery</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -465,10 +483,12 @@
                     <div class="service-item service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/orthopedic.svg')}}" alt="orthopedic" class="service-icon-custom-b" />
-                                    <h3>Orthopedic</h3>
-                                </div>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/orthopedic.svg')}}" alt="Orthopedic" class="service-icon-custom-b" />
+                                        <h3>Orthopedic</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -477,10 +497,12 @@
                     <div class="service-item two">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-front">
-                                    <i class="icofont-drug"></i>
-                                    <h3>Medicine</h3>
-                                </div>
+                                <a href="{{ route('department', ['slug' => 'general-medicine']) }}">
+                                    <div class="service-front">
+                                        <i class="icofont-drug"></i>
+                                        <h3>Medicine</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -489,10 +511,12 @@
                     <div class="service-item three service-icon-2345">
                         <div class="d-table">
                             <div class="d-table-cell">
-                                <div class="service-icon-front service-front">
-                                    <img src="{{asset('/img/home/department/ent.svg')}}" alt="ent" class="service-icon-custom-b" />
-                                    <h3>ENT</h3>
-                                </div>
+                                <a href="{{ route('department', ['slug' => 'ent']) }}">
+                                    <div class="service-icon-front service-front">
+                                        <img src="{{asset('/img/home/department/ent.svg')}}" alt="ENT" class="service-icon-custom-b" />
+                                        <h3>ENT</h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -505,10 +529,12 @@
                         <div class="service-item service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/psychiatary.svg')}}" alt="Psychiatary" class="service-icon-custom-b" />
-                                        <h3>Psychiatry</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'psychiatry']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/psychiatary.svg')}}" alt="Psychiatry" class="service-icon-custom-b" />
+                                            <h3>Psychiatry</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -517,10 +543,12 @@
                         <div class="service-item two service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/eye.svg')}}" alt="Opthalmology" class="service-icon-custom-b" />
-                                        <h3>Opthalmology</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'ophthalmology']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/eye.svg')}}" alt="Ophthalmology" class="service-icon-custom-b" />
+                                            <h3>Ophthalmology</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -529,10 +557,12 @@
                         <div class="service-item three service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/derma.svg')}}" alt="Dermatology" class="service-icon-custom-b" />
-                                        <h3>Dermatology</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'dermatology']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/derma.svg')}}" alt="Dermatology" class="service-icon-custom-b" />
+                                            <h3>Dermatology</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -541,10 +571,12 @@
                         <div class="service-item service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
-                                        <h3>Gynecology</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'obg']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/obg.svg')}}" alt="OBG" class="service-icon-custom-b" />
+                                            <h3>Gynecology</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -553,10 +585,12 @@
                         <div class="service-item two service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/pediatrics.svg')}}" alt="pediatrics" class="service-icon-custom-b" />
-                                        <h3>Pediatrics</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'pediatrics']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/pediatrics.svg')}}" alt="Pediatrics" class="service-icon-custom-b" />
+                                            <h3>Pediatrics</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -565,10 +599,12 @@
                         <div class="service-item three service-icon-2345">
                             <div class="d-table">
                                 <div class="d-table-cell">
-                                    <div class="service-icon-front service-front">
-                                        <img src="{{asset('/img/home/department/respiratory.svg')}}" alt="Respiratory" class="service-icon-custom-b" />
-                                        <h3>Respiratory</h3>
-                                    </div>
+                                    <a href="{{ route('department', ['slug' => 'respiratory-medicine']) }}">
+                                        <div class="service-icon-front service-front">
+                                            <img src="{{asset('/img/home/department/respiratory.svg')}}" alt="Respiratory" class="service-icon-custom-b" />
+                                            <h3>Respiratory</h3>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -624,7 +660,7 @@
                     <area target="_self" id="Reproductive-System" alt="Reproductive-System" title="Reproductive-System" href="{{ route('speciality', ['slug' => 'urology']) }}" coords="290,447,425,507" shape="rect">
                     <area target="_self" id="Lower-Back" alt="Lower-Back" title="Lower-Back" href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" coords="353,300,426,357" shape="rect">
                     <area target="_self" id="Thigh" alt="Thigh" title="Thigh" href="{{ route('department', ['slug' => 'orthopedic']) }}" coords="37,467,107,500" shape="rect">
-                    <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="/varicose" coords="10,600,100,660" shape="rect">
+                    <area target="_self" id="Varicose-Vain" alt="Varicose-Vain" title="Varicose-Vein" href="{{ route('department', ['slug' => 'general-surgery']) }}" coords="10,600,100,660" shape="rect">
                 </map>
 
 
@@ -657,86 +693,86 @@
 
                         <ul class="service-speciality-left body_list left">
                             <li class="eyeMpointer">
-                                <a href="/ophthalomology"><span class="txt">Eye</span></a>
+                                <a href="{{ route('department', ['slug' => 'ophthalmology']) }}"><span class="txt">Eye</span></a>
                             </li>
 
                             <li class="earMPointer">
-                                <a href="/ent"><span class="txt">Ear</span></a>
+                                <a href="{{ route('department', ['slug' => 'ent']) }}"><span class="txt">Ear</span></a>
                             </li>
 
                             <li class="earMPointer vocalcordMPointer">
-                                <a href="/ent"><span class="txt">Throat</span></a>
+                                <a href="{{ route('department', ['slug' => 'ent']) }}"><span class="txt">Throat</span></a>
                             </li>
 
                             <li class="liverMpointer">
-                                <a href="/gastroenterology"><span class="txt">Liver</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}"><span class="txt">Liver</span></a>
                             </li>
 
                             <li class="handMpointer">
-                                <a href="/orthopaedics"><span class="txt">Arm</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Arm</span></a>
                             </li>
 
                             <li class="kidneysMpointer">
-                                <a href="/nephrology"><span class="txt">Kidney</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'nephrology']) }}"><span class="txt">Kidney</span></a>
                             </li>
 
                             <li class="lowerBackMpointer">
-                                <a href="/neuro-surgery"><span class="txt">Lower Back</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}"><span class="txt">Lower Back</span></a>
                             </li>
 
                             <li class="reproductiveMpointer">
-                                <a href="/urology"><span class="txt">Reproductive System</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'urology']) }}"><span class="txt">Reproductive System</span></a>
                             </li>
 
                             <li class="thighMpointer">
-                                <a href="/orthopaedics"><span class="txt">Thigh</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Thigh</span></a>
                             </li>
 
                             <li class="thighMpointer vericoseMpointer">
-                                <a href="/varicose"><span class="txt">Varicose Vein</span></a>
+                                <a href="{{ route('department', ['slug' => 'general-surgery']) }}"><span class="txt">Varicose Vein</span></a>
                             </li>
 
                             <li class="footMpointer">
-                                <a href="/orthopaedics"><span class="txt">Foot</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Foot</span></a>
                             </li>
                         </ul>
 
 
                         <ul class="service-speciality-right body_list right">
                             <li class="brainMpointer">
-                                <a href="/neurology"><span class="txt">Brain</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'neurology']) }}"><span class="txt">Brain</span></a>
                             </li>
 
                             <li class="noseMpointer">
-                                <a href="/ent"><span class="txt">Nose</span></a>
+                                <a href="{{ route('department', ['slug' => 'ent']) }}"><span class="txt">Nose</span></a>
                             </li>
 
                             <li class="heartMpointer">
-                                <a href="/cardiology"><span class="txt">Heart</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'cardiology']) }}"><span class="txt">Heart</span></a>
                             </li>
 
                             <li class="lungMpointer">
-                                <a href="/pulmonology"><span class="txt">Chest</span></a>
+                                <a href="{{ route('department', ['slug' => 'respiratory-medicine']) }}"><span class="txt">Chest</span></a>
                             </li>
 
                             <li class="elbowMpointer">
-                                <a href="/orthopaedics"><span class="txt">Elbow</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Elbow</span></a>
                             </li>
 
                             <li class="spineMpointer">
-                                <a href="/gastroenterology"><span class="txt">Stomach</span></a>
+                                <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}"><span class="txt">Stomach</span></a>
                             </li>
 
                             <li class="hipMpointer">
-                                <a href="/orthopaedics"><span class="txt">Hip</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Hip</span></a>
                             </li>
 
                             <li class="kneeMpointer">
-                                <a href="/orthopaedics"><span class="txt">Knee</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Knee</span></a>
                             </li>
 
                             <li class="ankleMpointer">
-                                <a href="/orthopaedics"><span class="txt">Ankle</span></a>
+                                <a href="{{ route('department', ['slug' => 'orthopedic']) }}"><span class="txt">Ankle</span></a>
                             </li>
                         </ul>
                     </div>
@@ -1430,7 +1466,7 @@
                                         <p class="blog-date text-muted">January 3, 2025</p>
                                         <h5 class="blog-title">Blog 1</h5>
                                         <p class="blog-description">Learn about the latest advancements in health care...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                        <a href="{{route('blog.details')}}" class="view-details-unique-1 mt-2">Read Post</a>
                                     </div>
                                 </div>
                             </div>
@@ -1445,7 +1481,7 @@
                                         <p class="blog-date text-muted">January 2, 2025</p>
                                         <h5 class="blog-title">Blog 2</h5>
                                         <p class="blog-description">Explore how technology is transforming patient care...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                        <a href="{{route('blog.details')}}" class="view-details-unique-1 mt-2">Read Post</a>
                                     </div>
                                 </div>
                             </div>
@@ -1460,7 +1496,7 @@
                                         <p class="blog-date text-muted">January 1, 2025</p>
                                         <h5 class="blog-title">Blog 3</h5>
                                         <p class="blog-description">Expert tips for maintaining a healthy lifestyle...</p>
-                                        <a href="#" class="view-details-unique-1 mt-2">Read Post</a>
+                                        <a href="{{route('blog.details')}}" class="view-details-unique-1 mt-2">Read Post</a>
                                     </div>
                                 </div>
                             </div>
@@ -1480,7 +1516,7 @@
                                 <div class="news-card-right">
                                     <p class="news-date text-muted">January 3, 2025</p>
                                     <h5 class="news-title text-break">Medanta raises awareness on pediatric blood cancer...</h5>
-                                    <a href="#" class="view-news">Read News</a>
+                                    <a href="{{route('news.page')}}" class="view-news">Read News</a>
                                 </div>
                             </div>
                             <!-- Card 2 -->
@@ -1491,7 +1527,7 @@
                                 <div class="news-card-right">
                                     <p class="news-date text-muted">January 2, 2025</p>
                                     <h5 class="news-title text-break">Discover how deep brain stimulation saved lives...</h5>
-                                    <a href="#" class="view-news">Read News</a>
+                                    <a href="{{route('news.page')}}" class="view-news">Read News</a>
                                 </div>
                             </div>
                             <!-- Card 3 -->
@@ -1502,7 +1538,7 @@
                                 <div class="news-card-right">
                                     <p class="news-date text-muted">January 1, 2025</p>
                                     <h5 class="news-title text-break">Advanced treatments for thalassemia unveiled...</h5>
-                                    <a href="#" class="view-news">Read News</a>
+                                    <a href="{{route('news.page')}}" class="view-news">Read News</a>
                                 </div>
                             </div>
                         </div>
@@ -2022,6 +2058,22 @@
             });
         });
     });
+</script>
+
+<script>
+    function scrollToDepartment(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const departmentSection = document.querySelector('#departments');
+        if (departmentSection) {
+            const offset = 150; // Adjust this value to set the desired top spacing
+            const topPosition = departmentSection.offsetTop - offset;
+
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
 </script>
 
 

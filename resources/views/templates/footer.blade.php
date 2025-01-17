@@ -3,7 +3,7 @@
 
 
 <div class="container">
-    <div class="row justify-content-center g-5">
+    <div class="row justify-content-center g-5 p-0 m-0">
         <div class="col-sm-6 col-lg-4">
             <div class="footer-item">
                 <div class="footer-contact">
@@ -33,10 +33,13 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li>
-                            <a href="/About-Us">About us</a>
+                            <a href="{{route('about.us')}}">About us</a>
                         </li>
                         <li>
-                            <a href="/Blog">Blog</a>
+                            <a href="{{route('blog')}}">Blog</a>
+                        </li>
+                        <li>
+                            <a href="{{route('news')}}">News</a>
                         </li>
                         <li>
                             <a href="#">Our Expertise</a>
@@ -45,10 +48,10 @@
                             <a href="#">Faq</a>
                         </li>
                         <li>
-                            <a href="#">Doctors</a>
+                            <a href="{{route('our.doctors')}}">Doctors</a>
                         </li>
                         <li>
-                            <a href="/Contact-Us">Contact us</a>
+                            <a href="{{route('contact.us')}}">Contact us</a>
                         </li>
                     </ul>
                 </div>

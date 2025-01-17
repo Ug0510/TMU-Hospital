@@ -774,30 +774,40 @@ a {
 }
 
 
-.about-carousel-btn {
+/* Scope only to the buttons inside the .hospital-item */
+.hospital-item .carousel-buttons {
+  display: flex; /* Make the container a flexbox */
+  justify-content: center; /* Horizontally align the buttons */
+  align-items: center; /* Vertically align the buttons */
+}
+
+/* Ensure the button stays circular */
+.hospital-item .about-carousel-btn {
   background-color: #ff7900 !important;
   color: white !important;
   border: 2px solid #ff7900;
-  border-color: #ff7900;
-  width: 40px;
+  max-width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: 0.2s ease-in all;
-  margin: 0 0.5rem;
+  display: inline-flex; /* Use inline-flex instead of flex */
+  justify-content: center; /* Horizontally center the icon */
+  align-items: center; /* Vertically center the icon */
   text-align: center;
-  vertical-align: middle;
   box-sizing: border-box;
-
+  margin: 0 0.5rem;
 }
 
-.about-carousel-btn i {
-  font-size: 1.3rem;
+.hospital-item .about-carousel-btn i {
+  font-size: 25px;
 }
 
-.about-carousel-btn:hover {
+.hospital-item .about-carousel-btn:hover {
   background-color: white !important;
   color: #ff7900 !important;
 }
+
+
 
 /* Shared Base Styles for Service Items */
 .service-item,
