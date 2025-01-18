@@ -4,11 +4,11 @@
 
 @section('content')
 <!-- About -->
-<div class="about-area pt-100 pb-0">
+<div class="about-area  pb-0">
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
-                <div class="section-title w-fit-content mx-auto">
+                <div class="section-title w-fit-content mx-auto pt-5" style="padding-top: 50px;">
                     <h2 class="tmu-primary">Our Doctors</h2>
                 </div>
 

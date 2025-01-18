@@ -2,123 +2,88 @@
 <footer style="padding-top:40px; padding-bottom:20px;">
 
 
-<div class="container">
-    <div class="row justify-content-center g-5 p-0 m-0">
-        <div class="col-sm-6 col-lg-4">
-            <div class="footer-item">
-                <div class="footer-contact">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>
-                            <i class="icofont-ui-message"></i>
-                            <a href="mailto:hospital@tmu.ac.in">hospital@tmu.ac.in</a>
-                            <a href="mailto:tmu-hospital@tmu.ac.in">tmu-hospital@tmu.ac.in</a>
-                        </li>
-                        <li>
-                            <i class="icofont-stock-mobile"></i>
-                            <a href="tel:+07554332322">Call: 095688 65444</a>
-                            <a href="tel:+236256256365">Call: 072170 18724</a>
-                        </li>
-                        <li>
-                            <i class="icofont-location-pin"></i>
-                            Bagadpur, Uttar Pradesh <br> 244001
-                        </li>
-                    </ul>
+    <div class="container">
+        <div class="row justify-content-center g-5 p-0 m-0">
+            <!-- Contact Info: Display first on mobile -->
+            <div class="col-12 col-md-6 col-lg-4 order-sm-1 order-lg-1">
+                <div class="footer-item">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <i class="icofont-ui-message"></i>
+                                <a href="mailto:hospital@tmu.ac.in">hospital@tmu.ac.in</a>
+                                <a href="mailto:tmu-hospital@tmu.ac.in">tmu-hospital@tmu.ac.in</a>
+                            </li>
+                            <li>
+                                <i class="icofont-stock-mobile"></i>
+                                <a href="tel:+07554332322">Call: 095688 65444</a>
+                                <a href="tel:+236256256365">Call: 072170 18724</a>
+                            </li>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                Bagadpur, Uttar Pradesh <br> 244001
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+    
+            <!-- Quick Links and Our Services side by side on mobile -->
+            <div class="col-6 col-md-6 col-lg-2 order-sm-2 order-lg-2">
+                <div class="footer-item">
+                    <div class="footer-quick">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="{{route('about.us')}}">About us</a></li>
+                            <li><a href="{{route('blog')}}">Blog</a></li>
+                            <li><a href="{{route('news')}}">News</a></li>
+                            <li><a href="#">Our Expertise</a></li>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="{{route('our.doctors')}}">Doctors</a></li>
+                            {{-- <li><a href="{{route('contact.us')}}">Contact us</a></li> --}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-6 col-md-6 col-lg-2 order-sm-3 order-lg-3">
+                <div class="footer-item">
+                    <div class="footer-quick">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="service-details.html">Dental Care</a></li>
+                            <li><a href="/cardiology">Cardiology</a></li>
+                            <li><a href="service-details.html">Hijama Therapy</a></li>
+                            <li><a href="service-details.html">Massage Therapy</a></li>
+                            <li><a href="service-details.html">Ambulance Services</a></li>
+                            <li><a href="service-details.html">Medicine</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Super Speciality: Two columns on mobile -->
+            <div class="col-12 col-md-6 col-lg-3 order-sm-4 order-lg-4">
+                <div class="footer-item">
+                    <div class="footer-quick">
+                        <h3>Super Speciality</h3>
+                        <ul class="list-unstyled row">
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'cardiology']) }}">CARDIOLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'nephrology']) }}">NEPHROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neurology']) }}">NEUROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'ctvs']) }}">CTVS</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'urology']) }}">UROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}">GASTROENTEROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}">PLASTIC SURGERY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}">NEURO SURGERY</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
         </div>
-        <div class="col-sm-6 col-lg-2">
-            <div class="footer-item">
-                <div class="footer-quick">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li>
-                            <a href="{{route('about.us')}}">About us</a>
-                        </li>
-                        <li>
-                            <a href="{{route('blog')}}">Blog</a>
-                        </li>
-                        <li>
-                            <a href="{{route('news')}}">News</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Expertise</a>
-                        </li>
-                        <li>
-                            <a href="#">Faq</a>
-                        </li>
-                        <li>
-                            <a href="{{route('our.doctors')}}">Doctors</a>
-                        </li>
-                        <li>
-                            <a href="{{route('contact.us')}}">Contact us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-lg-2">
-            <div class="footer-item">
-                <div class="footer-quick">
-                    <h3>Our Services</h3>
-                    <ul>
-                        <li>
-                            <a href="service-details.html">Dental Care</a>
-                        </li>
-                        <li>
-                            <a href="/cardiology">Cardiology</a>
-                        </li>
-                        <li>
-                            <a href="service-details.html">Hijama Therapy</a>
-                        </li>
-                        <li>
-                            <a href="service-details.html">Massage Therapy</a>
-                        </li>
-                        <li>
-                            <a href="service-details.html">Ambulance Sevices</a>
-                        </li>
-                        <li>
-                            <a href="service-details.html">Medicine</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>     
-        <div class="col-sm-6 col-lg-3">
-            <div class="footer-item">
-                <div class="footer-quick">
-                    <h3>Super Speciality</h3>
-                    <ul>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'cardiology']) }}" class="nav-link">CARDIOLOGY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'nephrology']) }}" class="nav-link">NEPHROLOGY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'neurology']) }}" class="nav-link">NEUROLOGY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}" class="nav-link">NEURO SURGERY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'ctvs']) }}" class="nav-link">CTVS</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}" class="nav-link">PLASTIC SURGERY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}" class="nav-link">GASTROENTEROLOGY</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('speciality', ['slug' => 'urology']) }}" class="nav-link">UROLOGY</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>     
     </div>
-</div>
 </footer>
 <!-- End Footer -->
 

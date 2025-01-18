@@ -12,48 +12,48 @@
             <img src="{{asset('img/home/about1.png')}}" alt="Shape">
         </div>
         <div class="row m-0 align-items-center">
-            <div class="col-lg-6 p-0">
-                <div class="hospital-item">
-                    <div class="row m-0">
-                        <div class="p-0">
-                            <div style="padding-left: 10%;">
-                                <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item p-2 active">
-                                            <img src="{{asset('img/home/about/new/1.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/2.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/3.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/4.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/5.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/6.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/7.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
-                                        <div class="carousel-item p-2">
-                                            <img src="{{asset('img/home/about/new/8.webp')}}" class="d-block w-100" alt="About" style="width: 90%;border-radius:15px;">
-                                        </div>
+            <div class="col-lg-6  hospital-item p-0 m-0">
 
+                <div class="row m-0">
+                    <div class="p-0">
+                        <div class="p-3 ps-lg-3">
+                            <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item  active">
+                                        <img src="{{asset('img/home/about/new/1.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/2.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/3.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/4.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/5.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/6.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/7.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/8.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
                                     </div>
 
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="col-lg-6">
-                <div class="hospital-item hospital-right" style="margin-left: 30px;">
+                <div class="hospital-item hospital-right mx-4">
                     <div class="section-title pb-0 mb-0">
                         <h2 class="tmu-primary">About Our Hospital</h2>
                     </div>
@@ -62,7 +62,7 @@
                         <br /><br /><b>It provides-</b>
                         24/7 medical facility with an 800+ bed super-specialty hospital on campus Hands-on practical experience opportunities for medical, nursing, and allied health students Comprehensive critical and emergency healthcare services.
                     </p>
-                    <div class="carousel-buttons">
+                    <div class="carousel-buttons d-none d-sm-block">
                         <button class="owl-prev col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="prev">
                             <i class="icofont-simple-left"></i>
                         </button>
@@ -441,5 +441,13 @@
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
-
+<style>
+    .custom235-carousel-img {
+        margin: 10px auto;
+        /* Add spacing around the images */
+        width: 90%;
+        /* Retain the width and border-radius from inline styles */
+        border-radius: 15px;
+    }
+</style>
 @endsection

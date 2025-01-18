@@ -349,6 +349,90 @@
                 </div>
             </div>
         </div>
+        <!-- Card 1 -->
+        <div class="col-12 mb-4 news-card">
+            <div class="border-0 rounded-5 all-ts">
+                <div class="row g-0 align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-12 col-lg-4 col-xl-3 position-relative">
+                        <img src="https://picsum.photos/300/200" alt="News Image" class="rounded-4 w-100 h-100 p-2" style="object-fit: cover;">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="col-12 col-lg-8 col-xl-9 p-1">
+                        <div class="card-body px-3">
+                            <a href="#" class="text-decoration-none">
+                                <h5 class="card-title fw-bold mb-2">
+                                    Teerthanker Mahaveer University celebrated World IP Day
+                                </h5>
+                            </a>
+                            <ul class="list-inline small text-muted mb-1">
+                                <li class="list-inline-item"><i class="icofont-calendar"></i> April 30, 2024</li>
+                                <li class="list-inline-item"><i class="icofont-folder-open"></i> Conference-Seminar</li>
+                            </ul>
+                            <p class="card-text">On April 30, 2024, Teerthanker Mahaveer University, one of the best private universities in India, hosted two pivotal sessions ...</p>
+                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 mb-4 news-card">
+            <div class="border-0 rounded-5 all-ts">
+                <div class="row g-0 align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-12 col-lg-4 col-xl-3 position-relative">
+                        <img src="https://picsum.photos/300/200" alt="News Image" class="rounded-4 w-100 h-100 p-2" style="object-fit: cover;">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="col-12 col-lg-8 col-xl-9 p-1">
+                        <div class="card-body px-3">
+                            <a href="#" class="text-decoration-none">
+                                <h5 class="card-title fw-bold mb-2">
+                                    International Collaboration for Research & Innovation at TMU
+                                </h5>
+                            </a>
+                            <ul class="list-inline small text-muted mb-1">
+                                <li class="list-inline-item"><i class="icofont-calendar"></i> May 15, 2024</li>
+                                <li class="list-inline-item"><i class="icofont-folder-open"></i> Research & Development</li>
+                            </ul>
+                            <p class="card-text">Teerthanker Mahaveer University has partnered with top international institutions to enhance research and innovation, leading to new breakthroughs in technology...</p>
+                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 mb-4 news-card">
+            <div class="border-0 rounded-5 all-ts">
+                <div class="row g-0 align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-12 col-lg-4 col-xl-3 position-relative">
+                        <img src="https://picsum.photos/300/200" alt="News Image" class="rounded-4 w-100 h-100 p-2" style="object-fit: cover;">
+                    </div>
+                    <!-- Content Section -->
+                    <div class="col-12 col-lg-8 col-xl-9 p-1">
+                        <div class="card-body px-3">
+                            <a href="#" class="text-decoration-none">
+                                <h5 class="card-title fw-bold mb-2">
+                                    TMU Hosts National Sports Meet 2024
+                                </h5>
+                            </a>
+                            <ul class="list-inline small text-muted mb-1">
+                                <li class="list-inline-item"><i class="icofont-calendar"></i> June 20, 2024</li>
+                                <li class="list-inline-item"><i class="icofont-folder-open"></i> Sports</li>
+                            </ul>
+                            <p class="card-text">The National Sports Meet 2024 at Teerthanker Mahaveer University brought together athletes from across the country to compete and celebrate the spirit of sportsmanship...</p>
+                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
