@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <!-- Testimonial CSS -->
     <link rel="stylesheet" href="{{ asset('css/testimonial.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
@@ -42,6 +43,13 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" />
+  
+  
+  
+
 
     <title>TMU Hospital</title>
 
@@ -119,18 +127,15 @@
         </div>
     </div>
     <!-- End Header Top -->
-
-    <!-- Start Navbar Area -->
-    <div class="navbar-area sticky-top">
-        <!-- Menu For Mobile Device -->
-        <div class="mobile-nav">
+    
+    <div class="mobile-nav">
                 <a href="/" class="logo">
                     <img src="{{asset('img/logo.png')}}" alt="Logo" style="max-width: 150%;">
                 </a>
             </div>
 
         <!-- Menu For Desktop Device -->
-        <div class="main-nav">
+        <div class="main-nav" style="position:sticky">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="/">
@@ -243,5 +248,3 @@
                 </nav>
             </div>
         </div>
-    </div>
-    <!-- End Navbar Area -->

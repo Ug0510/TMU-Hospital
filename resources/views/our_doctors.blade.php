@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row align-items-center justify-content-center">
             <div class="col-lg-12">
-                <div class="section-title w-fit-content mx-auto pt-5" style="padding-top: 50px;">
+                <div class="section-title w-fit-content mx-auto pt-4 mb-4" >
                     <h2 class="tmu-primary">Our Doctors</h2>
                 </div>
 

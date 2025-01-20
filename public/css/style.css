@@ -708,7 +708,7 @@ button:focus {
     position: absolute;
     content: "";
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     width: 80px;
     height: 5px;
     background-color: #FF7900;

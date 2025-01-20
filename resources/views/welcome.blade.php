@@ -7,79 +7,105 @@
 
 <!-- Main content for the home page goes here -->
 <div class="main-content">
-    <!-- Home Slider -->
-    <div class="home-slider owl-theme owl-carousel">
-        <div class="slider-item one slider-item-img">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="slider-text pt-5">
-                            <!-- <div class="slider-shape">
-                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
-                                </div> -->
-                            <h1>Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
-                            <p class="pb-2 mb-2">
-                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
-                                state-of-the-art facilities and experienced medical professionals ensure you receive the
-                                best treatment available. Trust us to be your partner in achieving optimal health and a
-                                brighter future. </p>
-                            <div class="common-btn pt-0">
-                                <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    
+    <style>
+        /* Custom carousel styling */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+        }
+
+        .carousel-control-prev {
+            left: 20px;
+        }
+
+        .carousel-control-next {
+            right: 20px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #FF7900;
+            padding: 15px;
+            border-radius: 50%;
+            background-size: 50%;
+        }
+
+        .carousel-control-prev:hover .carousel-control-prev-icon,
+        .carousel-control-next:hover .carousel-control-next-icon {
+            background-color: white;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background-color: #FF7900;
+        }
+
+        .carousel-indicators {
+            margin-bottom: 1rem;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #001055;
+            opacity: 1;
+        }
+
+        .carousel-indicators .active {
+            background-color: #FF7900;
+        }
+
+       
+    </style>
+    
+    <!--Home Slider-->
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Carousel indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        <!-- First slide -->
+        <div class="carousel-item active">
+            <img src="{{ asset('img/home/ds.jpg') }}" class="d-none d-md-block w-100" alt="Desktop Slide 1">
+            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 1">
         </div>
-        <div class="slider-item two slider-item-img">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="slider-text">
-                            <!-- <div class="slider-shape">
-                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
-                                </div> -->
-                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
-                            <p class="invisible">
-                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
-                                state-of-the-art facilities and experienced medical professionals ensure you receive the
-                                best treatment available. Trust us to be your partner in achieving optimal health and a
-                                brighter future. </p>
-                            <div class="common-btn invisible">
-                                <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Second slide -->
+        <div class="carousel-item">
+            <img src="https://placehold.co/1920x800" class="d-none d-md-block w-100" alt="Desktop Slide 2">
+            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 2">
         </div>
-        <div class="slider-item three slider-item-img">
-            <div class="d-table">
-                <div class="d-table-cell">
-                    <div class="container">
-                        <div class="slider-text">
-                            <!-- <div class="slider-shape">
-                                    <img src="img/doc-banner.png" alt="Shape" style="width: 40%; margin-right: 5.5rem; margin-top: 3rem;">
-                                </div> -->
-                            <h1 class="invisible">Welcome to <span class="tmu-primary-orange">TMU Hospital</span></h1>
-                            <p class="invisible">
-                                At TMU Hospital, we provide top-quality healthcare with a personal touch. Our
-                                state-of-the-art facilities and experienced medical professionals ensure you receive the
-                                best treatment available. Trust us to be your partner in achieving optimal health and a
-                                brighter future. </p>
-                            <div class="common-btn invisible">
-                                <a href="appointment.html">Get Appointment</a>
-                                <a class="cmn-btn-right" href="{{route('about.us')}}">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Third slide -->
+        <div class="carousel-item">
+            <img src="https://placehold.co/1920x800" class="d-none d-md-block w-100" alt="Desktop Slide 3">
+            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 3">
         </div>
     </div>
-    <!-- End Home Slider -->
+
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+    <!--Home Slider End-->
 
     <!-- Counter -->
     <div class="counter-area">

@@ -267,36 +267,55 @@
     .page-title-four-n .page-title-item {
         margin-top: 0;
     }
+
+
+    @media (max-width: 991.98px) {
+
+        /* Tablet View */
+        .main-news {
+            order: 1;
+        }
+
+        .categories-section {
+            order: 2;
+        }
+
+        .related-news {
+            order: 3;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+
+        /* Mobile View */
+        .main-news {
+            order: 1;
+        }
+
+        .categories-section {
+            order: 2;
+        }
+
+        .related-news {
+            order: 3;
+        }
+
+        .categories-section,
+        .related-news {
+            display: block;
+            width: 100%;
+        }
+    }
 </style>
-<!-- Page Title -->
-<div class="page-title-area-news page-title-four-n">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="page-title-item">
-                <ul>
-                    <li>
-                        <i class="icofont-hospital pe-2" style="font-size:13px;"></i>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <i class="icofont-simple-right"></i>
-                    </li>
-                    <li>
-                        <i class="icofont-newspaper pe-2"></i>
-                        News
-                    </li>
-                </ul>
-            </div>
-        </div>
+<div class="row">
+    <div class="col-12 mb-1">
+        <h1 class="fw-bolder tmu-text-primary text-center mt-3"><span style="font-size:2.5rem; color:#ff7700">TMU</span><span style="font-size:2.5rem; color:#000f54"> News</span></h1>
     </div>
 </div>
-<!-- End Page Title -->
-
-<!-- Blog Details -->
 <div class="news-details-area pt-3">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-3">
+            <div class="col-lg-3 categories-section">
                 <div class="news-details-category">
                     <h3>Category</h3>
                     <ul>
@@ -329,37 +348,9 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="blog-details-tags">
-                    <h3>Tags</h3>
-                    <ul>
-                        <li>
-                            <a href="/Blog-Details">Dental</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">Health</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">Child</a>
-                        </li>
-                        <li>
-                            <a href="service-details.html">Medicine</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">Caveti</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">AIDS</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">Dental</a>
-                        </li>
-                        <li>
-                            <a href="/Blog-Details">Health</a>
-                        </li>
-                    </ul>
-                </div> -->
+
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 main-news">
                 <div class="blog-details-item">
                     <div class="blog-details-img">
                         <img src="https://picsum.photos/600/360" alt="Blog">
@@ -401,8 +392,32 @@
                         </div>
                     </div>
                 </div>
+                <div class="lightbox-gallery">
+                    <h3>Image Gallery</h3>
+                    <div class="gallery-grid">
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 1">
+                            <img src="https://picsum.photos/200/200?random=1" alt="Gallery Image 1">
+                        </a>
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 2">
+                            <img src="https://picsum.photos/200/200?random=2" alt="Gallery Image 2">
+                        </a>
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 3">
+                            <img src="https://picsum.photos/200/200?random=3" alt="Gallery Image 3">
+                        </a>
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 4">
+                            <img src="https://picsum.photos/200/200?random=4" alt="Gallery Image 4">
+                        </a>
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 5">
+                            <img src="https://picsum.photos/200/200?random=5" alt="Gallery Image 5">
+                        </a>
+                        <a href="https://picsum.photos/800/600" data-lightbox="gallery" data-title="Image 6">
+                            <img src="https://picsum.photos/200/200?random=6" alt="Gallery Image 6">
+                        </a>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 related-news">
                 <div class="blog-details-item">
                     <div class="news-details-recent">
                         <h3>Recent News</h3>
@@ -501,4 +516,50 @@
 
 <!-- End Blog -->
 
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (typeof lightbox !== "undefined") {
+            lightbox.option({
+                resizeDuration: 200,
+                wrapAround: true,
+            });
+            console.log("Lightbox initialized successfully.");
+        } else {
+            console.error("Lightbox2 is not defined. Check the script inclusion.");
+        }
+    });
+</script> -->
+
+
+<style>
+    .lightbox-gallery {
+        margin-top: 20px;
+    }
+
+    .lightbox-gallery h3 {
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .gallery-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+        transform: scale(1.05);
+    }
+</style>
 @endsection

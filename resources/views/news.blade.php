@@ -332,7 +332,7 @@
                     <!-- Content Section -->
                     <div class="col-12 col-lg-8 col-xl-9 p-1">
                         <div class="card-body px-3">
-                            <a href="#" class="text-decoration-none">
+                            <a href="{{route('news.page')}}" class="text-decoration-none">
                                 <h5 class="card-title fw-bold mb-2 ">
                                     Teerthanker Mahaveer University celebrated World IP Day
                                 </h5>
@@ -343,7 +343,7 @@
                                 <li class="list-inline-item"><i class="icofont-folder-open"></i> Conference-Seminar</li>
                             </ul>
                             <p class="card-text">On April 30, 2024, Teerthanker Mahaveer University, one of the best private universities in India, hosted two pivotal sessions ...</p>
-                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                            <a href="{{route('news.page')}}" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -360,7 +360,7 @@
                     <!-- Content Section -->
                     <div class="col-12 col-lg-8 col-xl-9 p-1">
                         <div class="card-body px-3">
-                            <a href="#" class="text-decoration-none">
+                            <a href="{{route('news.page')}}" class="text-decoration-none">
                                 <h5 class="card-title fw-bold mb-2">
                                     Teerthanker Mahaveer University celebrated World IP Day
                                 </h5>
@@ -370,7 +370,7 @@
                                 <li class="list-inline-item"><i class="icofont-folder-open"></i> Conference-Seminar</li>
                             </ul>
                             <p class="card-text">On April 30, 2024, Teerthanker Mahaveer University, one of the best private universities in India, hosted two pivotal sessions ...</p>
-                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                            <a href="{{route('news.page')}}" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -388,7 +388,7 @@
                     <!-- Content Section -->
                     <div class="col-12 col-lg-8 col-xl-9 p-1">
                         <div class="card-body px-3">
-                            <a href="#" class="text-decoration-none">
+                            <a href="{{route('news.page')}}" class="text-decoration-none">
                                 <h5 class="card-title fw-bold mb-2">
                                     International Collaboration for Research & Innovation at TMU
                                 </h5>
@@ -398,7 +398,7 @@
                                 <li class="list-inline-item"><i class="icofont-folder-open"></i> Research & Development</li>
                             </ul>
                             <p class="card-text">Teerthanker Mahaveer University has partnered with top international institutions to enhance research and innovation, leading to new breakthroughs in technology...</p>
-                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                            <a href="{{route('news.page')}}" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -416,7 +416,7 @@
                     <!-- Content Section -->
                     <div class="col-12 col-lg-8 col-xl-9 p-1">
                         <div class="card-body px-3">
-                            <a href="#" class="text-decoration-none">
+                            <a href="{{route('news.page')}}" class="text-decoration-none">
                                 <h5 class="card-title fw-bold mb-2">
                                     TMU Hosts National Sports Meet 2024
                                 </h5>
@@ -426,7 +426,7 @@
                                 <li class="list-inline-item"><i class="icofont-folder-open"></i> Sports</li>
                             </ul>
                             <p class="card-text">The National Sports Meet 2024 at Teerthanker Mahaveer University brought together athletes from across the country to compete and celebrate the spirit of sportsmanship...</p>
-                            <a href="#" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
+                            <a href="{{route('news.page')}}" class="btn btn-warning text-white rounded-pill px-4 py-2">Read More</a>
                         </div>
                     </div>
                 </div>

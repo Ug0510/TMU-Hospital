@@ -10,20 +10,39 @@
                     <div class="footer-contact">
                         <h3>Contact Us</h3>
                         <ul>
-                            <li>
+                            <li class="justify-content-center align-items-center"> 
                                 <i class="icofont-ui-message"></i>
-                                <a href="mailto:hospital@tmu.ac.in">hospital@tmu.ac.in</a>
-                                <a href="mailto:tmu-hospital@tmu.ac.in">tmu-hospital@tmu.ac.in</a>
+                                <!-- <a href="mailto:hospital@tmu.ac.in">hospital@tmu.ac.in</a> -->
+                                <a class=" pt-3" href="mailto:tmuhospital@tmu.ac.in">tmu-hospital@tmu.ac.in</a>
                             </li>
                             <li>
                                 <i class="icofont-stock-mobile"></i>
-                                <a href="tel:+07554332322">Call: 095688 65444</a>
-                                <a href="tel:+236256256365">Call: 072170 18724</a>
+                                <a href="tel:+07554332322">Call: 09258112588</a>
+                                <a href="tel:+236256256365">Call:  09568865444</a>
                             </li>
                             <li>
                                 <i class="icofont-location-pin"></i>
-                                Bagadpur, Uttar Pradesh <br> 244001
+                                Delhi Road, Moradabad (U.P.) <br> 244001
                             </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Super Speciality: Two columns on mobile -->
+            <div class="col-12 col-md-6 col-lg-3 order-sm-4 order-lg-4">
+                <div class="footer-item">
+                    <div class="footer-quick">
+                        <h3>Super Speciality</h3>
+                        <ul class="list-unstyled row">
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'cardiology']) }}">CARDIOLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'nephrology']) }}">NEPHROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neurology']) }}">NEUROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'ctvs']) }}">CTVS</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'urology']) }}">UROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}">GASTROENTEROLOGY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}">PLASTIC SURGERY</a></li>
+                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}">NEURO SURGERY</a></li>
                         </ul>
                     </div>
                 </div>
@@ -63,24 +82,7 @@
                 </div>
             </div>
     
-            <!-- Super Speciality: Two columns on mobile -->
-            <div class="col-12 col-md-6 col-lg-3 order-sm-4 order-lg-4">
-                <div class="footer-item">
-                    <div class="footer-quick">
-                        <h3>Super Speciality</h3>
-                        <ul class="list-unstyled row">
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'cardiology']) }}">CARDIOLOGY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'nephrology']) }}">NEPHROLOGY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neurology']) }}">NEUROLOGY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'ctvs']) }}">CTVS</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'urology']) }}">UROLOGY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'gastroenterology']) }}">GASTROENTEROLOGY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'plastic-surgery']) }}">PLASTIC SURGERY</a></li>
-                            <li class="col-6"><a href="{{ route('speciality', ['slug' => 'neuro-surgery']) }}">NEURO SURGERY</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            
     
         </div>
     </div>
@@ -129,6 +131,8 @@ integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIUR
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- imageMapResize JS -->
 <script src="{{asset('js/imageMapResizer.js')}}"></script>
+
+<script src="{{asset('js/lightbox.js')}}"></script>
 
 
 
