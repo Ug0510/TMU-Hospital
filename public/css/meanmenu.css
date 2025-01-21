@@ -5,7 +5,7 @@ a.meanmenu-reveal {
 .mean-container .mean-bar {
 	float: left;
 	width: 100%;
-	position: absolute;
+	position: relative;
 	background: transparent;
 	padding: 20px 0 0;
 	z-index: 999;
