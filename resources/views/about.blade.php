@@ -234,70 +234,113 @@
                     <div class="video-wrap">
                         <div class="video">
                             <div class="video-thumb ratio2">
-                                <img src="{{asset('img/about/testimonial/1.jpg')}}"
-                                    width="514" height="400" alt="liver failure">
-                                <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
+                                <img src="{{asset('img/about/testimonial/Testi-01.jpg')}}"
+                                    width="514" height="400" alt="Aortic valve replacement">
+                                <a href="https://www.youtube.com/watch?v=jPnHbhhBz9U" class="play-video">
                                     <img src="{{asset('img/about/play.png')}}"
                                         alt="Coronary Artery Disease" width="48" height="48">
                                 </a>
                             </div>
                             <div class="video-caption">
-                                <div class="video-title">Liver Failure</div>
-                                <p>Baby Bhavika</p>
+                                <div class="video-title">Aortic valve replacement</div>
+                                <p>Saida Begum</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="video-wrap">
-                        <div class="video">
-                            <div class="video-thumb ratio3">
-                                <img src="{{asset('img/about/testimonial/3.jpg')}}"
-                                    width="514" height="400" alt="jaw cancer">
-                                <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
-                                    <img src="{{asset('img/about/play.png')}}" width="48"
-                                        height="48" alt="Coronary Artery Disease">
-                                </a>
-                            </div>
-                            <div class="video-caption">
-                                <div class="video-title">Jaw Cancer</div>
-                                <p>Dr. Abhilasha Agarwal </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="item">
                     <div class="video-wrap">
                         <div class="video">
                             <div class="video-thumb ratio2">
-                                <img src="{{asset('img/about/testimonial/1.jpg')}}"
-                                    width="514" height="400" alt="liver failure">
-                                <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
-                                    <img src="{{asset('img/about/play.png')}}"
-                                        alt="Coronary Artery Disease" width="48" height="48">
-                                </a>
-                            </div>
-                            <div class="video-caption">
-                                <div class="video-title">Liver Failure</div>
-                                <p>Baby Bhavika</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="video-wrap">
-                        <div class="video">
-                            <div class="video-thumb ratio3">
-                                <img src="{{asset('img/about/testimonial/3.jpg')}}"
-                                    width="514" height="400" alt="jaw cancer">
-                                <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
+                                <img src="{{asset('img/about/testimonial/Testi-02.jpg')}}"
+                                    width="514" height="400" alt="Knee Replacement">
+                                <a href="https://www.youtube.com/watch?v=h_Fo7SjT9vw" class="play-video">
                                     <img src="{{asset('img/about/play.png')}}" width="48"
                                         height="48" alt="Coronary Artery Disease">
                                 </a>
                             </div>
                             <div class="video-caption">
-                                <div class="video-title">Jaw Cancer</div>
-                                <p>Dr. Abhilasha Agarwal </p>
+                                <div class="video-title">Knee Replacement</div>
+                                <p>Arun Kumar </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/Testi-03.jpg')}}"
+                                    width="514" height="400" alt="Bone Replacement">
+                                <a href="https://www.youtube.com/watch?v=Qx_FKOSMgwE" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}"
+                                        alt="Coronary Artery Disease" width="48" height="48">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Bone Replacement</div>
+                                <p>Master Haider</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/Testi-04.jpg')}}"
+                                    width="514" height="400" alt="Ear Operation">
+                                <a href="https://www.youtube.com/watch?v=vcguWA0oVmQ" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}" width="48"
+                                        height="48" alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Ear Operation</div>
+                                <p>Aansh</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="item">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/Testi-07.jpg')}}"
+                                    width="514" height="400" alt="Ear Operation">
+                                <a href="https://www.youtube.com/watch?v=Ql2difGF3n0" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}" width="48"
+                                        height="48" alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Emergency Perineal Repair</div>
+                                <p>Murtaza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="video-wrap">
+                        <div class="video">
+                            <div class="video-thumb ratio2">
+                                <img src="{{asset('img/about/testimonial/Testi-08.jpg')}}"
+                                    width="514" height="400" alt="Emergency Bone Realignment ">
+                                <a href="https://www.youtube.com/watch?v=b3SR90aHFBA" class="play-video">
+                                    <img src="{{asset('img/about/play.png')}}" width="48"
+                                        height="48" alt="Coronary Artery Disease">
+                                </a>
+                            </div>
+                            <div class="video-caption">
+                                <div class="video-title">Emergency Bone Realignment</div>
+                                <p>Mahesh Ram</p>
                             </div>
                         </div>
                     </div>
@@ -310,53 +353,60 @@
             id="style-lwSRM">
 
             <div class="video-col video-col-2">
+
+
                 <div class="video-wrap">
                     <div class="video">
                         <div class="video-thumb ratio4">
-                            <img src="{{asset('img/about/testimonial/2.jpg')}}"
-                                width="514" height="400" alt="pre-term babies">
-                            <a href="https://www.youtube.com/watch?v=Izcsx6gtGsI" class="play-video">
-                                <img src="{{asset('img/about/play.png')}}" width="48"
-                                    height="48" alt="Coronary Artery Disease">
-                            </a>
-                        </div>
-                        <div class="video-caption">
-                            <div class="video-title">Pre-term Babies</div>
-                            <p>Ms Sakshi</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="video-col video-col-2">
-                <div class="video-wrap">
-                    <div class="video">
-                        <div class="video-thumb ratio2">
-                            <img src="{{asset('img/about/testimonial/1.jpg')}}"
+                            <img src="{{asset('img/about/testimonial/Testi-01-desk.jpg')}}"
                                 width="514" height="400" alt="liver failure">
-                            <a href="https://www.youtube.com/watch?v=cOfR9N-mcY0" class="play-video">
+                            <a href="https://www.youtube.com/watch?v=jPnHbhhBz9U" class="play-video">
                                 <img src="{{asset('img/about/play.png')}}"
                                     alt="Coronary Artery Disease" width="48" height="48">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Liver Failure</div>
-                            <p>Baby Bhavika</p>
+                            <div class="video-title">Aortic valve replacement</div>
+                            <p>Saida Begum</p>
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+
+            <div class="video-col video-col-2">
+
                 <div class="video-wrap">
                     <div class="video">
-                        <div class="video-thumb ratio3">
-                            <img src="{{asset('img/about/testimonial/3.jpg')}}"
-                                width="514" height="400" alt="jaw cancer">
-                            <a href="https://www.youtube.com/watch?v=tnlEB7AfJQU" class="play-video">
+                        <div class="video-thumb ratio2">
+                            <img src="{{asset('img/about/testimonial/Testi-02.jpg')}}"
+                                width="514" height="400" alt="pre-term babies">
+                            <a href="https://www.youtube.com/watch?v=h_Fo7SjT9vw" class="play-video">
                                 <img src="{{asset('img/about/play.png')}}" width="48"
                                     height="48" alt="Coronary Artery Disease">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Jaw Cancer</div>
-                            <p>Dr. Abhilasha Agarwal </p>
+                            <div class="video-title">Knee Replacement</div>
+                            <p>Arun Kumar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-wrap">
+                    <div class="video">
+                        <div class="video-thumb ratio2">
+                            <img src="{{asset('img/about/testimonial/Testi-04.jpg')}}"
+                                width="514" height="400" alt="Ear Operation">
+                            <a href="https://www.youtube.com/watch?v=vcguWA0oVmQ" class="play-video">
+                                <img src="{{asset('img/about/play.png')}}" width="48"
+                                    height="48" alt="Coronary Artery Disease">
+                            </a>
+                        </div>
+                        <div class="video-caption">
+                            <div class="video-title">Ear Operation</div>
+                            <p>Aansh</p>
                         </div>
                     </div>
                 </div>
@@ -365,52 +415,54 @@
                 <div class="video-wrap">
                     <div class="video">
                         <div class="video-thumb ratio4">
-                            <img src="{{asset('img/about/testimonial/4.jpg')}}"
-                                width="514" height="400" alt="mauritian patient treated for esophageal cancer">
-                            <a href="https://www.youtube.com/watch?v=arFxSlbt9V8" class="play-video">
+                            <img src="{{asset('img/about/testimonial/Testi-03-desk.jpg')}}"
+                                width="514" height="400" alt="Bone Replacement">
+                            <a href="https://www.youtube.com/watch?v=Qx_FKOSMgwE" class="play-video">
                                 <img src="{{asset('img/about/play.png')}}"
                                     alt="Coronary Artery Disease" width="48" height="48">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Mauritian Patient Treated For Esophageal Cancer</div>
-                            <p>Mr Fazl Hosany</p>
+                            <div class="video-title">Bone Replacement</div>
+                            <p>Master Haider</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <div class="video-col video-col-2">
                 <div class="video-wrap">
                     <div class="video">
-                        <div class="video-thumb ratio3">
-                            <img src="{{asset('img/about/testimonial/5.jpg')}}"
+                        <div class="video-thumb ratio2">
+                            <img src="{{asset('img/about/testimonial/Testi-06.jpg')}}"
                                 width="514" height="400" alt="neurosurgical treatment">
-                            <a href="https://www.youtube.com/watch?v=Q4KOz-Zmh7g" class="play-video">
+                            <a href="https://www.youtube.com/watch?v=-GYXlKd07do" class="play-video">
                                 <img width="48" height="48"
                                     src="{{asset('img/about/play.png')}}"
                                     alt="Coronary Artery Disease">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Neurosurgical Treatment</div>
-                            <p>Mr. Devender Jeet Singh</p>
+                            <div class="video-title">Emergrncy Operation</div>
+                            <p>Rustum </p>
                         </div>
                     </div>
                 </div>
                 <div class="video-wrap">
                     <div class="video">
                         <div class="video-thumb ratio2">
-                            <img src="{{asset('img/about/testimonial/6.jpg')}}"
-                                width="514" height="400" alt="bone marrow transplant">
-                            <a href="https://www.youtube.com/watch?v=zDxSL37jy0U" class="play-video">
+                            <img src="{{asset('img/about/testimonial/Testi-07.jpg')}}"
+                                width="514" height="400" alt="Emergency Perineal Repair">
+                            <a href="https://www.youtube.com/watch?v=Ql2difGF3n0" class="play-video">
                                 <img width="48" height="48"
                                     src="{{asset('img/about/play.png')}}"
                                     alt="Coronary Artery Disease">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Bone Marrow Transplant</div>
-                            <p>Patient Father Mr Haider</p>
+                            <div class="video-title">Emergency Perineal Repair</div>
+                            <p>Murtaza</p>
                         </div>
                     </div>
                 </div>
@@ -419,17 +471,17 @@
                 <div class="video-wrap">
                     <div class="video">
                         <div class="video-thumb ratio4">
-                            <img src="{{asset('img/about/testimonial/7.jpg')}}"
-                                width="514" height="400" alt="mother saves daughter by donating a kidney">
-                            <a href="https://www.youtube.com/watch?v=M0jn57I0bwo" class="play-video">
+                            <img src="{{asset('img/about/testimonial/Testi-08-desk.jpg')}}"
+                                width="514" height="400" alt="Emergency Bone realignment ">
+                            <a href="https://www.youtube.com/watch?v=b3SR90aHFBA" class="play-video">
                                 <img width="48" height="48"
                                     src="{{asset('img/about/play.png')}}"
                                     alt="Coronary Artery Disease">
                             </a>
                         </div>
                         <div class="video-caption">
-                            <div class="video-title">Mother Saves Daughter By Donating A Kidney</div>
-                            <p>Ms Paluk Sunger</p>
+                            <div class="video-title">Emergency Bone realignment </div>
+                            <p>Mahesh Ram</p>
                         </div>
                     </div>
                 </div>
