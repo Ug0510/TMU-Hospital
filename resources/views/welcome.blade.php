@@ -20,6 +20,7 @@
             top: 50%;
             transform: translateY(-50%);
             opacity: 1;
+            transition: all 0.3s ease;
         }
 
         .carousel-control-prev {
@@ -36,17 +37,26 @@
             padding: 15px;
             border-radius: 50%;
             background-size: 50%;
-        }
-
-        .carousel-control-prev:hover .carousel-control-prev-icon,
-        .carousel-control-next:hover .carousel-control-next-icon {
-            background-color: white;
+            color: #FF7900!important;
+            transition: all 0.3s ease;
         }
 
         .carousel-control-prev:hover,
         .carousel-control-next:hover {
             background-color: #FF7900;
+            color: white !important;
         }
+        
+        .carousel-control-prev:hover .carousel-control-prev-icon{
+        
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FF7900'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+        }
+        .carousel-control-next:hover .carousel-control-next-icon {
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FF7900'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
 
         .carousel-indicators {
             margin-bottom: 1rem;
@@ -70,11 +80,11 @@
     <!--Home Slider-->
     <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
     <!-- Carousel indicators -->
-    <div class="carousel-indicators">
+    <!-- <div class="carousel-indicators">
         <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2"></button>
-    </div>
+    </div> -->
 
     <!-- Carousel items -->
     <div class="carousel-inner">

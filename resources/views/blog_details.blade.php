@@ -359,7 +359,7 @@
     }
 </style>
 <!-- Page Title -->
-<div class="page-title-area-blog">
+<!-- <div class="page-title-area-blog">
     <div class="d-table">
         <div class="d-table-cell">
             <div class="page-title-item mt-0">
@@ -379,8 +379,16 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Page Title -->
+
+<div class="row">
+    <div class="col-12 mb-2">
+        <h1 class="fw-bolder tmu-text-primary text-center mt-3"><span style="font-size:2.5rem; color:#ff7700">TMU</span><span style="font-size:2.5rem; color:#000f54"> Blogs</span></h1>
+    </div>
+</div>
+
+
 
 <!-- Blog Details -->
 <div class="blog-852-details-area">
@@ -470,7 +478,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="blog-852-details-category">
+                    <!-- <div class="blog-852-details-category">
                         <h3>Category</h3>
                         <ul>
                             <li>
@@ -501,7 +509,7 @@
                                 <a href="/Blog-852-Details">Student Succses</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
