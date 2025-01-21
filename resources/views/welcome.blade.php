@@ -80,18 +80,18 @@
     <div class="carousel-inner">
         <!-- First slide -->
         <div class="carousel-item active">
-            <img src="{{ asset('img/home/ds.jpg') }}" class="d-none d-md-block w-100" alt="Desktop Slide 1">
-            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 1">
+            <img src="{{ asset('img/home/banner1.jpg') }}" class="d-none d-md-block w-100" alt="Desktop Slide 1">
+            <img src="https://placehold.co/768x500" class="d-block d-md-none w-100" alt="Mobile Slide 1">
         </div>
         <!-- Second slide -->
         <div class="carousel-item">
-            <img src="https://placehold.co/1920x800" class="d-none d-md-block w-100" alt="Desktop Slide 2">
-            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 2">
+            <img src="{{ asset('img/home/banner2.jpg') }}" class="d-none d-md-block w-100" alt="Desktop Slide 2">
+            <img src="https://placehold.co/768x500" class="d-block d-md-none w-100" alt="Mobile Slide 2">
         </div>
         <!-- Third slide -->
         <div class="carousel-item">
             <img src="https://placehold.co/1920x800" class="d-none d-md-block w-100" alt="Desktop Slide 3">
-            <img src="https://placehold.co/768x400" class="d-block d-md-none w-100" alt="Mobile Slide 3">
+            <img src="https://placehold.co/768x500" class="d-block d-md-none w-100" alt="Mobile Slide 3">
         </div>
     </div>
 
