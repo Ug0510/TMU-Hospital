@@ -1482,7 +1482,7 @@
 
 <div class="container-fluid m-0 p-5 pe-0 nw2345 my-5" style="position: relative; max-width: 100%;">
     <div class="section-title pb-5">
-        <h2 class="tmu-primary" style="right: 50px; z-index: 5;">News & Events</h2>
+        <h2 class="tmu-primary ms-3">News & Events</h2>
     </div>
     <div class="row me-0">
         <div class="col-lg-8 col-md-12">
@@ -1582,24 +1582,37 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 p-0"></div> <!-- Placeholder to match layout -->
-    </div>
-    <div class="side-overlay-carousel-design-c">
-        <div class="section-card-unique-1 pt-5" style="border: none;">
-            <div class="blog-card" style="background-color: transparent;">
-
-                <!-- Image Section -->
-                <div class="event-card-image" style="padding: 20px 0; text-align: center;">
-                    <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Event Image" style="border-radius: 8px; max-width: 100%; height: auto;">
-                </div>
-                <!-- Button Section -->
-                <div style="text-align: center; margin-top: 20px;">
-                    <a href="#" class="btn btn-light btn-lg" style="color: #001055; font-weight: bold; padding: 10px 30px; border-radius: 25px;">Know More</a>
+        <div class="col-lg-4 p-0">
+            <div class="section-card-unique-1" style="border: none;">
+                <div class="blog-card" style="background-color: transparent;">
+    
+                    <!-- Image Section -->
+                    <div class="event-card-image" style="padding: 20px 0; text-align: center;">
+                        <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Event Image" style="border-radius: 8px; max-width: 100%; height: auto;">
+                    </div>
+                    <!-- Button Section -->
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="#" class="btn  btn-custom" style="color: white; font-weight: bold; padding: 10px 30px; border-radius: 25px;">Know More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+        
 </div>
+
+<style>
+    .btn-custom{
+        background-color: #FF7900;
+        color:white;
+        border:1px solid #FF7900;
+    }
+    .btn-custom:hover{
+        background-color: white !important;
+        color:#FF7900 !important;
+        border:1px solid #FF7900 !important;
+    }
+</style>
 
 
 
@@ -1620,7 +1633,7 @@
     .section-card-unique-1,
     .section-card-unique-2,
     .section-card-unique-3 {
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
+        /* box-shadow: 0 8px 12px rgba(0, 0, 0, 1); */
         border-radius: 8px;
         height: 100%;
     }
@@ -1668,16 +1681,19 @@
     }
 
     .section-card-unique-1 {
-        background-color: #ffffff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        background-color: transparent;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); */
         border-radius: 8px;
     }
 
     .blog-card {
         display: flex;
         flex-direction: column;
-        border-radius: 8px;
+        border-radius: 5px;
         overflow: hidden;
+        box-shadow: 0 3px 17px rgba(0, 0, 0, 0.14);
+        margin:1rem;
+        padding:1rem 1.5rem;
     }
 
 
@@ -1797,7 +1813,7 @@
     }
 
     .section-card-unique-3 {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); */
         border-radius: 8px;
     }
 
