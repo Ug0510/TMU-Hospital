@@ -99,10 +99,10 @@
             <img src="https://placehold.co/768x500" class="d-block d-md-none w-100" alt="Mobile Slide 2">
         </div>
         <!-- Third slide -->
-        <div class="carousel-item">
+        {{-- <div class="carousel-item">
             <img src="https://placehold.co/1920x800" class="d-none d-md-block w-100" alt="Desktop Slide 3">
             <img src="https://placehold.co/768x500" class="d-block d-md-none w-100" alt="Mobile Slide 3">
-        </div>
+        </div> --}}
     </div>
 
     <!-- Carousel controls -->
@@ -1481,7 +1481,7 @@
 
 
 <div class="container-fluid m-0 p-5 pe-0 nw2345 my-5" style="position: relative; max-width: 100%;">
-    <div class="section-title pb-5">
+    <div class="section-title ">
         <h2 class="tmu-primary ms-3">News & Events</h2>
     </div>
     <div class="row me-0">
@@ -1583,12 +1583,12 @@
             </div>
         </div>
         <div class="col-lg-4 p-0">
-            <div class="section-card-unique-1" style="border: none;">
-                <div class="blog-card" style="background-color: transparent;">
+            <div class="section-card-unique-1 p-0" style="border: none;">
+                <div class="blog-card px-0" style="background-color: transparent;">
     
                     <!-- Image Section -->
                     <div class="event-card-image" style="padding: 20px 0; text-align: center;">
-                        <img src="{{asset('img/home/poster1.png')}}" class="img-fluid" alt="Event Image" style="border-radius: 8px; max-width: 100%; height: auto;">
+                        <img src="{{asset('img/home/camp.jpeg')}}" class="img-fluid" alt="Event Image" style="object-fit:contain">
                     </div>
                     <!-- Button Section -->
                     <div style="text-align: center; margin-top: 20px;">
@@ -1692,7 +1692,7 @@
         border-radius: 5px;
         overflow: hidden;
         box-shadow: 0 3px 17px rgba(0, 0, 0, 0.14);
-        margin:1rem;
+        margin:0 1rem;
         padding:1rem 1.5rem;
     }
 
