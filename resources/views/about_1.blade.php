@@ -5,85 +5,78 @@
 @section('content')
 <!-- ------------------------------------------------------------------- -->
 
+
+
 <!-- About -->
-<div class="about-area  pb-5">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
+<section class="hospital-area pb-5 pt-5">
+    <div class="container-fluid p-0">
+        <div class="hospital-shape">
+            <img src="{{asset('img/home/about1.png')}}" alt="Shape">
+        </div>
+        <div class="row m-0 align-items-center">
+            <div class="col-lg-6  hospital-item p-0 m-0">
 
+                <div class="row m-0">
+                    <div class="p-0">
+                        <div class="p-3 ps-lg-3">
+                            <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item  active">
+                                        <img src="{{asset('img/home/about/new/1.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/2.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/3.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/4.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/5.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/6.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/7.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
+                                    <div class="carousel-item ">
+                                        <img src="{{asset('img/home/about/new/8.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
+                                    </div>
 
-            <div class="col-lg-12">
-                <div class="section-title w-fit-content mx-auto pt-4 mb-0">
-                    <h2 class="tmu-primary" style="font-size: 2rem;">About Our Hospital</h2>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-
-                <div class="container-fluid p-0">
-
-                    <div class="row m-0 align-items-center">
-                        <div class="col-lg-6  hospital-item p-0 m-0">
-
-                            <div class="row m-0">
-                                <div class="p-0">
-                                    <div class="p-0 pt-2 pb-2">
-                                        <div id="hospitalCarousel" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item  active">
-                                                    <img src="{{asset('img/home/about/new/1.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/2.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/3.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/4.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/5.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/6.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/7.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-                                                <div class="carousel-item ">
-                                                    <img src="{{asset('img/home/about/new/8.webp')}}" class="d-block w-100 custom235-carousel-img" alt="About">
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6 pt-lg-3">
-                            <div class="hospital-item hospital-right mx-4 ">
-
-                                <p class="pb-0 mb-3 " style="text-align:justify!important;">
-                                    TMU hospital is a hub of safety and advanced care, offering an extensive range of super-specialty services. It provides advanced and comprehensive primary, secondary, and tertiary care, serving as a vital resource for the community.
-                                    <br /><br /><b>It provides-</b>
-                                    24/7 medical facility with an 800+ bed super-specialty hospital on campus Hands-on practical experience opportunities for medical, nursing, and allied health students Comprehensive critical and emergency healthcare services.
-                                </p>
-                                <div class="carousel-buttons d-none d-lg-block">
-                                    <button class="owl-prev col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="prev">
-                                        <i class="icofont-simple-left"></i>
-                                    </button>
-                                    <button class="owl-next col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="next">
-                                        <i class="icofont-simple-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hospital-item hospital-right mx-4">
+                    <div class="section-title pb-0 mb-0">
+                        <h2 class="tmu-primary">About Our Hospital</h2>
+                    </div>
+                    <p class="pb-0 mb-3 " style="text-align:justify!important;">
+                        TMU hospital is a hub of safety and advanced care, offering an extensive range of super-specialty services. It provides advanced and comprehensive primary, secondary, and tertiary care, serving as a vital resource for the community.
+                        <br /><br /><b>It provides-</b>
+                        24/7 medical facility with an 800+ bed super-specialty hospital on campus Hands-on practical experience opportunities for medical, nursing, and allied health students Comprehensive critical and emergency healthcare services.
+                    </p>
+                    <div class="carousel-buttons d-none d-sm-block">
+                        <button class="owl-prev col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="prev">
+                            <i class="icofont-simple-left"></i>
+                        </button>
+                        <button class="owl-next col about-carousel-btn my-3 " data-bs-target="#hospitalCarousel" data-bs-slide="next">
+                            <i class="icofont-simple-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- End About -->
 
 
@@ -507,6 +500,18 @@
     </div>
 </div>
 
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+<style>
+    .custom235-carousel-img {
+        margin: 10px auto;
+        /* Add spacing around the images */
+        width: 90%;
+        /* Retain the width and border-radius from inline styles */
+        border-radius: 15px;
+    }
+</style>
+
 <style>
     /* General Modal Styles */
     .video-modal {
@@ -580,7 +585,7 @@
 
     @media (max-width: 480px) {
         .video-modal-content {
-            width: 90%;
+            width: 100%;
         }
 
         .video-modal iframe {
@@ -590,9 +595,9 @@
         }
 
         .close-btn {
-            width: 30px;
-            height: 25px;
-            font-size: 30px;
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
         }
     }
 
@@ -624,16 +629,4 @@
         videoFrame.src = ''; // Stop the video
     }
 </script>
-
-
-<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
-<style>
-    .custom235-carousel-img {
-        margin: 10px auto;
-        /* Add spacing around the images */
-        width: 90%;
-        /* Retain the width and border-radius from inline styles */
-        border-radius: 15px;
-    }
-</style>
 @endsection
